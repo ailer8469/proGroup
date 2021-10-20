@@ -1,0 +1,9 @@
+@import 'mixins/mix';
+@import 'base/var';
+@import 'base/reset';
+@import 'base/global';
+@import 'layout/header';
+
+body{
+    background:url(../img/material.png) ;
+}

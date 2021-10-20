@@ -1,0 +1,45 @@
+{
+  "name": "cfd101_g1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "安裝套件": "npm i",
+    "預覽本地專案": "gulp",
+    "上線打包": "gulp prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ting2s/CFD101-G1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ting2s/CFD101-G1/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.1",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^5.0.0"
+  },
+  "homepage": "https://github.com/Ting2s/CFD101-G1#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "fix": "0.0.6",
+    "literallycanvas": "^0.5.2",
+    "them": "0.0.4",
+    "to": "^0.2.9"
+  }
+}

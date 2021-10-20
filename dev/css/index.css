@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button, input, a {
+  text-decoration: none;
+  color: #4f4f4f;
+  cursor: url("../img/mouse/click.svg"), default;
+}
+
+html {
+  cursor: url("../img/mouse/normal.svg"), default;
+  font-family: 'Roboto';
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  background: url(../img/material.png);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+header {
+  width: 100%;
+  z-index: 99;
+}
+
+.nav-pc {
+  display: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+  height: 70px;
+}
+
+.nav-pc a {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.nav_logo {
+  padding: 9px 0 11px 110px;
+  width: 120px;
+}
+
+.nav_item {
+  background-color: rgba(212, 232, 237, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_item ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_item li {
+  margin: 0 50px;
+}
+
+.nav_item a {
+  color: #68543b;
+}
+
+.nav_ask {
+  padding: 26px 46px;
+  white-space: nowrap;
+  background-color: #379595;
+}
+
+.nav_ask a {
+  color: white;
+}
+
+.nav-sp {
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 60px;
+  display: none;
+}
+
+.nav-sp a {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.nav-sp .nav_logo {
+  padding: 9px;
+  margin: auto;
+}
+
+.burger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/hamburger.svg");
+  background-color: #379595;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.burger.active {
+  background-image: url("../img/close.svg");
+}
+
+.nav-sp-bar {
+  display: none;
+  display: fixed;
+  background: rgba(55, 149, 149, 0.5);
+  width: 100%;
+  height: 100vh;
+}
+
+.bar_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15%;
+}
+
+.bar_wrap li {
+  margin-bottom: 90px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  color: white;
+}
+
+.nav_link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_link li {
+  margin: 30px;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: url("../img/mouse/click.svg"), default;
+}
+
+.nav_link li:nth-child(1) {
+  background-image: url("../img/link/facebook/sp.svg");
+}
+
+.nav_link li:nth-child(2) {
+  background-image: url("../img/link/phone/sp.svg");
+}
+
+.nav_link li:nth-child(3) {
+  background-image: url("../img/link/line/sp.svg");
+}
+
+.nav_link li:nth-child(4) {
+  background-image: url("../img/link/mail/sp.svg");
+}
+
+@media (max-width: 1200px) {
+  .nav-pc {
+    display: none;
+  }
+  .nav-sp {
+    display: block;
+  }
+}
+
+body {
+  background: url(../img/material.png);
+}
+/*# sourceMappingURL=index.css.map */

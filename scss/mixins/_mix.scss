@@ -1,0 +1,17 @@
+
+
+@mixin flex($side,$justify,$align){
+    display: flex; 
+    flex-direction:$side;     
+    justify-content: $justify; 
+    align-items: $align;
+}
+
+@mixin btn($h,$w){
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        padding: $h $w;
+        margin: 0 auto;
+}
