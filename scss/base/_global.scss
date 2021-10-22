@@ -13,13 +13,16 @@ button,input,a{
 	cursor: url("../img/mouse/click.svg"), default;
 }
 html{
+	background:url(../img/material.png);
 	cursor: url("../img/mouse/normal.svg"), default;
-    font-family: 'Roboto';
     font-style: normal;
 }
 body{
     width: 100%;
     background:url(../img/material.png);
+	box-sizing: border-box;
+	font-weight: 200;
+	font-family: 'Roboto', sans-serif;
 }
 img{
     width: 100%;

@@ -1,0 +1,48 @@
+.loadpage{
+    @include flex(column,center,center);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background:url(../img/material.png);
+    background-color: $green;
+    z-index: 1000;
+}
+#loading,#loaded{
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 20%;
+}
+#loaded{
+    display: none;
+}
+#progress{
+    position: relative;
+    bottom: -15%;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+@media (max-width: $desktop){
+
+    #progress{
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media (max-width: $mobile){
+    #progress{
+        font-size: 32px;
+    }
+    #loading,#loaded{
+        width: 600px;
+        height: 600px;
+        top: 25%;
+    }
+}

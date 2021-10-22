@@ -3,8 +3,6 @@
 @import 'base/reset';
 @import 'base/global';
 @import 'layout/header';
+@import 'layout/footer';
+@import 'layout/loading';
 
-body{
-    background:url(../img/material.png);
-    
-}

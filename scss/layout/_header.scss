@@ -1,9 +1,9 @@
 header{
     width: 100%;
+    position: fixed;
     z-index: 99;
 }
 .nav-pc{
-    display: fixed;
     @include flex("",space-between,start);
     width: 100%;
     height: 70px;
@@ -79,10 +79,13 @@ header{
 }
 .nav-sp-bar{
     display: none;
-    display: fixed;
+    position: absolute;
+    left: 0;
+    top:60px;
     background: rgba(55, 149, 149, 0.5);
     width: 100%;
     height: 100vh;
+    z-index: 4;
 }
 .bar_wrap{
     @include flex(column,center,center);
@@ -129,5 +132,18 @@ header{
     }
     .nav-sp{
         display: block;
+    }
+}
+
+@media (max-width: $mobile){
+    .nav-sp{
+        height: 50px;
+    }
+    .burger{
+        width: 50px;
+        height: 50px;
+    }
+    .nav-sp-bar{
+        top:50px;
     }
 }
