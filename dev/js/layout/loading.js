@@ -32,7 +32,7 @@ if (now - loadingStartTime > timeout) {
 function complete () {
     add(100, [1, 5], 10, () => {
         window.setTimeout(() => {
-            $loading.fadeOut();
+            $loading.fadeOut(500)
         }, 1000)
     })
 }

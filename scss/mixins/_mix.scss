@@ -15,3 +15,15 @@
         padding: $h $w;
         margin: 0 auto;
 }
+
+@mixin learnmore($h,$w){
+    padding: $h $w;
+    border:1px solid $green;
+    color: $green;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-align: center;
+}

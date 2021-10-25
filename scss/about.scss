@@ -42,15 +42,7 @@
         }
         button{
             margin-top: 20px;
-            padding: 12px 50px;
-            border:1px solid $green;
-            color: $green;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 16px;
-            letter-spacing: 0.15em;
-            text-align: center;
+            @include learnmore(12px,50px);
         }
     }
 

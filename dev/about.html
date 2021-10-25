@@ -23,6 +23,19 @@
     <title>關於博群</title>
 </head>
 <body>
+    <!--▼ loading ▼-->
+    <div class="loadpage">
+        <lottie-player id="loading"
+        src="https://assets8.lottiefiles.com/packages/lf20_a2dkrcwq.json" background="transparent" speed="1" loop autoplay>
+        </lottie-player>
+        <lottie-player id="loaded"
+        src="https://assets7.lottiefiles.com/packages/lf20_wz1jiozw.json" background="transparent" speed="1" loop autoplay>
+        </lottie-player>
+        <p id="progress">
+            0%
+        </p>
+    </div>
+    <!--▲ loading ▲-->
     <!--▼ header ▼-->
     <header>
         <div class="nav-pc">
@@ -200,8 +213,8 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
-    <script src="js/layout/burger.js"></script>
-    <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/about.js"></script>
+    <script src="js/layout/loading.js"></script>
+    <script src="js/layout/burger.js"></script>
 </body>
 </html>
