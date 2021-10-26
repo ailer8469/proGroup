@@ -92,6 +92,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 99;
+  top: 0;
 }
 
 .nav-pc {
@@ -405,9 +406,9 @@ footer {
   font-weight: 200;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1000px) {
   .footer_info_item {
-    margin: 20px;
+    margin: 10px;
   }
 }
 
