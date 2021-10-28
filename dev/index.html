@@ -15,13 +15,12 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <title>博群國際商務</title>
 </head>
-<body>
+<body data-scroll-container>
     <!--▼ loading ▼-->
-    <div class="loadpage">
+    <!-- <div class="loadpage">
         <lottie-player id="loading"
         src="https://assets8.lottiefiles.com/packages/lf20_a2dkrcwq.json" background="transparent" speed="1" loop autoplay>
         </lottie-player>
@@ -31,7 +30,7 @@
         <p id="progress">
             0%
         </p>
-    </div>
+    </div> -->
     <!--▲ loading ▲-->
     <!--▼ header ▼-->
     <header>
@@ -78,25 +77,203 @@
         </div>
     </div>
     <!--▲ header ▲-->
+    <div class="top_header"></div>
+    <section class="page_01">
+
+        <div class="index_link">
+            <ul>
+                <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
+                <li><a></a></li>
+                <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+        <div class="index_scrolldown">
+            Scroll down
+        </div>
+    </section>
+    <section class="page_02">
+        <div class="page02_01">
+            <h2>你也有法律相關的煩惱嗎？</h2>
+            <div class="ask_wrap">
+                <div class="ask_item">
+                    <img src="img/index/message.svg" alt="">
+                    <span>你們有提供商業公司諮詢嗎？</span>
+                </div>
+            </div> 
+            <div class="index_scrolldown">
+            Scroll down
+            </div>
+        </div>
+        <div class="page02_02">
+            <h2>交給我們，以下是我們的服務</h2>
+            <div class="card_wrap">
+                <div class="card_box">
+                    <span>01</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/1.svg" alt="">
+                        <h3>公司投資</h3>
+                        <p>舉凡國內外企業併購、股權收購、增資、股東會、企業法律健診以及僑外資公司、辦事處設立登記、外籍白領聘僱等，均為本所服務範圍之內。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>02</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/2.svg" alt="">
+                        <h3>金融保險</h3>
+                        <p>包含金融、證券機構、基金管理機構法律顧問服務、保險理賠，及違反銀行法、證券交易法案件。
+                        </p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>03</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/3.svg" alt="">
+                        <h3>智慧財產權</h3>
+                        <p>商標權、專利權之規劃、申請、異議；商標、專利、著作權等授權及轉讓契約之談判、審閱、撰擬，以及訴訟代理。<br>
+                            企業營業秘密之規劃、訴訟，保密契約(NDA)之審閱、撰擬。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>04</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/4.svg" alt="">
+                        <h3>不動產爭議</h3>
+                        <p>不動產營造、買賣、租賃相關契約文件之審閱、撰擬及訴訟。<br>
+                            共有土地分割、繼承、祭祀公業之法律諮詢、規劃及訴訟。<br>
+                            公寓大廈法律問題諮詢、規約撰擬及爭議處理。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>05</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/5.svg" alt="">
+                        <h3>學校法人</h3>
+                        <p>本所律師曾擔任大學主任秘書、人事主任及董事會法律顧問，對學校事務實務經驗豐富、熟稔教育法令，提供學校法人董事會及學校法務規劃，及代理教師調解、行政救濟。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>06</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/6.svg" alt="">
+                        <h3>勞資關係</h3>
+                        <p>撰擬勞動契約、建立公司人事規章、規劃薪資結構、勞動調解及訴訟，為企業節省人事成本，共創勞資雙贏。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>07</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/7.svg" alt="">
+                        <h3>遺產繼承</h3>
+                        <p>提供國內外遺產分配規劃、撰擬遺囑、見證、遺囑執行、信託、訴訟代理及家族傳承規劃。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>08</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/8.svg" alt="">
+                        <h3>大陸法律事務</h3>
+                        <p>本所除提供傳統兩岸民事糾紛與台商至大陸投資爭議事件處理，亦有提供兩岸遺產處理、合同及爭議，乃至於兩岸知識產權糾紛等相關法律事務。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>09</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/9.svg" alt="">
+                        <h3>國內外訴訟暨仲裁</h3>
+                        <p>本所承辦業務包含跨國訴訟協助，及境內及境外的仲裁案件。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+                <div class="card_box">
+                    <span>10</span>
+                    <div class="card_contain">
+                        <img src="img/index/service/10.svg" alt="">
+                        <h3>專業教育訓練課程</h3>
+                        <p>提供企業法律風險管理、公司內部規章制度等訓練課程。</p>
+                    </div>
+                    <div class="card_hover">
+                        <img src="img/index/consult.svg" alt="">
+                        <a href="ask.html"><button>我要諮詢</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page_03"></section>
 
 
     <!--▼ footer ▼-->
     <footer>
         <div class="footer_wrap">
-            <div class="footer_info">
-                <div class="footer_info_item">
-                    <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+            <div class="item_tb">
+                <div class="item_left">
+                    <div class="footer_info_item">
+                        <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                    </div>
                 </div>
+                <div class="item_right">
+                    <div class="footer_info_item">
+                        <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item_box">
                 <div class="footer_info_item">
-                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
                 </div>
                 <div class="footer_info_item">
                     <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
                 </div>
                 <div class="footer_info_item">
+                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                </div>
+                <div class="footer_info_item">
                     <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
                 </div>
             </div>
+            <hr>
             <div class="footer_copyright">
                 Copyright© 2021 博群國際商務法律事務所 All rights reserved
             </div>
@@ -107,7 +284,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
     <script src="js/layout/burger.js"></script>
-    <script src="js/layout/loading.js"></script>
+    <script src="js/layout/locomotive.js"></script>
+    <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/index.js"></script>
 </body>
 </html>

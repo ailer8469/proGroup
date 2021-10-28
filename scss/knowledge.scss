@@ -8,17 +8,18 @@
 body{
     background: white;
 }
-.top_header{
-    width: 100vw;
-    height: 60px;
-    background: rgba(212, 232, 237, 0.2);
+header{
+    background-color: white;
 }
 .top{
     @include flex(column,center,center);
     position: relative;
+    padding-top: 60px;
+    margin-top: -10px;
     width: 100vw;
     height: 280px;
-    background-color: linear-gradient(180deg, rgba(255, 235, 193, 0.4) 0%, rgba(193, 237, 226, 0.4) 87.5%);
+    background: linear-gradient(180deg, rgba(255, 235, 193, 0.4) 0%, rgba(193, 237, 226, 0.4) 87.5%);
+    color: white;
     &::after{
         content: "";
         opacity: 0.6;
@@ -34,15 +35,14 @@ body{
     }
     h1{
         z-index: 1;
-        color: $green;
         font-size: 18px;
         font-weight: 700;
         line-height: 21px;
         letter-spacing: 0.2em;
+        margin-bottom: 15px;
     }
     h2{
         z-index: 1;
-        color: white;
         font-size: 18px;
         font-weight: 400;
         line-height: 21px;
@@ -92,6 +92,7 @@ body{
     width: 100%;
     max-width: 580px;
     margin: 0px 180px 0 65px;
+    z-index: 0;
     .content_box{
         position: relative;
         letter-spacing: 0.15em;
@@ -133,14 +134,17 @@ body{
     }
     .content{   
         @include flex(column,center,center);
+        margin-top: 60px;
         padding:0;
     }
     .tabs{
+        position: fixed;
         @include flex(row,center,center);
         padding: 10px;
         width: 100%;
         background: rgba(209, 239, 237, 1);
         box-shadow: none;
+        z-index: 2;
         
         .tablink{
             padding: 15px 40px;
@@ -157,16 +161,53 @@ body{
         }
     }
     .content_wrap {
-        margin: 40px auto;
+        margin: 120px auto 40px auto;
     }
 
 }
 @media (max-width:770px){
     .tabs{
+        display: block;
         padding: 15px 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        .tablink{
+            max-width: none;
+            width: auto;
+        }
     }
-
+    .content_wrap {
+        margin-top: 100px;
+    }
+}
+@media (max-width:500px){
+    .content_wrap .content_box {
+        border-bottom: none;
+        margin: 30px 0;
+        @include flex(column,center,center);
+        &::after{
+            width: 80%;
+            background-color: rgba(139, 205, 193, 1);
+            height: 1px;
+        }
+        p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
 }
 @media (max-width:$mobile){
-
+    .tabs{
+        top: 50px;
+    }
+    .content_wrap .content_box {
+        margin: 30px 20px;
+        @include flex(column,center,center);
+        &::after{
+            width: 90%;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
 }

@@ -6,3 +6,24 @@
 @import 'layout/footer';
 @import 'layout/loading';
 
+section{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.top_header{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    background-color: #FFEBC1;
+}
+.page_01{
+    height: 100vh;
+    background:linear-gradient(90deg,rgba(255, 255, 255, 0.6) 1px, transparent 0), 
+    url('../img/index/page01_bg.png');
+    background-size: 150px 150px,cover;
+}
+.page_02{
+    height: 300vh;
+    background: linear-gradient(180deg, #C2EDE2 0%, #BEE8F5 100%);
+}

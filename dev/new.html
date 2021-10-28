@@ -20,9 +20,10 @@
     <!-- locomotive -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <title>最新消息</title>
 </head>
-<body>
+<body data-scroll-container>
     <!--▼ loading ▼-->
     <!-- <div class="loadpage">
         <lottie-player id="loading"
@@ -83,33 +84,154 @@
     <!--▲ header ▲-->
     <main>
         <section class="top_slider">
-            <div class="top_new_wrap">
-                <div class="top_new_pic">
-                    <img src="img/new/news_item_ex.png" alt="">
-                </div>
-                <div class="top_new_title">
-                    <div class="top_new_word">
-                        <div class="top_new_title_tm">
-                        <span>2021</span>
-                        10/19
+            <div class="top_carousel">
+                <!-- 前五個 -->
+                <div class="top_new_wrap">
+                    <div class="top_new_pic">
+                        <img src="img/new/news_item_ex.png" alt="">
                     </div>
-                        <div class="top_new_title_tp">
-                            網站全新改版上線
+                    <div class="top_new_title">
+                        <div class="top_new_word">
+                            <div class="top_new_title_tm">
+                            <span>2021</span>
+                            10/19
+                        </div>
+                            <div class="top_new_title_tp">
+                                網站全新改版上線
+                            </div>
+                        </div>
+                        
+                        <div class="top_new_title_more">
+                            <span>More</span>
+                            <div class="more_arrow">
+                                <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
+                                </svg> 
+                                <svg class="shadow" width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="1" stroke-linecap="round"/>
+                                </svg>                                 
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="top_new_title_more">
-                        <span>More</span>
-                        <div class="more_arrow">
-                            <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
-                                </svg>                                
+                </div>
+                <div class="top_new_wrap">
+                    <div class="top_new_pic">
+                        <img src="img/new/news_item_ex.png" alt="">
+                    </div>
+                    <div class="top_new_title">
+                        <div class="top_new_word">
+                            <div class="top_new_title_tm">
+                            <span>2021</span>
+                            10/19
+                        </div>
+                            <div class="top_new_title_tp">
+                                網站全新改版上線
+                            </div>
+                        </div>
+                        
+                        <div class="top_new_title_more">
+                            <span>More</span>
+                            <div class="more_arrow">
+                                <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
+                                </svg> 
+                                <svg class="shadow" width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="1" stroke-linecap="round"/>
+                                </svg>                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_new_wrap">
+                    <div class="top_new_pic">
+                        <img src="img/new/news_item_ex.png" alt="">
+                    </div>
+                    <div class="top_new_title">
+                        <div class="top_new_word">
+                            <div class="top_new_title_tm">
+                            <span>2021</span>
+                            10/19
+                        </div>
+                            <div class="top_new_title_tp">
+                                網站全新改版上線
+                            </div>
+                        </div>
+                        
+                        <div class="top_new_title_more">
+                            <span>More</span>
+                            <div class="more_arrow">
+                                <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
+                                </svg> 
+                                <svg class="shadow" width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="1" stroke-linecap="round"/>
+                                </svg>                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_new_wrap">
+                    <div class="top_new_pic">
+                        <img src="img/new/news_item_ex.png" alt="">
+                    </div>
+                    <div class="top_new_title">
+                        <div class="top_new_word">
+                            <div class="top_new_title_tm">
+                            <span>2021</span>
+                            10/19
+                        </div>
+                            <div class="top_new_title_tp">
+                                網站全新改版上線
+                            </div>
+                        </div>
+                        
+                        <div class="top_new_title_more">
+                            <span>More</span>
+                            <div class="more_arrow">
+                                <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
+                                </svg> 
+                                <svg class="shadow" width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="1" stroke-linecap="round"/>
+                                </svg>                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_new_wrap">
+                    <div class="top_new_pic">
+                        <img src="img/new/news_item_ex.png" alt="">
+                    </div>
+                    <div class="top_new_title">
+                        <div class="top_new_word">
+                            <div class="top_new_title_tm">
+                            <span>2021</span>
+                            10/19
+                        </div>
+                            <div class="top_new_title_tp">
+                                網站全新改版上線
+                            </div>
+                        </div>
+                        
+                        <div class="top_new_title_more">
+                            <span>More</span>
+                            <div class="more_arrow">
+                                <svg width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="0.6" stroke-linecap="round"/>
+                                </svg> 
+                                <svg class="shadow" width="70" height="20" viewBox="0 0 73 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M52.6917 0.515137L70.8189 18.6576H1.02896" stroke="white" stroke-opacity="1" stroke-linecap="round"/>
+                                </svg>                                 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="load_icon">
+            <div class="load_icon" data-scroll data-scroll-speed="-1">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+                    <rect class="diamondSt diamond" rx="10" ry="10" x="135" y="-75" width="80" height="80"  transform="rotate(45)"/>  
+                </svg>
+                <svg class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
                     <rect class="diamondSt diamond" rx="10" ry="10" x="135" y="-75" width="80" height="80"  transform="rotate(45)"/>  
                 </svg>
                 <span>1/5</span>
@@ -121,168 +243,222 @@
             <h2>/News/</h2>
             <div class="new_wrap">
                 <!-- 最多九個 -->
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                    </a>
+                </div> 
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
-                <a href="new_page.html">
-                    <div class="new_item">
-                    <div class="new_img">
-                        <img src="img/new/news_item_ex.png" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h3>網站全新改版上線</h3>
-                        <div class="new_info">
-                            <span class="new_time">2021</span>
-                            <div class="new_time_stage">
-                                08-21<span>(六)</span> 
-                                <span class="new_time_stage_line"></span>
-                                08-21 <span>(六)</span>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                </a>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div> 
+                <div class="new_item">
+                    <a href="new_page.html">
+                        <div class="new_img">
+                            <img src="img/new/news_item_ex.png" alt="">
+                        </div>
+                        <div class="new_text">
+                            <h3>網站全新改版上線</h3>
+                            <div class="new_info">
+                                <span class="new_time">2021</span>
+                                <div class="new_time_stage">
+                                    08-21<span>(六)</span> 
+                                    <span class="new_time_stage_line"></span>
+                                    08-21 <span>(六)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>                               
             </div>
             <button id="new_learnMore">
                 了解更多
@@ -295,20 +471,39 @@
     <!--▼ footer ▼-->
     <footer>
         <div class="footer_wrap">
-            <div class="footer_info">
-                <div class="footer_info_item">
-                    <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+            <div class="item_tb">
+                <div class="item_left">
+                    <div class="footer_info_item">
+                        <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                    </div>
                 </div>
+                <div class="item_right">
+                    <div class="footer_info_item">
+                        <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item_box">
                 <div class="footer_info_item">
-                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
                 </div>
                 <div class="footer_info_item">
                     <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
                 </div>
                 <div class="footer_info_item">
+                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                </div>
+                <div class="footer_info_item">
                     <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
                 </div>
             </div>
+            <hr>
             <div class="footer_copyright">
                 Copyright© 2021 博群國際商務法律事務所 All rights reserved
             </div>
@@ -318,6 +513,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
+    <script src="js/layout/locomotive.js"></script>
     <script src="js/layout/burger.js"></script>
     <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/new.js"></script>

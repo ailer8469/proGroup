@@ -7,7 +7,7 @@ header{
 .nav-pc{
     @include flex("",space-between,start);
     width: 100%;
-    height: 70px;
+    height: 60px;
     a{
         font-size: 16px;
         font-style: normal;
@@ -27,15 +27,53 @@ header{
     @include flex("",space-between,center);
     ul{
         @include flex("",center,center);
+        padding-right: 200px;
+        a{
+            @include flex("",center,center);
+            height:40px;
+            color:$nav_color;
+            position: relative;
+            &:hover{
+                transform: translateY(6px);
+                &::before{
+                animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+                content: "";
+                width: 2px;
+                height: 170%;
+                background: #8BCDC1;
+                position: absolute;
+                left: 49%;
+                top: -150%;
+            }
+        }
+    }
     }
     li{
         margin: 0 50px;
     }
-    a{
-        color:$nav_color;
-    }
+
+}
+@keyframes sdl {
+	0% {
+		transform: scale(1, 0);
+		transform-origin: 0 0;
+	}
+	30% {
+		transform: scale(1, 1);
+		transform-origin: 0 0;
+	}
+	70% {
+		transform: scale(1, 1);
+		transform-origin: 0 100%;
+	}
+	100% {
+		transform: scale(1, 0);
+		transform-origin: 0 100%;
+	}
 }
 .nav_ask{
+    position: absolute;
+    right: 0;
     padding: 26px 46px;
     white-space:nowrap;
     background-color: $green;
@@ -46,6 +84,7 @@ header{
 }
 
 .nav-sp{
+    background-color: $nav_back;
     position: relative;
     border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     width: 100%;

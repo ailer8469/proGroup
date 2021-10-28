@@ -1,11 +1,4 @@
 $(function(){
-    // LocomotiveScroll
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('body'),
-        smooth: true,
-        repeat:true,
-    })
-
     // carousel
     $('.pic_carousel').slick({
         arrows:false,

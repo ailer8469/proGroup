@@ -17,9 +17,10 @@
     <!-- locomotive -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <title>法律小知識_文章</title>
 </head>
-<body>
+<body data-scroll-container>
     <!--▼ loading ▼-->
     <!-- <div class="loadpage">
         <lottie-player id="loading"
@@ -79,7 +80,8 @@
     </div>
     <!--▲ header ▲-->
     <main>
-        <div class="page">
+        <div class="contain">
+            <div class="page">
             <h1>2020企業經營風險法律與對策</h1>
             <svg width="802" height="21" viewBox="0 0 802 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 19.5H797.497L779.986 2" stroke="#379595" stroke-width="3" stroke-linecap="round"/>
@@ -108,64 +110,82 @@
                 <a href=""></a>
                 <a href=""></a>
             </div>
-        </div>
-
-        <div class="arrow_box">
-            <div class="prev">
-                <span>上一篇</span>
-                <svg class="pc" width="301" height="34" viewBox="0 0 301 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M300 33C243.96 33 212.54 33 156.5 33V20.2353H143V26.1618H137.5V8.83823L126.5 2V15.6765H118.5V27.9853H100.5V10.6618H82V17.5H69L66.5 33H3L17.5 20.2353" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
-                </svg>
-                <svg class="pc shadow" width="301" height="34" viewBox="0 0 301 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M300 33C243.96 33 212.54 33 156.5 33V20.2353H143V26.1618H137.5V8.83823L126.5 2V15.6765H118.5V27.9853H100.5V10.6618H82V17.5H69L66.5 33H3L17.5 20.2353" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
-                </svg>
-                <svg class="tb" width="243" height="37" viewBox="0 0 243 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M241.5 36C185.46 36 212.54 36 156.5 36V22H143V28.5H137.5V9.5L126.5 2V17H118.5V30.5H100.5V11.5H82V19H69L66.5 36H3L17.5 22" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <svg class="sp" width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M91 15H3L17.5 1" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <p>如果買屋遇到漏水瑕疵該怎麼辦？</p>                    
             </div>
+            <div class="arrow_box">
+                <div class="prev">
+                    <span>上一篇</span>
+                    <svg class="pc" width="301" height="34" viewBox="0 0 301 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M300 33C243.96 33 212.54 33 156.5 33V20.2353H143V26.1618H137.5V8.83823L126.5 2V15.6765H118.5V27.9853H100.5V10.6618H82V17.5H69L66.5 33H3L17.5 20.2353" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="pc shadow" width="301" height="34" viewBox="0 0 301 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M300 33C243.96 33 212.54 33 156.5 33V20.2353H143V26.1618H137.5V8.83823L126.5 2V15.6765H118.5V27.9853H100.5V10.6618H82V17.5H69L66.5 33H3L17.5 20.2353" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="tb" width="243" height="37" viewBox="0 0 243 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M241.5 36C185.46 36 212.54 36 156.5 36V22H143V28.5H137.5V9.5L126.5 2V17H118.5V30.5H100.5V11.5H82V19H69L66.5 36H3L17.5 22" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="sp" width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M91 15H3L17.5 1" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <p>如果買屋遇到漏水瑕疵該怎麼辦？</p>                    
+                </div>
 
-            <div class="next">
-                <span>下一篇</span>
-                <svg class="pc" width="301" height="37" viewBox="0 0 301 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 36C57.0402 36 88.4598 36 144.5 36V22H158V28.5H163.5V9.5L174.5 2V17H182.5V30.5H200.5V11.5H219V19H232L234.5 36H298L283.5 22" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
-                </svg>   
-                <svg class="pc shadow" width="301" height="37" viewBox="0 0 301 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 36C57.0402 36 88.4598 36 144.5 36V22H158V28.5H163.5V9.5L174.5 2V17H182.5V30.5H200.5V11.5H219V19H232L234.5 36H298L283.5 22" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
-                </svg>  
-                <svg class="tb" width="242" height="37" viewBox="0 0 242 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 36C57.0402 36 29.9598 36 86 36V22H99.5V28.5H105V9.5L116 2V17H124V30.5H142V11.5H160.5V19H173.5L176 36H239.5L225 22" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <svg class="sp" width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 15H89L74.5 1" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <p>如果買屋遇到漏水瑕疵該怎麼辦？</p>                    
+                <div class="next">
+                    <span>下一篇</span>
+                    <svg class="pc" width="301" height="37" viewBox="0 0 301 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 36C57.0402 36 88.4598 36 144.5 36V22H158V28.5H163.5V9.5L174.5 2V17H182.5V30.5H200.5V11.5H219V19H232L234.5 36H298L283.5 22" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
+                    </svg>   
+                    <svg class="pc shadow" width="301" height="37" viewBox="0 0 301 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 36C57.0402 36 88.4598 36 144.5 36V22H158V28.5H163.5V9.5L174.5 2V17H182.5V30.5H200.5V11.5H219V19H232L234.5 36H298L283.5 22" stroke="#379595" stroke-opacity="0.3" stroke-linecap="round"/>
+                    </svg>  
+                    <svg class="tb" width="242" height="37" viewBox="0 0 242 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 36C57.0402 36 29.9598 36 86 36V22H99.5V28.5H105V9.5L116 2V17H124V30.5H142V11.5H160.5V19H173.5L176 36H239.5L225 22" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="sp" width="92" height="16" viewBox="0 0 92 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 15H89L74.5 1" stroke="#379595" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <p>如果買屋遇到漏水瑕疵該怎麼辦？</p>                    
+                </div>
             </div>
         </div>
-
     </main>
 
 
     <!--▼ footer ▼-->
     <footer>
         <div class="footer_wrap">
-            <div class="footer_info">
-                <div class="footer_info_item">
-                    <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+            <div class="item_tb">
+                <div class="item_left">
+                    <div class="footer_info_item">
+                        <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                    </div>
                 </div>
+                <div class="item_right">
+                    <div class="footer_info_item">
+                        <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item_box">
                 <div class="footer_info_item">
-                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
                 </div>
                 <div class="footer_info_item">
                     <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
                 </div>
                 <div class="footer_info_item">
+                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                </div>
+                <div class="footer_info_item">
                     <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
                 </div>
             </div>
+            <hr>
             <div class="footer_copyright">
                 Copyright© 2021 博群國際商務法律事務所 All rights reserved
             </div>
@@ -175,6 +195,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
+    <script src="js/layout/locomotive.js"></script>
     <script src="js/layout/burger.js"></script>
     <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/new.js"></script>

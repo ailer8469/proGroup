@@ -17,9 +17,10 @@
     <!-- locomotive -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <title>最新消息_內文</title>
 </head>
-<body>
+<body data-scroll-container>
     <!--▼ loading ▼-->
     <!-- <div class="loadpage">
         <lottie-player id="loading"
@@ -135,20 +136,39 @@
     <!--▼ footer ▼-->
     <footer>
         <div class="footer_wrap">
-            <div class="footer_info">
-                <div class="footer_info_item">
-                    <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+            <div class="item_tb">
+                <div class="item_left">
+                    <div class="footer_info_item">
+                        <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                    </div>
                 </div>
+                <div class="item_right">
+                    <div class="footer_info_item">
+                        <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
+                    </div>
+                    <div class="footer_info_item">
+                        <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item_box">
                 <div class="footer_info_item">
-                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                <img src="img/icons/phone.svg" alt=""> <span>04 3602 2825</span>
                 </div>
                 <div class="footer_info_item">
                     <img src="img/icons/location.svg" alt=""> <span>407臺中市西屯區市政北二路282號21樓</span>
                 </div>
                 <div class="footer_info_item">
+                    <img src="img/icons/time.svg" alt=""> <span>9:00~17:30 六日休假</span>
+                </div>
+                <div class="footer_info_item">
                     <img src="img/icons/mail.svg" alt=""> <span>progrouplaw@gmail.com</span>
                 </div>
             </div>
+            <hr>
             <div class="footer_copyright">
                 Copyright© 2021 博群國際商務法律事務所 All rights reserved
             </div>
@@ -159,6 +179,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
     <script src="js/layout/burger.js"></script>
+    <script src="js/layout/locomotive.js"></script>
     <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/new.js"></script>
 </body>

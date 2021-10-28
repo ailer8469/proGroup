@@ -26,4 +26,30 @@
     line-height: 16px;
     letter-spacing: 0.15em;
     text-align: center;
+    &:hover{
+        color: white;
+        background-color: $green;
+    }
+}
+
+@mixin submit($h,$w){
+    padding: $h $w;
+    border:1px solid rgba(136, 96, 36, 1);
+    background-color: rgba(184, 146, 90, 0.4);
+    color: rgba(136, 96, 36, 1);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    &:hover{
+        color: white;
+        background-color: rgba(136, 96, 36, 1);
+    }
+    &:disabled{
+        border:1px solid #AEAEAE;
+        background-color: #E0E0E0;
+        color: #AEAEAE;
+    }
 }
