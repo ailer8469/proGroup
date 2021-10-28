@@ -710,8 +710,13 @@ section {
 }
 
 .page_02 {
-  height: 300vh;
+  height: 200vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#C2EDE2), to(#BEE8F5));
   background: linear-gradient(180deg, #C2EDE2 0%, #BEE8F5 100%);
+}
+
+.page_03 {
+  height: 100vh;
+  background-color: white;
 }
 /*# sourceMappingURL=index.css.map */
