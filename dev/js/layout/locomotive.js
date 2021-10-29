@@ -5,9 +5,7 @@ $(function(){
     scroll = new LocomotiveScroll({
         el: scrollContainer,
         smooth: true,
-        getSpeed: true,
-        getDirection: true,
-        offset:["15%",0]
+        lerp:.04
     })
     imagesLoaded(scrollContainer, { background: true }, function () {
         scroll.update();

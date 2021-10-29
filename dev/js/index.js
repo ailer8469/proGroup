@@ -5,4 +5,8 @@ $(function(){
         repeat: true,
         lerp:.02
     })
+    var $scene = $('.top_cloud_wrap').parallax({
+		scalarX: 100,
+		scalarY: 100,
+	});
 })
