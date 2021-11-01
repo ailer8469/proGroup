@@ -1431,7 +1431,33 @@ section {
 
 @media (max-width: 768px) {
   .page_01 {
-    height: 130vh;
+    height: 120vh;
+  }
+  .top_cloud {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .top_cloud_01, .top_cloud_06 {
+    display: none;
+  }
+  .top_cloud_02 {
+    width: 500px;
+    right: 60%;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .top_cloud_03 {
+    right: -20%;
+  }
+  .top_cloud_04 {
+    right: -15%;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  .top_cloud_05 {
+    right: 56%;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
 /*# sourceMappingURL=index.css.map */

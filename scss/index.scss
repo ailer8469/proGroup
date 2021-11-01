@@ -506,6 +506,30 @@ section{
 
 @media (max-width:768px){
     .page_01{
-        height: 130vh;
+        height: 120vh;
     }
+    // bottom cloud
+    .top_cloud{
+        transform: translateY(0);
+    }
+    .top_cloud_01,.top_cloud_06{
+        display: none;
+    } 
+    .top_cloud_02{
+        width: 500px;
+        right: 60%;
+        transform: translateY(5px);
+    } 
+    .top_cloud_03{
+        right: -20%;
+    } 
+    .top_cloud_04{
+        right: -15%;
+        transform: translateY(-100px);
+    } 
+    .top_cloud_05{
+        right: 56%;
+        transform: translateY(-100px);
+    } 
+
 }
