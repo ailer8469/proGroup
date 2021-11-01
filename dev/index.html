@@ -19,6 +19,8 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <title>博群國際商務 PRO GROUP LAW</title>
 </head>
 <body data-scroll-container>
@@ -82,6 +84,10 @@
     <!--▲ header ▲-->
     <div class="top_header"></div>
     <section class="page_01">
+        <!-- background animation -->
+        <div id="container">
+            <canvas id="pixie" width="1420" height="705"></canvas>
+        </div>
         <div class="page_01_title">
             <p>博群的專業</p>
             <p>來守護您的事業</p>
@@ -108,63 +114,25 @@
         </div>
         </div>
         <!-- bottom cloud -->
-        <div class="top_cloud_wrap">
-            <div class="top_cloud_box" data-depth="1" >
-                <svg class="top_cloud_01 top_cloud" width="499" height="154" viewBox="0 0 499 154" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.1317 154H492.931C498.133 146.538 499 137.467 499 127.683C499 102.202 478.348 81.5513 452.865 81.5513C447.57 81.5513 442.493 82.4491 437.786 84.0901C427.444 66.6281 408.433 54.9248 386.666 54.9248C384.777 54.9248 382.889 55.0177 381.031 55.2035C371.556 35.0479 351.059 21.0844 327.31 21.0844C312.262 21.0844 298.545 26.6884 288.08 35.9148C270.988 14.0563 244.36 0 214.45 0C180.7 0 151.13 17.8955 134.72 44.7077C134.689 44.7077 134.658 44.7077 134.627 44.7077C111.653 44.7077 92.3936 60.7764 87.5015 82.2633C83.3834 81.0868 79.0486 80.4367 74.5899 80.4367C52.4514 80.4367 33.9045 95.8553 29.1052 116.506C26.3495 115.082 23.2532 114.277 19.9402 114.277C8.91735 114.277 0 123.194 0 134.216C0 143.938 6.96668 152.018 16.1627 153.783V154H16.1317ZM119.765 138.953C120.26 139.108 120.756 139.263 121.282 139.417H119.641C119.703 139.263 119.734 139.108 119.765 138.953Z" fill="url(#paint0_linear_523:4104)"/>
-                <defs>
-                <linearGradient id="paint0_linear_523:4104" x1="249.489" y1="154.001" x2="249.489" y2="-0.0329145" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-                </svg>
+        <div id="top_cloud_wrap">
+            <div class="layer" data-depth="0.3" >
+                <img class="top_cloud_01 top_cloud" src="img/index/cloud_01.png" alt="">
             </div>
-            <div class="top_cloud_box" data-depth="0.5"><svg class="top_cloud_02 top_cloud" width="376" height="142" viewBox="0 0 376 142" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.6" d="M375.975 121.66C375.975 113.628 373.258 106.268 368.719 100.38C362.421 79.1326 342.762 63.6128 319.491 63.6128C312.49 63.6128 305.809 65.0208 299.704 67.5807C297.019 67.0687 294.206 66.8127 291.361 66.8127C289.922 66.8127 288.516 66.8767 287.109 67.0047C279.981 51.8049 264.541 41.277 246.64 41.277C241.014 41.277 234.812 41.373 229.059 42.333C224.423 18.7173 203.645 0.893555 178.68 0.893555C157.454 0.893555 139.234 13.7894 131.402 32.1891C119.063 38.0771 108.674 47.4529 101.578 59.0688C101.546 59.0688 101.546 59.0688 101.514 59.0688C84.1881 59.0688 69.7074 71.1646 66.0313 87.3884C62.9306 86.4925 59.6701 86.0125 56.3136 86.0125C39.6273 86.0125 25.6581 97.6283 22.0459 113.212C19.9682 112.124 17.6346 111.516 15.1413 111.516C6.86204 111.516 0.117188 118.236 0.117188 126.556C0.117188 133.884 5.35963 139.996 12.2963 141.308V141.5H371.372C375.336 135.868 375.975 129.052 375.975 121.66ZM90.2936 130.524C90.3256 130.396 90.3576 130.3 90.3895 130.172C90.7731 130.3 91.1567 130.396 91.5083 130.524H90.2936Z" fill="url(#paint0_linear_717:19236)"/>
-                <defs>
-                <linearGradient id="paint0_linear_717:19236" x1="-124.054" y1="501.359" x2="-124.054" y2="360.737" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg></div>
-            <div class="top_cloud_box" data-depth="1"><svg class="top_cloud_03 top_cloud" width="516" height="160" viewBox="0 0 516 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6544 159.166H508.901C514.271 151.454 515.166 142.078 515.166 131.966C515.166 105.631 493.845 84.2869 467.536 84.2869C462.07 84.2869 456.828 85.2149 451.969 86.9109C441.292 68.8631 421.665 56.7673 399.193 56.7673C397.243 56.7673 395.293 56.8633 393.375 57.0553C383.593 36.2235 362.432 21.7917 337.914 21.7917C322.378 21.7917 308.217 27.5837 297.413 37.1195C279.767 14.5278 252.277 0 221.397 0C186.554 0 156.027 18.4958 139.085 46.2074C139.053 46.2074 139.021 46.2074 138.989 46.2074C115.27 46.2074 95.3869 62.8152 90.3363 85.0229C86.0848 83.8069 81.6095 83.1349 77.0064 83.1349C54.1506 83.1349 35.0029 99.0707 30.0482 120.414C27.2032 118.942 24.0065 118.11 20.5861 118.11C9.20621 118.11 0 127.326 0 138.718C0 148.766 7.19236 157.118 16.6863 158.942V159.166H16.6544ZM123.677 143.614C124.188 143.774 124.7 143.934 125.243 144.094H123.549C123.581 143.934 123.613 143.774 123.677 143.614Z" fill="url(#paint0_linear_717:19235)"/>
-                <defs>
-                <linearGradient id="paint0_linear_717:19235" x1="257.583" y1="159.152" x2="257.583" y2="-0.048926" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg></div>
-            <div class="top_cloud_box" data-depth="0.5"><svg class="top_cloud_04 top_cloud"  width="423" height="131" viewBox="0 0 423 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.3699 130.365H417.595C421.994 124.066 422.727 116.409 422.727 108.15C422.727 86.6399 405.262 69.2072 383.712 69.2072C379.234 69.2072 374.94 69.9651 370.959 71.3503C362.214 56.6097 346.136 46.7303 327.728 46.7303C326.13 46.7303 324.533 46.8088 322.962 46.9656C314.949 29.9511 297.615 18.1638 277.531 18.1638C264.805 18.1638 253.205 22.8944 244.354 30.6829C229.9 12.2309 207.381 0.365234 182.086 0.365234C153.544 0.365234 128.537 15.4718 114.659 38.1055C114.633 38.1055 114.607 38.1055 114.58 38.1055C95.1511 38.1055 78.8639 51.67 74.7267 69.8083C71.2441 68.8152 67.5781 68.2663 63.8075 68.2663C45.0851 68.2663 29.4002 81.282 25.3415 98.7147C23.011 97.5124 20.3925 96.8329 17.5907 96.8329C8.26874 96.8329 0.727417 104.36 0.727417 113.664C0.727417 121.871 6.61908 128.693 14.3961 130.182V130.365H14.3699ZM102.012 117.663C102.431 117.794 102.85 117.925 103.295 118.055H101.907C101.959 117.925 101.985 117.794 102.012 117.663Z" fill="url(#paint0_linear_516:4309)"/>
-                <defs>
-                <linearGradient id="paint0_linear_516:4309" x1="544.991" y1="214.001" x2="544.991" y2="83.9722" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg></div>
-            <div class="top_cloud_box" data-depth="0.7"><svg class="top_cloud_05 top_cloud" width="670" height="206" viewBox="0 0 670 206" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.6598 206H661.852C668.836 196.019 670 183.884 670 170.797C670 136.712 642.27 109.088 608.055 109.088C600.946 109.088 594.128 110.289 587.809 112.484C573.923 89.1258 548.397 73.4709 519.171 73.4709C516.635 73.4709 514.099 73.5951 511.605 73.8436C498.883 46.8822 471.361 28.2038 439.474 28.2038C419.27 28.2038 400.853 35.7 386.801 48.0418C363.852 18.8026 328.099 0 287.939 0C242.624 0 202.921 23.9381 180.887 59.8038C180.845 59.8038 180.804 59.8038 180.762 59.8038C149.914 59.8038 124.056 81.2983 117.487 110.041C111.958 108.467 106.137 107.597 100.151 107.597C70.4257 107.597 45.5231 128.222 39.0792 155.846C35.3791 153.941 31.2218 152.864 26.7734 152.864C11.9732 152.864 0 164.792 0 179.536C0 192.54 9.35406 203.349 21.7014 205.71V206H21.6598ZM160.807 185.872C161.472 186.079 162.137 186.286 162.844 186.493H160.64C160.724 186.286 160.765 186.079 160.807 185.872Z" fill="url(#paint0_linear_516:4307)"/>
-                <defs>
-                <linearGradient id="paint0_linear_516:4307" x1="334.986" y1="206.002" x2="334.986" y2="-0.0440284" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg></div>
-            <div class="top_cloud_box" data-depth="0.7"><svg class="top_cloud_06 top_cloud" width="515" height="159" viewBox="0 0 515 159" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.649 159H508.737C514.105 151.296 515 141.93 515 131.829C515 105.521 493.685 84.199 467.386 84.199C461.921 84.199 456.681 85.126 451.823 86.8202C441.15 68.7913 421.529 56.7081 399.064 56.7081C397.115 56.7081 395.166 56.804 393.248 56.9958C383.47 36.1858 362.315 21.769 337.805 21.769C322.274 21.769 308.118 27.5549 297.317 37.0808C279.677 14.5127 252.195 0 221.326 0C186.494 0 155.976 18.4765 139.04 46.1592C139.008 46.1592 138.976 46.1592 138.944 46.1592C115.233 46.1592 95.3562 62.7497 90.3072 84.9342C86.057 83.7195 81.5832 83.0483 76.9816 83.0483C54.1332 83.0483 34.9916 98.9674 30.0385 120.289C27.1944 118.818 23.9988 117.987 20.5795 117.987C9.20328 117.987 0 127.194 0 138.574C0 148.611 7.19006 156.954 16.6809 158.776V159H16.649ZM123.605 143.464C124.116 143.624 124.628 143.784 125.171 143.944H123.477C123.541 143.784 123.573 143.624 123.605 143.464Z" fill="url(#paint0_linear_516:4308)"/>
-                <defs>
-                <linearGradient id="paint0_linear_516:4308" x1="257.489" y1="159.001" x2="257.489" y2="-0.0339831" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.8306" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg> </div>
+            <div class="layer" data-depth="1">
+                <img class="top_cloud_02 top_cloud" src="img/index/cloud_02.png" alt="">
+            </div>
+            <div class="layer" data-depth="0.6">
+                <img class="top_cloud_03 top_cloud" src="img/index/cloud_03.png" alt="">
+            </div>
+            <div class="layer" data-depth="1">
+                <img class="top_cloud_04 top_cloud" src="img/index/cloud_04.png" alt="">
+            </div>
+            <div class="layer" data-depth="0.7">
+                <img class="top_cloud_05 top_cloud" src="img/index/cloud_05.png" alt="">
+            </div>
+            <div class="layer" data-depth="0.3">
+                <img class="top_cloud_06 top_cloud" src="img/index/cloud_06.png" alt="">
+            </div>
             
         </div>
         <!-- bottom cloud -->   
@@ -510,8 +478,6 @@
         </div>
     </footer>
     <!--▲ footer ▲-->
-      <!-- parallax -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
@@ -519,5 +485,6 @@
     <!-- <script src="js/layout/locomotive.js"></script> -->
     <!-- <script src="js/layout/loading.js"></script> -->
     <script src="js/index.js"></script>
+    <script src="js/layout/lightball.js"></script>
 </body>
 </html>
