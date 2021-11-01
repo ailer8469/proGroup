@@ -5,8 +5,13 @@ $(function(){
         repeat: true,
         lerp:.02
     })
-    var $scene = $('.top_cloud_wrap').parallax({
-		scalarX: 100,
-		scalarY: 100,
-	});
 })
+const wrap=document.getElementById('top_cloud_wrap');
+const scene = new Parallax(wrap,{
+    scalarX: 10,
+	scalarY: 10,
+});
+for (var i = 0, l = this.layers.length; i < l; i++) {
+    var layer = this.layers[i];
+    if (this.transform3DSupport) this.accelerate(layer);
+}
