@@ -1249,6 +1249,7 @@ section {
 }
 
 .page_03 {
+  position: relative;
   height: 85vh;
   background-color: white;
 }
@@ -1368,6 +1369,20 @@ section {
   border-bottom: 3px solid #379595;
 }
 
+.page_03 .page_03_bg {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  max-width: 230px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/index/background_03.jpeg);
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: url(#clipping);
+          clip-path: url(#clipping);
+}
+
 @media (max-width: 1260px) {
   .page02_01 .ask_item:nth-child(4) {
     left: 14%;
@@ -1431,7 +1446,10 @@ section {
 
 @media (max-width: 768px) {
   .page_01 {
-    height: 120vh;
+    height: 117vh;
+  }
+  .page_01 .page_01_title {
+    top: 15%;
   }
   .top_cloud {
     -webkit-transform: translateY(0);
@@ -1447,10 +1465,10 @@ section {
             transform: translateY(5px);
   }
   .top_cloud_03 {
-    right: -20%;
+    right: -30%;
   }
   .top_cloud_04 {
-    right: -15%;
+    right: -20%;
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
   }
