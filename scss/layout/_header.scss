@@ -114,9 +114,13 @@ header{
     background-position: center;
     background-size: contain;
 }
-.burger.active{
+body.active{
+    overflow: hidden;
+    .burger{
     background-image: url('../img/close.svg');
 }
+}
+
 .nav-sp-bar{
     display: none;
     position: absolute;
@@ -130,6 +134,9 @@ header{
 .bar_wrap{
     @include flex(column,center,center);
     padding-top:15%;
+    ul{
+        width: 80%;
+    }
     li{
         margin-bottom: 90px;
         font-size: 18px;
@@ -139,10 +146,17 @@ header{
         text-align: center;
         color: white;
     }
+    li.sb_bar_ask{
+        border: 1px solid white;
+        padding: 20px;
+    }
+    
 }
 .nav_link{
+    margin-top: -60px;
     ul{
         @include flex("",center,center);
+        width: 100%;
     }
     li{
         margin: 30px;
@@ -152,6 +166,7 @@ header{
         background-position: center;
         background-size: contain;
         cursor: $click;
+        
     }
     li:nth-child(1){
         background-image: url('../img/link/facebook/sp.svg');
