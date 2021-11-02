@@ -133,7 +133,7 @@ section{
     width: 423px;
     transform: translateY(-160px);
     right: -15%;
-    z-index: 0;
+    z-index: 2;
 } 
 .top_cloud_05{
     width: 670px;
@@ -145,7 +145,7 @@ section{
     width: 515px;
     transform: translateY(-150px);
     right: 52%;
-    z-index: 2;
+    z-index: 0;
 } 
 
 .page_02{
@@ -200,7 +200,7 @@ section{
         padding: 13px 25px;
         background: rgba(255, 255, 255, 0.5);
         border: 1px solid white;
-        border-radius: 20px;
+        border-radius: 14px;
         color: $gray2;
         font-size: 16px;
         font-weight: 400;
@@ -372,7 +372,7 @@ section{
 }
 .page_03{
     position: relative;
-    height: 85vh;
+    height: 95vh;
     background-color: white;
     h2{
         @include flex("",flex-start,center);
@@ -458,6 +458,14 @@ section{
             left: 14%;
         }
     }
+    .page_03{
+        h2{
+            margin: 120px 0 67px 55px;
+        } 
+    .cooperate_wrap {
+        margin: 30px 0 0 50px;
+    }
+}
 }
 @media (max-width:$desktop){
     .index_link{
@@ -502,8 +510,9 @@ section{
             bottom: 15px;
         }
     }
+
 }
-@media (max-width:970px){
+@media (max-width:980px){
     .page02_01{
         .ask_item{
             padding: 10px 25px;
@@ -515,37 +524,256 @@ section{
             bottom: 520px;
         }
     }
-}
+    .page_03{
+        height: auto;
+        .cooperate_wrap{
+            margin: 30px auto auto 60px ;
+            width: 60%;
+        }
+    }
 
+}
+@media (max-width:860px){
+    .page02_02{
+        .card_wrap{
+            margin-top: 50px;
+            justify-content: center;
+        }
+        .card_box{
+            margin: 15px 10px;
+        }
+        .card_box:nth-child(3n+1),.card_box:nth-child(3n+3){
+            bottom: 0;
+        }
+        .card_box:nth-child(2n){
+            position: relative;
+            bottom: -60px;
+        }
+    }
+
+}
 @media (max-width:768px){
     .page_01{
         height:117vh;
+        background-size: 120px 120px,cover;
+
     }
     .page_01 .page_01_title {
         top: 15%;
     }
     // bottom cloud
-    .top_cloud{
-        transform: translateY(0);
-    }
     .top_cloud_01,.top_cloud_06{
         display: none;
     } 
     .top_cloud_02{
         width: 500px;
-        right: 60%;
-        transform: translateY(5px);
+        right: 55%;
+        transform: translateY(-35px);
     } 
     .top_cloud_03{
-        right: -30%;
+        right: -14%;
+        transform: translateY(-20px);
     } 
     .top_cloud_04{
-        right: -20%;
+        right: -13%;
+        transform: translateY(-120px);
+    } 
+    .top_cloud_05{
+        right: 53%;
+        transform: translateY(-145px);
+    } 
+    .page_02{
+        h2{
+            margin: 100px;
+        }
+    }
+    .page02_01{
+        .scroll_box{
+            display: none;
+        }
+        .ask_wrap{
+            height: 110vh;
+            margin-bottom: 200px;
+        }
+        .ask_item{
+            padding: 10px 20px;
+        }
+        .ask_item:nth-child(11),.ask_item:nth-child(12){
+            display: none;
+        }
+        .ask_item:nth-child(1){
+            left: -10%;
+            bottom: 800px;
+        }
+        .ask_item:nth-child(2){
+            left: -27%;
+            bottom: 280px;
+        }
+        .ask_item:nth-child(3){
+            left: 0%;
+            bottom: 425px;
+        }
+        .ask_item:nth-child(4){
+            bottom: 0;
+            left: 27%;
+        }
+        .ask_item:nth-child(5){
+            bottom: 180px;
+            left: 15%;
+        }
+        .ask_item:nth-child(6){
+            left: 28%;
+            bottom: 600px;
+        }
+        .ask_item:nth-child(7){
+            left: 48%;
+        }
+        .ask_item:nth-child(8){
+            left: 32%;
+            bottom: 325px;
+        }
+        .ask_item:nth-child(9){
+            bottom: 715px;
+        }
+        .ask_item:nth-child(10){
+            left: 84%;
+            bottom: 130px;
+        }
+    }
+    .page_03{
+        .cooperate_wrap{
+            max-width: 400px;
+            width: 100%;
+            margin: 30px auto auto 100px;
+        }
+        .page_03_bg{
+            top: 30%;
+        }
+    }
+}
+@media (max-width:670px){
+    .page_03 .cooperate_wrap{
+        margin: auto;
+        justify-content: space-between;
+    }
+    .page_03_bg{
+        display: none;
+    }
+}
+@media (max-width:575px){
+    .page02_02{
+        .cloud{
+            display: none;
+        }
+        .card_box:nth-child(2n) {
+            bottom: 0;
+        }
+    }
+}
+@media (max-width:420px){
+    .page_01{
+        background-size: 80px 80px,cover;
+         // bottom cloud
+    .top_cloud_02{
+        right: 27%;
+        transform: translateY(12px);
+    } 
+    .top_cloud_03{
+        right: -66%;
+        transform: translateY(-4px);
+    } 
+    .top_cloud_04{
+        right: -48%;
         transform: translateY(-100px);
     } 
     .top_cloud_05{
-        right: 56%;
-        transform: translateY(-100px);
+        right: 39%;
+        transform: translateY(-65px);
     } 
+    .scroll_box{
+        bottom: 80px;
+        .index_scrolldown{
+            font-size: 14px;
+        }    
+    }
+    }
+    .page_01 .page_01_title {
+        top: 10%;
+        left: 20%;
+        p {
+        font-size: 24px;
+        margin: 9px 0;
+    }
+    span{
+        font-size: 16px;
+    }
+}
+    .page_02 h2 {
+        margin: 100px 20px;
+        font-size: 24px;
+    }
+    .page_02 .ask_wrap{
+        margin-bottom: 150px;
+    }
+    .page02_01 .ask_item:nth-child(2) {
+        bottom: 260px;
+    }
+    .page02_01 .ask_item:nth-child(10) {
+        bottom: 105px;
+    }
+    .page_03 .cooperate_wrap {
+        max-width: none;
+        width: 90%;
+        .cooperate_item{
+            margin: 10px;
+        }
+    }
+}
+@media (max-width:$mobile){
+    .page_01{
+        background-size: 65px 65px,cover;
+    }
+    .page_01 .page_01_title {
+        p {
+        font-size: 21px;
+        margin: 5px 0;
+    }
+        span{
+            font-size: 14px;
+        }
+    }
+    .page_01 .top_cloud_04 {
+        right: -80%;
+    }
+    .page_01 .top_cloud_03 {
+        right: -83%;
+    }
+    .page_02 h2 {
+        margin: 100px 10px;
+        font-size: 20px;
+    }
+    .page02_01 .ask_item {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+@media (max-width:310px){
+    .page_03 .cooperate_wrap {
+        justify-content: center;
+    }
+}
+
+@media (max-width:280px){
+    .page_01 .top_cloud_02 {
+        right: 5%;
+    }
+    .page_01 .top_cloud_04 {
+        right: -102%;
+    }
+    .page_01 .top_cloud_03 {
+        right: -106%;
+        transform: translateY(3px);
+    }
+
 
 }

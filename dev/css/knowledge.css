@@ -303,7 +303,11 @@ header {
   background-size: contain;
 }
 
-.burger.active {
+body.active {
+  overflow: hidden;
+}
+
+body.active .burger {
   background-image: url("../img/close.svg");
 }
 
@@ -335,6 +339,10 @@ header {
   padding-top: 15%;
 }
 
+.bar_wrap ul {
+  width: 80%;
+}
+
 .bar_wrap li {
   margin-bottom: 90px;
   font-size: 18px;
@@ -343,6 +351,15 @@ header {
   letter-spacing: 0.15em;
   text-align: center;
   color: white;
+}
+
+.bar_wrap li.sb_bar_ask {
+  border: 1px solid white;
+  padding: 20px;
+}
+
+.nav_link {
+  margin-top: -60px;
 }
 
 .nav_link ul {
@@ -359,6 +376,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .nav_link li {

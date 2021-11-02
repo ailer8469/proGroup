@@ -62,7 +62,8 @@
             <button class="burger"></button>
         </div>
     </header>
-    <div class="nav-sp-bar">
+    <div id="fixed-target">
+        <div class="nav-sp-bar" data-scroll data-scroll-sticky data-scroll-target="#fixed-target" >
         <div class="bar_wrap">
             <ul>
                 <a href="about.html"><li>關於博群</li></a>
@@ -81,6 +82,8 @@
             </div>
         </div>
     </div>
+    </div>
+   
     <!--▲ header ▲-->
     <main>
         <section class="page_01">
@@ -236,9 +239,9 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
-    <script src="js/about.js"></script>
-    <script src="js/layout/locomotive.js"></script>
-    <script src="js/layout/loading.js"></script>
+    <!-- <script src="js/layout/locomotive.js"></script> -->
+    <script src="js/about.js"></script> 
     <script src="js/layout/burger.js"></script>
+    <script src="js/layout/loading.js"></script>
 </body>
 </html>
