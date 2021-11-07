@@ -71,6 +71,8 @@ section{
         @include flex("",center,center);
     }
     li{
+        display: inline-block;
+        position: relative;
         margin: 15px;
         width: 40px;
         height: 40px;
@@ -89,6 +91,10 @@ section{
         background-image: url('../img/link/phone/normal.svg');
         &:hover{
             background-image: url('../img/link/phone/hover.svg');
+            .poptext{
+                visibility: visible;
+                animation: fadeIn 1s;  
+            }
         }
     }
     li:nth-child(3){
@@ -103,6 +109,33 @@ section{
             background-image: url('../img/link/mail/hover.svg');
         }
     }
+}
+.poptext {
+    visibility: hidden;
+    width: 160px;
+    background: #FFFFFF80;
+    color:$gray3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    &:hover{
+        span{
+            color: $green;
+        }
+    }
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 // bottom cloud
 .top_cloud{

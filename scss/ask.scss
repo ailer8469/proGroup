@@ -1,0 +1,17 @@
+@import 'mixins/mix';
+@import 'base/var';
+@import 'base/reset';
+@import 'base/global';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/loading';
+
+html{
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../img/ask/consult_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
