@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    
+
     let modal=$('.cooperate_modal');
     let open_modal=$('.cooperate_item');
     let close_modal =$(".modal_close");
