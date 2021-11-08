@@ -765,6 +765,332 @@ section {
   line-height: 21px;
 }
 
+.alert_modal {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: url("../img/mouse/click.svg"), default;
+}
+
+.modal-content {
+  position: relative;
+  background: #ffebc122;
+  color: #121212;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 50%;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: rgba(18, 18, 18, 0.51);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.modal-body {
+  padding: 20px 30px;
+}
+
+.map {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.map .body_map {
+  position: absolute;
+  right: 15%;
+  background-image: url("../img/index/body.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+}
+
+.map .up_board {
+  position: absolute;
+  right: 30%;
+  top: -3%;
+  width: 136px;
+}
+
+.map .down_board {
+  position: absolute;
+  right: 14%;
+  top: 23%;
+  width: 100px;
+}
+
+.map .book {
+  position: absolute;
+  right: 36%;
+  top: 35%;
+  width: 125px;
+}
+
+.map .stairs {
+  position: absolute;
+  right: 80%;
+  top: 300px;
+  width: 100%;
+  max-width: 96px;
+  z-index: 1;
+}
+
+.map .pig_map_off {
+  position: absolute;
+  right: 89%;
+  top: 280px;
+  width: 100%;
+  max-width: 294px;
+}
+
+.map .pig_map_on {
+  display: none;
+  position: absolute;
+  right: 84%;
+  top: -124px;
+  width: 100%;
+  max-width: 354px;
+  -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+          filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+}
+
+.map_topic {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  z-index: 3;
+}
+
+.map_topic span {
+  color: #B8925A;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+}
+
+.map_topic svg {
+  position: absolute;
+  height: 1px;
+}
+
+.map_box.member .map_topic {
+  top: -70px;
+  left: 82%;
+}
+
+.map_box.member svg {
+  top: 10px;
+  right: 80px;
+  width: 100px;
+}
+
+.map_box.new .map_topic {
+  top: -45px;
+  left: -2%;
+}
+
+.map_box.new svg {
+  top: 7px;
+  right: -110px;
+  width: 100px;
+}
+
+.map_box.about .map_topic {
+  width: 100px;
+  top: 170px;
+  left: 98%;
+}
+
+.map_box.about svg {
+  top: 7px;
+  right: 109px;
+  width: 100px;
+}
+
+.map_box.knowledge .map_topic {
+  width: 100px;
+  top: 294px;
+  left: 108%;
+}
+
+.map_box.knowledge svg {
+  width: 240px;
+  top: 7px;
+  right: 108px;
+}
+
+.map_box.ask .map_topic {
+  top: 235px;
+  left: -61%;
+}
+
+.map_box.ask svg {
+  top: 7px;
+  right: -305px;
+}
+
+.map_box a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 700px;
+}
+
+.map_box .loader-disc-bouncer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 3;
+}
+
+.map_box .loader-disc-bouncer:before, .map_box .loader-disc-bouncer:after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.map_box .loader-disc-bouncer:before {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-animation: bounce-disks 1s infinite alternate ease;
+          animation: bounce-disks 1s infinite alternate ease;
+}
+
+.map_box .loader-disc-bouncer:after {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  -webkit-animation: bounce-disks2 1s .5s infinite alternate ease;
+          animation: bounce-disks2 1s .5s infinite alternate ease;
+}
+
+.map_box .new_ball {
+  left: 29%;
+  top: -60px;
+}
+
+.map_box .mem_ball {
+  left: 56%;
+  top: -80px;
+}
+
+.map_box .about_ball {
+  left: 71%;
+  top: 155px;
+}
+
+.map_box .know_ball {
+  left: 58%;
+  top: 280px;
+}
+
+.map_box .ask_ball {
+  left: -30%;
+  top: 220px;
+}
+
+@-webkit-keyframes bounce-disks {
+  to {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@keyframes bounce-disks {
+  to {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@-webkit-keyframes bounce-disks2 {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes bounce-disks2 {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
 .scroll_box {
   position: absolute;
   left: 0;
@@ -823,12 +1149,6 @@ section {
   background-image: url("../img/link/phone/hover.svg");
 }
 
-.index_link li:nth-child(2):hover .poptext {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-}
-
 .index_link li:nth-child(3) {
   background-image: url("../img/link/line/normal.svg");
 }
@@ -846,7 +1166,7 @@ section {
 }
 
 .poptext {
-  visibility: hidden;
+  display: none;
   width: 160px;
   background: #FFFFFF80;
   color: #828282;
@@ -1448,17 +1768,6 @@ section {
   background-size: cover;
   -webkit-clip-path: url(#clipping);
           clip-path: url(#clipping);
-}
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
 }
 
 @keyframes animatetop {

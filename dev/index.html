@@ -88,6 +88,80 @@
         <div id="container">
             <canvas id="pixie" width="1420" height="705"></canvas>
         </div>
+        <!-- center -->
+        <div class="map_wrap">
+            <div class="map">
+                <div class="body_map">
+                    <div class="map_box new">
+                        <a href="new.html">
+                            <div class="map_topic">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                </svg>
+                                <span>最新消息</span>
+                            </div>
+                            <div class="loader-disc-bouncer new_ball"></div>
+                            <img src="" alt="" class="up_board">
+                        </a>
+                    </div>
+                    <div class="map_box member">
+                        <a href="member.html">
+                            <div class="map_topic">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                </svg>
+                                <span>夥伴介紹</span>
+                            </div>
+                            <div class="loader-disc-bouncer mem_ball"></div>
+                            
+                            <img src="img/index/up_board.svg" alt="" class="up_board">
+                        </a>
+                    </div>
+                    <div class="map_box about">
+                        <a href="about.html">
+                            <div class="map_topic">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                </svg>
+                                <span>關於博群</span>
+                            </div>
+                            <div class="loader-disc-bouncer about_ball"></div>
+                            
+                            <img src="img/index/right_board.svg" alt="" class="down_board">
+                        </a>
+                    </div>
+                    <div class="map_box knowledge">
+                        <a href="knowledge.html">
+                            <div class="map_topic">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 300 0"/>
+                                </svg>
+                                <span>法律小知識</span>
+                            </div>
+                            <div class="loader-disc-bouncer know_ball"></div>
+                            
+                            <img src="img/index/book.svg" alt="" class="book">
+                        </a>
+                    </div>
+                    <img src="img/index/stairs.svg" alt="" class="stairs">
+                    <div class="map_box ask">
+                        <a href="ask.html">
+                            <div class="loader-disc-bouncer ask_ball"></div>
+                            <div class="map_topic">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                </svg>
+                                <span>我要詢問</span>
+                            </div>
+                            <img class="pig_map_off" src="img/index/pig.png" alt="">
+                            <lottie-player class="pig_map_on" src="https://assets10.lottiefiles.com/packages/lf20_end7xcc1.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
         <div class="page_01_title">
             <p>博群的專業</p>
             <p>來守護您的事業</p>
@@ -97,10 +171,11 @@
         <div class="index_link">
             <ul>
                 <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
-                <li><a>
+                <li id="link_phone"><a>
                     <p class="poptext" id="popnumber">
                         04 3602 2825
                         <span>複製</span>
+                        <p id="copyPhone" style="opacity: 0;">0436022825</p>
                     </p>
                 </a></li>
                 <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
@@ -475,6 +550,18 @@
         </div>
     </div>
 
+    <!-- copy alert -->
+    <div id="alert_modal" class="alert_modal">
+        <div class="modal-content">
+            <div class="modal-header">
+            <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+            <p>複製成功！</p>
+            </div>
+        </div>
+        
+    </div>
 
     <!--▼ footer ▼-->
     <footer>
