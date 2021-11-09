@@ -120,6 +120,8 @@
                 width: 56px;
             }
             span{
+                position: absolute;
+                width: 250px;
                 color: $gray2;
                 font-size: 18px;
                 font-weight: 500;
@@ -128,16 +130,26 @@
             }
         }
         .ball_item:nth-child(1){
-            right: 100px;
-            top: -70px;
+            right: 120px;
+            top: -20px;
+            span{
+                top: -40px;
+                left: -70px;
+            }
         }
         .ball_item:nth-child(2){
-            right: 350px;
-            top: 137px;
+            right: 345px;
+            top: 270px;
+            span{
+                left: -220px;
+            }
         }
         .ball_item:nth-child(3){
-            right: -97px;
+            right: -26px;
             top: 170px;
+            span{
+                left: 70px;
+            }
         }
     }
 }

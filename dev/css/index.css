@@ -740,7 +740,7 @@ section {
 
 .page_01 .page_01_title {
   position: absolute;
-  left: 15%;
+  left: 25%;
   top: 25%;
   width: 300px;
   letter-spacing: 0.1em;
@@ -748,6 +748,7 @@ section {
 }
 
 .page_01 .page_01_title p {
+  opacity: 0;
   color: #886024;
   font-size: 32px;
   line-height: 38px;
@@ -835,6 +836,7 @@ section {
 .map {
   position: absolute;
   top: 20%;
+  right: 6%;
   width: 100%;
 }
 
@@ -849,25 +851,55 @@ section {
   height: 100vh;
 }
 
-.map .up_board {
+.map .up_board_off {
   position: absolute;
   right: 30%;
   top: -3%;
   width: 136px;
 }
 
-.map .down_board {
+.map .up_board_on {
+  display: none;
+  position: absolute;
+  right: -6%;
+  top: -21%;
+  width: 650px;
+  -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+          filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+}
+
+.map .down_board_off {
   position: absolute;
   right: 14%;
   top: 23%;
   width: 100px;
 }
 
-.map .book {
+.map .down_board_on {
+  display: none;
+  position: absolute;
+  right: -20%;
+  top: -24%;
+  width: 700px;
+  -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+          filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+}
+
+.map .book_off {
   position: absolute;
   right: 36%;
   top: 35%;
   width: 125px;
+}
+
+.map .book_on {
+  display: none;
+  position: absolute;
+  right: 14%;
+  top: -10%;
+  width: 276px;
+  -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+          filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
 }
 
 .map .stairs {
@@ -881,8 +913,8 @@ section {
 
 .map .pig_map_off {
   position: absolute;
-  right: 89%;
-  top: 280px;
+  right: 90%;
+  top: 267px;
   width: 100%;
   max-width: 294px;
 }
@@ -891,11 +923,16 @@ section {
   display: none;
   position: absolute;
   right: 84%;
-  top: -124px;
+  top: -100px;
   width: 100%;
   max-width: 354px;
   -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
           filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+}
+
+.path-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .map_topic {
@@ -907,6 +944,7 @@ section {
 }
 
 .map_topic span {
+  display: none;
   color: #B8925A;
   font-size: 16px;
   font-weight: 500;
@@ -1088,6 +1126,32 @@ section {
   to {
     -webkit-transform: scale(2);
             transform: scale(2);
+  }
+}
+
+@-webkit-keyframes up-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes up-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1804,7 +1868,7 @@ section {
   overflow: auto;
   background-color: black;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #37959539;
   /* Black w/ opacity */
   display: none;
 }

@@ -917,6 +917,8 @@ footer {
 }
 
 .page_02 .page02_circle .ball_item span {
+  position: absolute;
+  width: 250px;
   color: #4f4f4f;
   font-size: 18px;
   font-weight: 500;
@@ -925,18 +927,31 @@ footer {
 }
 
 .page_02 .page02_circle .ball_item:nth-child(1) {
-  right: 100px;
-  top: -70px;
+  right: 120px;
+  top: -20px;
+}
+
+.page_02 .page02_circle .ball_item:nth-child(1) span {
+  top: -40px;
+  left: -70px;
 }
 
 .page_02 .page02_circle .ball_item:nth-child(2) {
-  right: 350px;
-  top: 137px;
+  right: 345px;
+  top: 270px;
+}
+
+.page_02 .page02_circle .ball_item:nth-child(2) span {
+  left: -220px;
 }
 
 .page_02 .page02_circle .ball_item:nth-child(3) {
-  right: -97px;
+  right: -26px;
   top: 170px;
+}
+
+.page_02 .page02_circle .ball_item:nth-child(3) span {
+  left: 70px;
 }
 
 .page_03 {

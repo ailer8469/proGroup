@@ -14,13 +14,9 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!-- locomotive -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <title>我要詢問</title>
 </head>
 <body data-scroll-container>
@@ -83,6 +79,128 @@
     </div>
     <!--▲ header ▲-->
     <main>
+        <div id="background_color"></div>
+        <div class="top_header"></div>
+        <section class="page_01 section">
+            <!-- background animation -->
+            <!-- center -->
+            <div class="page_01_center">
+                <div class="map_wrap">
+                <div class="map">
+                    <div class="body_map">
+                        <div class="map_box new">
+                            <a href="new.html">
+                                <div class="loader-disc-bouncer new_ball"></div>
+                                <img src="" alt="" class="up_board">
+                            </a>
+                        </div>
+                        <div class="map_box member">
+                            <a href="member.html">
+                                <div class="loader-disc-bouncer mem_ball"></div>
+                                <img src="img/index/up_board.svg" alt="" class="up_board_off">
+                            </a>
+                        </div>
+                        <div class="map_box about">
+                            <a href="about.html">
+                                <div class="loader-disc-bouncer about_ball"></div>
+                                <img src="img/index/right_board.svg" alt="" class="down_board_off">
+                            </a>
+                        </div>
+                        <div class="map_box knowledge">
+                            <a href="knowledge.html">
+                                <div class="loader-disc-bouncer know_ball"></div>
+                                <img src="img/index/book.svg" alt="" class="book_off">
+                            </a>
+                        </div>
+                        <img src="img/index/stairs.svg" alt="" class="stairs">
+                        <div class="map_box ask">
+                            <a href="ask.html">
+                                <div class="loader-disc-bouncer ask_ball"></div> 
+                                <img class="pig_map_off" src="img/index/pig.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>      
+                <div class="page_01_title">
+                    <p>博群的專業</p>
+                    <p>來守護您的事業</p>
+                    <span>Protect Your bussiness</span>
+                </div>
+            </div>
+            <div class="index_link">
+                <ul>
+                    <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
+                    <li id="link_phone"><a>
+                        <p class="poptext" id="popnumber">
+                            04 3602 2825
+                            <span>複製</span>
+                            <p id="copyPhone" style="opacity: 0;">0436022825</p>
+                        </p>
+                    </a></li>
+                    <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+            <div class="scroll_box">
+                <div class="index_scrolldown">
+                Scroll down
+                <svg width="2" height="47" viewBox="0 0 2 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0V47" stroke="#8FCFC4" stroke-width="2"/>
+                </svg>
+                <svg class="move_line" width="2" height="14" viewBox="0 0 2 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0L1 14" stroke="#379595" stroke-width="2"/>
+                </svg>                
+            </div>
+            </div>
+        </section>
+
+        <section class="postcard">
+            <button class="close"></button>
+            <div class="card_text">
+                <h1>有話想說</h1>
+                <p>我們願意傾聽您的需求，也歡迎撥打<br>
+                    ：04-36022825</p> 
+                <form class="consult_form">
+                    <h2>姓名</h2>
+                    <input type="text">
+                    <div class="warning">
+                        <img src="" alt="">
+                        尚未填寫聯繫姓名
+                    </div>
+
+                    <h2>信箱</h2>
+                    <input type="email" name="" id="">
+                    <div class="warning">
+                        <img src="" alt="">
+                        信箱為無效信箱
+                    </div>
+
+                    <h2>咨詢類別</h2>
+                    <select name="consult_type" required>
+                        <option selected>請選擇咨詢類別</option>
+                        <option>公司投資</option>
+                        <option>投資保險</option>
+                        <option>智慧財產權</option>
+                        <option>產權分配</option>
+                    </select>
+                    <div class="warning">
+                        <img src="" alt="">
+                        尚未選擇咨詢類別
+                    </div>
+                    
+                    <textarea name="consult_text" id="consult_text" cols="30" rows="10" required>
+                        填寫與您聯繫之信箱
+                    </textarea>
+                    <div class="warning">
+                        <img src="" alt="">
+                        尚未填寫諮詢內容
+                    </div>
+                    <input type="submit" value="發送">
+                </form>
+            </div>
+                
+        </section>
 
     </main>
     <!-- GSAP -->

@@ -14,6 +14,9 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -133,7 +136,8 @@
         </section>
         <section class="page_03">
             <div class="dream_box">
-                <div class="dream_text">
+                <div class="dream_text"
+                data-aos="fade-left">
                     <h2>01 <span>創建 —— 夢想的開始</span></h2>
                     <p>事業甫創立之初，從營運計畫擬定、公司命名、商標申請、商業登記、簽訂契約、稅務規劃...等。各種項細節，若不小心，都有可能成為未來的風險。</p>
                 </div>
@@ -145,13 +149,17 @@
                 <div class="dream_picture"  data-scroll data-scroll-speed="2">
                     <img src="img/about/dream_02.png" alt="">
                 </div>
-                <div class="dream_text">
+                <div class="dream_text"
+                data-aos="fade-left"
+                data-aos-duration="2000">
                     <h2>02 <span>成長 —— 夢想的延伸</span></h2>
                     <p>各種美好條件聚合後事業慢慢成長。公司成立之後需要調養體質，例如研發產品、設定商業模式，甚至是物料來源、批發管道、行銷策略...等。各種上下遊與合作端的契約擬定，均需法律支持。</p>
                 </div>
             </div>
             <div class="dream_box">
-                <div class="dream_text">
+                <div class="dream_text"
+                data-aos="fade-left"
+                data-aos-duration="2000">
                     <h2>03 <span>壯大 —— 成為一群人的夢想</span></h2>
                     <p>企業正式面臨更大的挑戰。例如聘雇人力、勞資關係、營運規制、設計產品、獲利模式...等，方面進行合理的配置過程。各種內部資源的整合，都需要契約來規範。</p>
                 </div>
@@ -163,7 +171,9 @@
                 <div class="dream_picture"  data-scroll data-scroll-speed="2">
                     <img src="img/about/dream_04.png" alt="">
                 </div>
-                <div class="dream_text">
+                <div class="dream_text"
+                data-aos="fade-left"
+                data-aos-duration="2000">
                     <h2>04 <span>永續 —— 夢想開花結果</span></h2>
                     <p>企業經營三至五年後，各項營運項目更加確立、營收也會更加穩定，即將邁入中小型規模的企業。此時，股東協議、員工認設、開放加盟、企業轉型、企業併購...等。都需要專業的法律團隊，為您把關。</p>
                 </div>
@@ -171,12 +181,24 @@
         </section>
         <section class="page_04">
             <ul>
-                <li>其實營經事業</li>
-                <li>大部份困擾你的其實都是法律問題</li>  
-                <li>我們需要知道暗礁在哪裡</li>  
-                <li>並做好應對準備</li>
-                <li>讓專業的團隊</li>  
-                <li>成為你創業路上的靠山</li>
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">其實營經事業</li>
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">大部份困擾你的其實都是法律問題</li>  
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">我們需要知道暗礁在哪裡</li>  
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">並做好應對準備</li>
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">讓專業的團隊</li>  
+                <li
+                data-aos="fade-up"
+                data-aos-duration="2000">成為你創業路上的靠山</li>
             </ul>
             <div class="pic_carousel">
                 <img src="img/about/1.jpg" alt="">
@@ -238,6 +260,8 @@
     <!--▲ footer ▲-->
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
     <!-- javascript -->
     <!-- <script src="js/layout/locomotive.js"></script> -->
     <script src="js/about.js"></script> 
