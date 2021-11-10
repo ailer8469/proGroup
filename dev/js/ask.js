@@ -16,9 +16,11 @@ let modal=document.querySelector('.postcard_wrap');
 let close_modal =document.querySelector(".close");
 let open_modal=document.querySelector('.nav_ask');
 open_modal.addEventListener("click", () => {
-    card.style.display = "flex";  
+    card.style.display = "flex";
     if(animationCompleted = true){
         animation.playSegments([0,120], true); 
+    }else{
+        animation.stop(); 
     }
     animation.addEventListener("complete", () => {
         card.style.display = "none";
