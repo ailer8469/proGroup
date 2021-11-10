@@ -262,10 +262,12 @@ header {
   padding: 26px 46px;
   white-space: nowrap;
   background-color: #379595;
-}
-
-.nav_ask a {
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0.15em;
+  cursor: url("../img/mouse/click.svg"), default;
 }
 
 .nav-sp {

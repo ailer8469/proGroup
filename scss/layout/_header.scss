@@ -77,10 +77,12 @@ header{
     padding: 26px 46px;
     white-space:nowrap;
     background-color: $green;
-    a{
-        color:white;
-    }
-    
+    color:white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.15em;
+    cursor: $click;
 }
 
 .nav-sp{
