@@ -240,3 +240,53 @@
         border-top: solid #ACC0D8 1px;
     }
 }
+.sp{
+    display: none;
+}
+@media (max-width:600px){
+    .pc{
+        display: none;
+    }
+    .sp{
+        display: block;
+    }
+    .new_global .new_wrap{
+        max-width: auto;
+        margin: 30px;
+    }
+    .new_item{
+        margin: 20px 40px;
+        .new_img{
+            @include flex("",flex-start,flex-start);
+            max-width: none;
+            h3{
+                margin-top: 10px;
+                margin-left:10px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 0.15em;
+            }
+            img{
+                width: 50%;
+            }
+        }
+        .new_info{
+            img{
+                margin-right: 10px;
+                width: 23px;
+            }
+        }
+    }
+    .new_item .new_info{
+        @include flex("",flex-start,center);
+        margin-bottom: 0;
+        margin: 10px 0;
+        .new_time_stage{
+            width: 100%;
+            margin-left: 5px;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+    }
+}
