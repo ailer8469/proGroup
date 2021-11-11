@@ -202,6 +202,25 @@ header {
   margin: 0 50px;
 }
 
+.nav_item .active {
+  color: #379595;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.nav_item .active::before {
+  -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  content: "";
+  width: 2px;
+  height: 170%;
+  background: #8BCDC1;
+  position: absolute;
+  left: 49%;
+  top: -150%;
+  color: #379595;
+}
+
 @-webkit-keyframes sdl {
   0% {
     -webkit-transform: scale(1, 0);
@@ -711,6 +730,7 @@ footer {
 }
 
 .top_slider {
+  position: relative;
   width: 100vw;
   height: 90vh;
   overflow: hidden;
@@ -718,6 +738,11 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.top_carousel {
+  position: absolute;
+  width: 70%;
 }
 
 .top_new_wrap {
@@ -747,6 +772,9 @@ footer {
 }
 
 .top_new_wrap .top_new_title {
+  -webkit-animation: fade_in 1s .5s forwards;
+          animation: fade_in 1s .5s forwards;
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,6 +796,31 @@ footer {
           clip-path: polygon(2% 0, 92% 0, 100% 100%, 0% 100%);
   background-color: #4f4f4f;
   color: white;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.top_new_wrap .top_new_title:hover {
+  background: #379595;
+}
+
+.top_new_wrap .top_new_title:hover::before {
+  width: 100%;
+}
+
+.top_new_wrap .top_new_title::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 110%;
+  width: 0%;
+  content: '';
+  background: #379595;
+  z-index: -1;
+  border-radius: 20px;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
 }
 
 .top_new_wrap .top_new_title .top_new_word {
@@ -863,6 +916,32 @@ footer {
 @keyframes dash {
   to {
     stroke-dashoffset: 500;
+  }
+}
+
+@-webkit-keyframes fade_in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 

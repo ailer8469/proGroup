@@ -215,3 +215,91 @@ ul{
     }
 }
 }
+@media (max-width:650px){
+    .postcard{
+        padding: 0;
+        width: 550px;
+        .card_text{
+            padding: 20px;
+            width: 70%;
+            h1{
+                font-size: 20px;
+            }
+            .consult_form{
+                padding: 5px;
+                .consult_box{
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width:550px){
+    .postcard{
+        max-width: none;
+        max-height: none;
+        height: auto;
+        width: 450px;
+        .close{
+            right: 6%;
+            top: 2%;
+            width: 25px;
+        }
+    }
+}
+@media (max-width:450px){
+    .postcard{
+        padding: 20px;
+        background-image: url('../img/ask/paper_sp.png');
+        .card_text{
+            width: 60%;
+            h1{
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+        .close{
+            top: 2%;
+            right: 21%;
+        }
+    }
+}
+@media (max-width:400px){
+    .postcard{
+        .card_text{
+            width: 70%;
+        }
+        .close{
+            right: 18%;
+        }
+    }
+}
+@media (max-width:350px){
+    .postcard{
+        .card_text{
+            width: 80%;
+        }
+        .close{
+            right: 12%;
+        }
+    }
+}
+@media (max-width:300px){
+    .postcard{
+        width: 260px;
+        .card_text{
+            width: 90%;
+        }
+        .close{
+            right: 7%;
+        }
+    }
+}
+@media (max-width:280px){
+    .postcard{
+        .close{
+            right: 5%;
+            top: 4%;
+        }
+    }
+}

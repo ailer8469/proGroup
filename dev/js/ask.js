@@ -6,10 +6,7 @@ animation = lottie.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'https://assets10.lottiefiles.com/packages/lf20_ckm9hwyr.json'
-});
-animation.addEventListener("DOMLoaded", () => {
-    console.log("animation loaded!");
+    path: "https://assets3.lottiefiles.com/packages/lf20_fpv1mcf5.json"
 });
 //open ask modal
 let modal=document.querySelector('.postcard_wrap');
@@ -18,7 +15,7 @@ let open_modal=document.querySelector('.nav_ask');
 open_modal.addEventListener("click", () => {
     card.style.display = "flex";
     if(animationCompleted = true){
-        animation.playSegments([0,120], true); 
+        animation.playSegments([0,100], true); 
     }else{
         animation.stop(); 
     }
@@ -28,7 +25,7 @@ open_modal.addEventListener("click", () => {
         animationCompleted = false;
     });
 });
-close_modal.addEventListener("click", (e) => {
+close_modal.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
@@ -49,4 +46,6 @@ $(function(){
         var parent = $(this).closest('.select');
         parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
     });
+
+    //check
 });

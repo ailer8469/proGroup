@@ -203,6 +203,25 @@ header {
   margin: 0 50px;
 }
 
+.nav_item .active {
+  color: #379595;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.nav_item .active::before {
+  -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  content: "";
+  width: 2px;
+  height: 170%;
+  background: #8BCDC1;
+  position: absolute;
+  left: 49%;
+  top: -150%;
+  color: #379595;
+}
+
 @-webkit-keyframes sdl {
   0% {
     -webkit-transform: scale(1, 0);
@@ -1044,5 +1063,94 @@ html {
 
 .consult_form .consult_box .select ul li:hover {
   background: #B8925A33;
+}
+
+@media (max-width: 650px) {
+  .postcard {
+    padding: 0;
+    width: 550px;
+  }
+  .postcard .card_text {
+    padding: 20px;
+    width: 70%;
+  }
+  .postcard .card_text h1 {
+    font-size: 20px;
+  }
+  .postcard .card_text .consult_form {
+    padding: 5px;
+  }
+  .postcard .card_text .consult_form .consult_box {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .postcard {
+    max-width: none;
+    max-height: none;
+    height: auto;
+    width: 450px;
+  }
+  .postcard .close {
+    right: 6%;
+    top: 2%;
+    width: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .postcard {
+    padding: 20px;
+    background-image: url("../img/ask/paper_sp.png");
+  }
+  .postcard .card_text {
+    width: 60%;
+  }
+  .postcard .card_text h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .postcard .close {
+    top: 2%;
+    right: 21%;
+  }
+}
+
+@media (max-width: 400px) {
+  .postcard .card_text {
+    width: 70%;
+  }
+  .postcard .close {
+    right: 18%;
+  }
+}
+
+@media (max-width: 350px) {
+  .postcard .card_text {
+    width: 80%;
+  }
+  .postcard .close {
+    right: 12%;
+  }
+}
+
+@media (max-width: 300px) {
+  .postcard {
+    width: 260px;
+  }
+  .postcard .card_text {
+    width: 90%;
+  }
+  .postcard .close {
+    right: 7%;
+  }
+}
+
+@media (max-width: 280px) {
+  .postcard .close {
+    right: 5%;
+    top: 4%;
+  }
 }
 /*# sourceMappingURL=ask.css.map */

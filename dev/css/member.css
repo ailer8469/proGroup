@@ -202,6 +202,25 @@ header {
   margin: 0 50px;
 }
 
+.nav_item .active {
+  color: #379595;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.nav_item .active::before {
+  -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  content: "";
+  width: 2px;
+  height: 170%;
+  background: #8BCDC1;
+  position: absolute;
+  left: 49%;
+  top: -150%;
+  color: #379595;
+}
+
 @-webkit-keyframes sdl {
   0% {
     -webkit-transform: scale(1, 0);
@@ -714,10 +733,8 @@ html {
   width: 100vw;
   height: 100%;
   overflow: hidden;
-  background-image: url("../img/member/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFEBC1), color-stop(87.5%, #C1EDE2));
+  background: linear-gradient(180deg, #FFEBC1 0%, #C1EDE2 87.5%);
 }
 
 .member_slider {

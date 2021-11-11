@@ -202,6 +202,25 @@ header {
   margin: 0 50px;
 }
 
+.nav_item .active {
+  color: #379595;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.nav_item .active::before {
+  -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  content: "";
+  width: 2px;
+  height: 170%;
+  background: #8BCDC1;
+  position: absolute;
+  left: 49%;
+  top: -150%;
+  color: #379595;
+}
+
 @-webkit-keyframes sdl {
   0% {
     -webkit-transform: scale(1, 0);
@@ -732,6 +751,7 @@ footer {
           align-items: center;
   position: relative;
   background-color: white;
+  z-index: 2;
 }
 
 .page_01 .about_intro {
@@ -1055,5 +1075,105 @@ footer {
 
 .page_04 .pic_carousel .slick-slide {
   margin: 0 10px;
+}
+
+.sp {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  .page_01 {
+    padding-top: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page_01 .office_pic {
+    margin-bottom: 60px;
+  }
+  .page_01 .about_intro button {
+    display: block;
+    margin: 60px auto;
+  }
+  .page_03 {
+    height: auto;
+  }
+  .page_03 .dream_text h2 {
+    font-size: 60px;
+  }
+  .page_03 .dream_text span {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 700px) {
+  .page_03 .dream_box:nth-child(2n+1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .page_03 .dream_box:nth-child(2n) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 570px) {
+  .page_01 .office_pic img {
+    width: 90%;
+  }
+  .page_01 .about_intro {
+    margin: auto 50px;
+  }
+  .page_01 .about_intro h1 {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+  .page_01 .about_intro p {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 400px) {
+  .page_01 .about_intro {
+    margin: auto 30px;
+  }
+  .page_03 .dream_picture img {
+    width: 90%;
+  }
+  .page_03 .dream_text {
+    padding: 0 20px;
+  }
+  .page_03 .dream_text h2 {
+    font-size: 40px;
+  }
+  .page_03 .dream_text span {
+    font-size: 16px;
+  }
+  .page_03 .dream_text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page_03 .dream_picture img {
+    width: 90%;
+  }
+  .page_03 .dream_text {
+    padding: 0 20px;
+  }
+  .page_03 .dream_text span {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=about.css.map */

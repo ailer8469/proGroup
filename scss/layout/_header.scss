@@ -51,8 +51,23 @@ header{
     li{
         margin: 0 50px;
     }
-
+    .active{
+        color: $green;
+        transform: translateY(6px);
+        &::before{
+        animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+        content: "";
+        width: 2px;
+        height: 170%;
+        background: #8BCDC1;
+        position: absolute;
+        left: 49%;
+        top: -150%;
+        color: $green;
 }
+}
+}
+
 @keyframes sdl {
 	0% {
 		transform: scale(1, 0);

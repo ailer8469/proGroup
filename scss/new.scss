@@ -7,6 +7,7 @@
 @import 'layout/loading';
 
 .top_slider{
+    position: relative;
     width: 100vw;
     height: 90vh;
     overflow: hidden;
@@ -14,6 +15,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.top_carousel{
+    position: absolute;
+    width: 70%;
 }
 .top_new_wrap{
     @include flex(column,center,"");
@@ -29,6 +34,8 @@
         }
     }
     .top_new_title{
+        animation: fade_in 1s .5s forwards;
+        opacity: 0;
         @include flex("",space-between,center);
         position: absolute;
         bottom: -20px;
@@ -37,6 +44,26 @@
         clip-path: polygon(2% 0, 92% 0, 100% 100%, 0% 100%);
         background-color: $gray2;
         color: white;
+        transition: all .8s;
+            &:hover{
+                background: $green;
+                &::before{
+                    width: 100%;
+                }   
+            }
+            &::before{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 110%; 
+                width: 0%;
+                content: '';
+                background: $green;   
+                z-index: -1;
+                border-radius:20px;
+                transition: all 1.5s;
+            } 
         .top_new_word{
             @include flex("",center,center);
         }
@@ -82,6 +109,16 @@
 @keyframes dash {
     to {
         stroke-dashoffset: 500;
+    }
+}
+@keyframes fade_in {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 .load_icon{

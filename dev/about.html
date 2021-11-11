@@ -12,7 +12,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/about.css">
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
@@ -24,11 +24,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <title>關於博群</title>
 </head>
 <body data-scroll-container>
     <!--▼ loading ▼-->
-    <div class="loadpage">
+    <!-- <div class="loadpage">
         <lottie-player id="loading"
         src="https://assets8.lottiefiles.com/packages/lf20_a2dkrcwq.json" background="transparent" speed="1" loop autoplay>
         </lottie-player>
@@ -38,7 +44,7 @@
         <p id="progress">
             0%
         </p>
-    </div>
+    </div> -->
     <!--▲ loading ▲-->
     <!--▼ header ▼-->
     <header>
@@ -48,14 +54,14 @@
                     <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
                 </div>
                 <ul>
-                    <a href="about.html"><li>關於博群</li></a>
+                    <a class="active" href="about.html"><li>關於博群</li></a>
                     <a href="member.html"><li>夥伴介紹</li></a>
                     <a href="new.html"><li>最新消息</li></a>
                     <a href="knowledge.html"><li>法律小知識</li></a>
                 </ul>
             </div>
             <div class="nav_ask">
-                <a href="ask.html">我要詢問</a>
+                我要詢問
             </div>
         </div>
         <div class="nav-sp">
@@ -88,25 +94,26 @@
     </div>
     <!--▲ header ▲-->
     <main>
-        <section class="page_01">
-            <div class="office_pic" data-scroll data-scroll-speed="-1">
-                <img src="img/about/about_pic.png" alt="">
+        <section class="page_01 box" id="page01">
+            <div class="office_pic" 
+                data-aos="fade-left"
+                data-aos-duration="2000">
+                <img class="pc" src="img/about/about_pic.png" alt="">
+                <img class="sp" src="img/about/about_pic_sp.png" alt="">
             </div>
             <div class="about_intro">
                 <h1>關於博群 <span>/About Pro Group/</span></h1>
                 <p>博群國際商務法律事務所由多位擁有美國法學博士學位及多國律師資格之專業人士所組成，每一位律師及顧問均有專精領域、經驗豐富。</p>
                 <p>本所的專業律師團隊致力於提供客戶正確、有效的法律意見與全方位的法律服務，協助處理並解決複雜而日新月異的跨國法律問題，及時給予客戶有關國內、美洲、東盟等地區法律事務的專業風險評估。</p>
                 <p>展望未來，本所將積極與大陸、東盟國家之事務所，以及其他領域的專業人士建立各種策略聯盟關係，積極為客戶提供最佳的跨國性法律專業整合服務方案。</p>
-                <a href="">
-                    <button id="page01_learnMore">
+                <button id="page01_learnMore">
                     了解更多服務
                     <!-- 到首頁的卡牌 -->
-                    </button>
-                </a>
+                </button>
             </div>
             <img src="img/about/background_01.svg" alt="">
         </section>
-        <section class="page_02">
+        <section class="page_02 box" id="page02">
             <div class="animation_01">
                 Proffesional
             </div>
@@ -133,20 +140,24 @@
                 </div>
             </div>
         </section>
-        <section class="page_03">
+        <section class="page_03 box" id="page03">
             <div class="dream_box">
                 <div class="dream_text"
                 data-aos="fade-left">
                     <h2>01 <span>創建 —— 夢想的開始</span></h2>
                     <p>事業甫創立之初，從營運計畫擬定、公司命名、商標申請、商業登記、簽訂契約、稅務規劃...等。各種項細節，若不小心，都有可能成為未來的風險。</p>
                 </div>
-                <div class="dream_picture"  data-scroll data-scroll-speed="2">
-                    <img src="img/about/dream_01.png" alt="">
+                <div class="dream_picture" >
+                    <img src="img/about/dream_01.png" alt=""
+                    data-aos="fade-down"
+                    data-aos-duration="2000">
                 </div>
             </div>
             <div class="dream_box">
-                <div class="dream_picture"  data-scroll data-scroll-speed="2">
-                    <img src="img/about/dream_02.png" alt="">
+                <div class="dream_picture"  >
+                    <img src="img/about/dream_02.png" alt=""
+                    data-aos="fade-down"
+                    data-aos-duration="2000">
                 </div>
                 <div class="dream_text"
                 data-aos="fade-left"
@@ -162,13 +173,17 @@
                     <h2>03 <span>壯大 —— 成為一群人的夢想</span></h2>
                     <p>企業正式面臨更大的挑戰。例如聘雇人力、勞資關係、營運規制、設計產品、獲利模式...等，方面進行合理的配置過程。各種內部資源的整合，都需要契約來規範。</p>
                 </div>
-                <div class="dream_picture"  data-scroll data-scroll-speed="2">
-                    <img src="img/about/dream_03.png" alt="">
+                <div class="dream_picture"  >
+                    <img src="img/about/dream_03.png" alt=""
+                    data-aos="fade-down"
+                    data-aos-duration="2000">
                 </div>
             </div>
             <div class="dream_box">
-                <div class="dream_picture"  data-scroll data-scroll-speed="2">
-                    <img src="img/about/dream_04.png" alt="">
+                <div class="dream_picture"  >
+                    <img src="img/about/dream_04.png" alt=""
+                    data-aos="fade-down"
+                    data-aos-duration="2000">
                 </div>
                 <div class="dream_text"
                 data-aos="fade-left"
@@ -178,7 +193,7 @@
                 </div>
             </div>
         </section>
-        <section class="page_04">
+        <section class="page_04 box" id="page04">
             <ul>
                 <li
                 data-aos="fade-up"
@@ -257,14 +272,10 @@
         </div>
     </footer>
     <!--▲ footer ▲-->
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
     <!-- javascript -->
     <!-- <script src="js/layout/locomotive.js"></script> -->
     <script src="js/about.js"></script> 
     <script src="js/layout/burger.js"></script>
-    <script src="js/layout/loading.js"></script>
+    <!-- <script src="js/layout/loading.js"></script> -->
 </body>
 </html>
