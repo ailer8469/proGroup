@@ -38,30 +38,30 @@ learnMore.addEventListener('click',() => {
 
 // ball animation
 let ball= document.querySelectorAll('.ball_item');
-let animate_1=document.getElementById('animation_01');
-let animate_2=document.getElementById('animation_02');
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+let animate1=document.getElementById('animation_01');
+let animate2=document.getElementById('animation_02');
 
-
-tl.from(animate_1,{
+const tl = new TimelineLite({ 
+    defaults: { ease: "power1.out" } 
+});
+const rotate={
+    autoRotate:45,
+    type:"soft",
+    curviness:2,
+    values:[
+    {left:150,top:50},
+    {left:250,top:150},
+    {left:150,top:250},
+    {left:50,top:150},
+    {left:150,top:50},
+    ],
+};
+tl.from(animate1,{
     x:-200,
     duration:1
 });
-
-tl.from(".text", { y: "0%", duration: 1, stagger: 0.25 });
 tl.to(ball,5,{
-    bezier:{
-        autoRotate:45,
-        type:"soft",
-        curviness:2,
-        values:[
-        {left:150,top:50},
-        {left:250,top:150},
-        {left:150,top:250},
-        {left:50,top:150},
-        {left:150,top:50},
-        ]
-    },
+    Bezier:rotate,
     ease:Linear.easeNone,
     repeat:-1
 });
