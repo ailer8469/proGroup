@@ -115,6 +115,39 @@
                 </div>
             </div>
         </div>
+            <svg id="arrow_right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <defs>
+                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
+                <animateTransform
+                            attributeName="transform"
+                            begin="0s"
+                            dur="20s"
+                            type="rotate"
+                            from="0 250 250"
+                            to="360 250 250"
+                            repeatCount="indefinite" 
+                />
+                </path>
+                <symbol>
+                    <g id="redstripe">
+                        <circle cx="250" cy="250" r="70"/>
+                        <path id="#arrow_right" d="M2 2L9.58579 9.58579C10.3668 10.3668 10.3668 11.6332 9.58579 12.4142L2 20" stroke-width="3" stroke-linecap="round"/>
+                    </g>
+                </symbol>
+                </defs>
+                <use xlink:href="#redstripe" />
+
+                <text dy="120" textLength="1220">
+                        <textPath xlink:href="#textcircle">
+                            抓取下一個成員的職稱  
+                        </textPath>
+                </text>
+                <text dy="120" textLength="1220">
+                    <textPath xlink:href="#textcircle">
+                        抓取下一個成員的職稱  
+                    </textPath>
+                </text>
+            </svg>
         <div class="title_slider">
             <ul>
                 <div class="title_item memactive">
@@ -140,9 +173,17 @@
                 
             </ul>
         </div>
-
         <div class="loading_line">
-            
+            <div class="shadow_line"></div>    
+        </div>
+        <div class="load_icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+                <rect class="diamondSt diamond" rx="10" ry="10" x="135" y="-75" width="80" height="80"  transform="rotate(45)"/>  
+            </svg>
+            <svg class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+                <rect class="diamondSt diamond" rx="10" ry="10" x="135" y="-75" width="80" height="80"  transform="rotate(45)"/>  
+            </svg>
+            <span>1/5</span>
         </div>
 
     </main>

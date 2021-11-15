@@ -9,6 +9,68 @@ $(function(){
         autoplay:true,
         cssEase: 'ease',
     });
+    // word animation
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.animation_01', {
+        scrollTrigger:'.animation_01',
+        duration: 2,
+        opacity:0,
+        x:'1000',
+        ease:'back',
+    }); 
+    // ball animation
+    let ball= $('.ball_item');
+    const rotate={
+        autoRotate:45,
+        type:"soft",
+        curviness:2,
+        values:[
+        {left:150,top:50},
+        {left:250,top:150},
+        {left:150,top:250},
+        {left:50,top:150},
+        {left:150,top:50},
+        ],
+    };
+    let tl = new TimelineMax();
+    tl.from('.animation_02', {
+        scrollTrigger:'.animation_02',
+        duration: 2,
+        opacity:0,
+        x:'-1000',
+        ease:'back',
+    })
+    .fromTo('.out_circle',.5,{
+        scrollTrigger:'.out_circle',
+        delay:2,
+        scale: 0,
+    },{
+        scale: 1,
+        ease:Circ.easeOut,
+    }).fromTo('.inner_circle',1,{
+        scale: 0,
+    },{
+        scale: 1,
+        ease:Circ.easeOut,
+    }).fromTo('.ball_img',.5,{
+        scale: 0,
+    },{
+        scale: 1,
+        opacity:1,
+        ease:Circ.easeOut,
+    }).fromTo('.ball_span',1,{
+        y:'-50'
+    },{
+        y:0,
+        opacity:1,
+        ease:Back.easeOut,
+    }).to('.animation_01',1, {
+        x:'-500',
+        ease:Back.easeOut,
+    }).to('.animation_02',1, {
+        x:'500',
+        ease:Back.easeOut,
+    },"-=1");
 });    
 //aos init
 AOS.init();
@@ -35,33 +97,3 @@ learnMore.addEventListener('click',() => {
 // .setTween(page)
 // .addIndicators() 
 // .addTo(controller);
-
-// ball animation
-let ball= document.querySelectorAll('.ball_item');
-let animate1=document.getElementById('animation_01');
-let animate2=document.getElementById('animation_02');
-
-const tl = new TimelineLite({ 
-    defaults: { ease: "power1.out" } 
-});
-const rotate={
-    autoRotate:45,
-    type:"soft",
-    curviness:2,
-    values:[
-    {left:150,top:50},
-    {left:250,top:150},
-    {left:150,top:250},
-    {left:50,top:150},
-    {left:150,top:50},
-    ],
-};
-tl.from(animate1,{
-    x:-200,
-    duration:1
-});
-tl.to(ball,5,{
-    Bezier:rotate,
-    ease:Linear.easeNone,
-    repeat:-1
-});

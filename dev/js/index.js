@@ -123,6 +123,30 @@ $(document).ready(function(){
         });
         $('.new span').fadeOut();
     });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('#mask_clip_1', {
+        scrollTrigger:'#clipping',
+        duration: 2,
+        opacity:0,
+        y:'1000',
+        ease:'back',
+    }); 
+    gsap.from('#mask_clip_2', {
+        scrollTrigger:'#clipping',
+        duration: 2.3,
+        opacity:0,
+        y:'1000',
+        ease:'back',
+    }); 
+    gsap.from('#mask_clip_3', {
+        scrollTrigger:'#clipping',
+        duration: 2.5,
+        opacity:0,
+        y:'1000',
+        ease:'back',
+    }); 
+    
+
 });
 AOS.init();
 //cloud parallax

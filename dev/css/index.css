@@ -870,6 +870,7 @@ section {
   width: 100%;
   max-width: 600px;
   height: 100vh;
+  z-index: 0;
 }
 
 .map .up_board_off {
@@ -978,6 +979,18 @@ section {
   height: 1px;
 }
 
+.gif {
+  position: absolute;
+  left: 83px;
+  width: 35%;
+}
+
+.gif_aft {
+  z-index: 0;
+  left: 50%;
+  width: 15%;
+}
+
 .map_box.member .map_topic {
   top: -70px;
   left: 82%;
@@ -987,6 +1000,10 @@ section {
   top: 10px;
   right: 80px;
   width: 100px;
+}
+
+.map_box.member svg path {
+  height: 1px;
 }
 
 .map_box.new .map_topic {
