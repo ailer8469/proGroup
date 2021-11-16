@@ -881,6 +881,17 @@ footer {
   -webkit-text-stroke: 1px rgba(130, 130, 130, 0.5);
 }
 
+.page_02 svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.page_02 #path {
+  fill: transparent;
+  stroke: transparent;
+}
+
 .page_02 .page02_circle {
   display: -webkit-box;
   display: -ms-flexbox;

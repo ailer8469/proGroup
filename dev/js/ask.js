@@ -15,7 +15,7 @@ let open_modal=document.querySelector('.nav_ask');
 open_modal.addEventListener("click", () => {
     card.style.display = "flex";
     if(animationCompleted = true){
-        animation.playSegments([0,100], true); 
+        animation.playSegments([0,110], true); 
     }else{
         animation.stop(); 
     }
@@ -27,6 +27,7 @@ open_modal.addEventListener("click", () => {
 });
 close_modal.addEventListener("click", () => {
     modal.style.display = "none";
+    card.style.display = "none";
 });
 
 

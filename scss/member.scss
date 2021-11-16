@@ -16,6 +16,13 @@ html{
     width: 100vw;
     height: 100vh;
     @include flex(column,center,center);
+    .wave_line{
+        position: absolute;
+        top: 60px;
+        height: 400px;
+        width: 3px;
+        background-color: white;
+    }
 }
 .mem_wrap{
     @include flex("",center,center);
@@ -25,15 +32,6 @@ html{
     background: #FFFFFFB2;
     border: 3px solid #FFFFFF;
     border-radius: 10px;
-    &::before{
-        position: absolute;
-        top: -122px;
-        content: "";
-        display: block;
-        height: 122px;
-        width: 3px;
-        background-color: white;
-    }
     .mem_name{
         @include flex("",center,center);
         position: absolute;

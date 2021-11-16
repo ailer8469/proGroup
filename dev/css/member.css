@@ -755,6 +755,14 @@ html {
           align-items: center;
 }
 
+.member_slider .wave_line {
+  position: absolute;
+  top: 60px;
+  height: 400px;
+  width: 3px;
+  background-color: white;
+}
+
 .mem_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,16 +783,6 @@ html {
   background: #FFFFFFB2;
   border: 3px solid #FFFFFF;
   border-radius: 10px;
-}
-
-.mem_wrap::before {
-  position: absolute;
-  top: -122px;
-  content: "";
-  display: block;
-  height: 122px;
-  width: 3px;
-  background-color: white;
 }
 
 .mem_wrap .mem_name {

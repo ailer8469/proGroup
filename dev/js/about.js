@@ -20,16 +20,17 @@ $(function(){
     }); 
     // ball animation
     let ball= $('.ball_item');
+    gsap.registerPlugin(MotionPathPlugin);
     const rotate={
         autoRotate:45,
         type:"soft",
         curviness:2,
-        values:[
-        {left:150,top:50},
-        {left:250,top:150},
-        {left:150,top:250},
-        {left:50,top:150},
-        {left:150,top:50},
+        path:[
+            {left:150,top:50},
+            {left:250,top:150},
+            {left:150,top:250},
+            {left:50,top:150},
+            {left:150,top:50},
         ],
     };
     let tl = new TimelineMax();
@@ -70,7 +71,17 @@ $(function(){
     }).to('.animation_02',1, {
         x:'500',
         ease:Back.easeOut,
-    },"-=1");
+    },"-=1")
+    .to(ball,5,{
+        ease:Linear.easeNone,
+        repeat:-1,
+        motionPath: {
+            path: MotionPathPlugin.convertToPath("#path")[0],
+            align: "#path",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5]
+        }
+        })
 });    
 //aos init
 AOS.init();

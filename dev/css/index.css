@@ -870,7 +870,7 @@ section {
   width: 100%;
   max-width: 600px;
   height: 100vh;
-  z-index: 0;
+  z-index: 1;
 }
 
 .map .up_board_off {
@@ -884,7 +884,7 @@ section {
   display: none;
   position: absolute;
   right: -6%;
-  top: -21%;
+  top: -26%;
   width: 650px;
   -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
           filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
@@ -945,7 +945,7 @@ section {
   display: none;
   position: absolute;
   right: 84%;
-  top: -100px;
+  top: -170px;
   width: 100%;
   max-width: 354px;
   -webkit-filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
@@ -976,34 +976,19 @@ section {
 
 .map_topic svg {
   position: absolute;
-  height: 1px;
 }
 
 .gif {
   position: absolute;
-  left: 83px;
-  width: 35%;
+  left: 109px;
+  top: -28px;
+  width: 27%;
 }
 
 .gif_aft {
   z-index: 0;
-  left: 50%;
-  width: 15%;
-}
-
-.map_box.member .map_topic {
-  top: -70px;
-  left: 82%;
-}
-
-.map_box.member svg {
-  top: 10px;
-  right: 80px;
-  width: 100px;
-}
-
-.map_box.member svg path {
-  height: 1px;
+  width: 10%;
+  left: 53%;
 }
 
 .map_box.new .map_topic {
@@ -1049,6 +1034,17 @@ section {
 .map_box.ask svg {
   top: 7px;
   right: -305px;
+}
+
+.map_box.member .map_topic {
+  top: -70px;
+  left: 82%;
+}
+
+.map_box.member svg {
+  top: 10px;
+  right: 80px;
+  width: 100px;
 }
 
 .map_box a {
