@@ -10,7 +10,7 @@ animation = lottie.loadAnimation({
 });
 //open ask modal
 let modal=document.querySelector('.postcard_wrap');
-let close_modal =document.querySelector(".close");
+let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
 
