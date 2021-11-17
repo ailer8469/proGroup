@@ -19,21 +19,12 @@ $(function(){
         ease:'back',
     }); 
     // ball animation
-    let ball= $('.ball_item');
     gsap.registerPlugin(MotionPathPlugin);
-    const rotate={
-        autoRotate:45,
-        type:"soft",
-        curviness:2,
-        path:[
-            {left:150,top:50},
-            {left:250,top:150},
-            {left:150,top:250},
-            {left:50,top:150},
-            {left:150,top:50},
-        ],
-    };
-    let tl = new TimelineMax();
+    let tl = new TimelineMax({
+        onComplete:function(){
+            rotate();
+        }
+    });
     tl.from('.animation_02', {
         scrollTrigger:'.animation_02',
         duration: 2,
@@ -71,18 +62,62 @@ $(function(){
     }).to('.animation_02',1, {
         x:'500',
         ease:Back.easeOut,
-    },"-=1")
-    .to(ball,5,{
+    },"-=1");
+});   
+var rotate= function(){
+    gsap.to('#ball_01',30,{
         ease:Linear.easeNone,
         repeat:-1,
+        type: "cubic",
         motionPath: {
             path: MotionPathPlugin.convertToPath("#path")[0],
             align: "#path",
             autoRotate: true,
-            alignOrigin: [0.5, 0.5]
+            alignOrigin: [0.5, 0.5],
+            start: 0.42,
+            end:1.5
         }
-        })
-});    
+    });
+    gsap.to('#ball_02',14,{
+        ease:Linear.easeNone,
+        repeat:-1,
+        type: "cubic",
+        motionPath: {
+            path: MotionPathPlugin.convertToPath("#path")[0],
+            align: "#path",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: 0,
+            end:1
+        }
+    });
+    gsap.to('#ball_03',15,{
+        ease:Linear.easeNone,
+        repeat:-1,
+        type: "cubic",
+        motionPath: {
+            path: MotionPathPlugin.convertToPath("#path")[0],
+            align: "#path",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: 0.8,
+            end:1.8
+        }
+    });
+    gsap.to('#span_01',50,{
+        ease:Linear.easeNone,
+        repeat:-1,
+        type: "cubic",
+        motionPath: {
+            path: MotionPathPlugin.convertToPath("#smpath_1")[0].reverse(),
+            align: "#smpath_1",
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5],
+            start: 0.4,
+            end:1.2
+        }
+    });
+}
 //aos init
 AOS.init();
 //button switch

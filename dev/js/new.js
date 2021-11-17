@@ -6,14 +6,14 @@ $(function(){
         $('.new_item:gt('+(CRT-1)+')').slideToggle();
         $(this).hide();
     })
-
     //top carousel
     $('.top_carousel').slick({
         arrows:false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4700,
+        autoplaySpeed: 4500,
+        lazyLoad: 'ondemand',
     });
     gsap.registerPlugin(ScrollTrigger);
     let tl = new TimelineMax();
@@ -42,6 +42,8 @@ $(function(){
         })
     });
     $('.top_carousel').on('afterChange', function(){
+        // load item number
+        $('#icon_num').text(($('.top_new_wrap.slick-current').index()));
         gsap.fromTo('.top_new_title', {
             scrollTrigger:'.top_new_title',
             duration: .7,

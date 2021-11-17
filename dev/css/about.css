@@ -961,12 +961,21 @@ footer {
   letter-spacing: 0.15em;
 }
 
-.page_02 .page02_circle .ball_item:nth-child(1) {
-  right: 120px;
-  top: -20px;
+.page_02 .page02_circle .ball_item svg {
+  background-color: aqua;
 }
 
-.page_02 .page02_circle .ball_item:nth-child(1) span {
+.page_02 .page02_circle .ball_item #smpath {
+  stroke-width: 3px;
+  fill: transparent;
+}
+
+.page_02 .page02_circle .ball_item:nth-child(4) {
+  right: 130px;
+  top: -30px;
+}
+
+.page_02 .page02_circle .ball_item:nth-child(4) span {
   top: -40px;
   left: -70px;
 }

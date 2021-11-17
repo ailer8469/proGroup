@@ -140,10 +140,17 @@
                 line-height: 21px;
                 letter-spacing: 0.15em;
             }
+            svg{
+                background-color: aqua;
+            }
+            #smpath{
+                stroke-width: 3px;
+                fill: transparent;
+            }
         }
-        .ball_item:nth-child(1){
-            right: 120px;
-            top: -20px;
+        .ball_item:nth-child(4){
+            right: 130px;
+            top: -30px;
             span{
                 top: -40px;
                 left: -70px;

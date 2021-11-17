@@ -974,7 +974,7 @@ footer {
     stroke-dashoffset: 800;
   }
   to {
-    stroke-dashoffset: 400;
+    stroke-dashoffset: 200;
   }
 }
 
@@ -983,7 +983,7 @@ footer {
     stroke-dashoffset: 800;
   }
   to {
-    stroke-dashoffset: 400;
+    stroke-dashoffset: 200;
   }
 }
 

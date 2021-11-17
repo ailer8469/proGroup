@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/ask.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- locomotive -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
@@ -69,19 +68,19 @@
         <!--▲ header ▲-->
     <main>
         <!--▼ ASK ▼-->
-        <div id="open_animate"></div>
         <section class="postcard_wrap">
+            <div id="open_animate"></div>
             <div class="postcard">
                 <button class="close"></button>
             <div class="card_text">
                 <h1>有話想說</h1>
                 <p>我們願意傾聽您的需求，也歡迎撥打<br>
                     ：04-36022825</p> 
-                <form class="consult_form">
+                <form class="consult_form" name="consult">
                     <div class="consult_box">
                         <h2>姓名</h2>
-                        <input type="text" placeholder="填寫與您聯繫之姓名">
-                        <p class="warning">
+                        <input type="text" name="realname" placeholder="填寫與您聯繫之姓名">
+                        <p class="warning name_check">
                             <img src="img/ask/notice.svg" alt="">
                             尚未填寫聯繫姓名
                         </p>              
@@ -89,8 +88,8 @@
 
                     <div class="consult_box">
                         <h2>信箱</h2>
-                        <input type="email" name="" id="email" placeholder="填寫與您聯繫之信箱">
-                        <p class="warning">
+                        <input type="email" name="mail" id="email" placeholder="填寫與您聯繫之信箱">
+                        <p class="warning mail_check">
                             <img src="img/ask/notice.svg" alt="">
                             信箱為無效信箱
                         </p>
@@ -101,8 +100,8 @@
                         <div class="select">
                             <span class="placeholder">
                                 請選擇咨詢類別
-
                             </span>
+                            <input type="text" name="select" value="請選擇咨詢類別">
                             <ul>
                                 <li>公司投資</li>
                                 <li>投資保險</li>
@@ -113,21 +112,20 @@
                                 <li>產權分配</li>
                             </ul>
                         </div>
-                        <p class="warning">
+                        <p class="warning select_check">
                             <img src="img/ask/notice.svg" alt="">
                             尚未選擇咨詢類別
                         </p>
                     </div>
 
                     <div class="consult_box">
-                        <textarea placeholder="填寫與您聯繫之信箱" name="consult_text" id="consult_text" cols="30" rows="10" required>
-                        </textarea>
-                        <p class="warning">
+                        <textarea placeholder="填寫與您聯繫之信箱" name=comments id="consult_text" cols="30" rows="10" required></textarea>
+                        <p class="warning talk_check">
                             <img src="img/ask/notice.svg" alt=""> 尚未填寫諮詢內容
                         </p>
                     </div>
-                    <div class="submit">
-                        <input type="submit" value="發送">
+                    <div class="submit" >
+                        <input id="ask_submit" type="submit" value="發送" >
                     </div>
                 
                 </form>
