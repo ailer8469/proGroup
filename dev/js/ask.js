@@ -13,8 +13,7 @@ let modal=document.querySelector('.postcard_wrap');
 let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
-
-open_modal.addEventListener("click", () => {
+function openModal(){
     card.style.display = "flex";
     modal.style.display = "flex"; 
     if(animationCompleted = true){
@@ -24,9 +23,9 @@ open_modal.addEventListener("click", () => {
     }
     animation.addEventListener("complete", () => {
         let tl = new TimelineMax();
-            tl.fromTo(postcard,1, {
+            tl.fromTo(postcard,1.5, {
                 display:'none',
-                scale:0.75,
+                scale:0.68,
             },{
                 display:'flex',
             }).to(card,1,{
@@ -41,10 +40,15 @@ open_modal.addEventListener("click", () => {
                 opacity:1,
                 ease:'back',
             });
-        // postcard.style.display = "flex";
-        // card.style.display = "none";
         animationCompleted = false;
     });
+}
+open_modal.addEventListener("click", () => {
+    openModal();
+});
+let bar_ask=document.getElementById('bar_ask_click');
+bar_ask.addEventListener("click", () => {
+    openModal();
 });
 close_modal.addEventListener("click", () => {
     modal.style.display = "none";

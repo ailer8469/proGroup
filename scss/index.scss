@@ -378,7 +378,7 @@ text-decoration: none;
         background-size: contain;
         cursor: $click;
     }
-    li:nth-child(1){
+    a:nth-child(1) li{
         background-image: url('../img/link/facebook/normal.svg');
         &:hover{
             background-image: url('../img/link/facebook/hover.svg');
@@ -390,7 +390,7 @@ text-decoration: none;
             background-image: url('../img/link/phone/hover.svg');
         }
     }
-    li:nth-child(3){
+    a:nth-child(3) li{
         background-image: url('../img/link/line/normal.svg');
         &:hover{
             background-image: url('../img/link/line/hover.svg');
@@ -420,15 +420,12 @@ text-decoration: none;
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
+    white-space: nowrap;
     &:hover{
         span{
             color: $green;
         }
     }
-}
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
 }
 // bottom cloud
 .top_cloud{

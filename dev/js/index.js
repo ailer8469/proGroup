@@ -1,13 +1,43 @@
 $(document).ready(function(){
     //open copy phone
     $('#link_phone').on('click',function(){
-        $('.poptext').fadeToggle(600)
+        $('#popnumber').fadeToggle(600)
     });
     //copy phone number
     $('#popnumber').click(function(){
         var $temp = $("<input>");
         $("body").append($temp);
         $temp.val($('#copyPhone').text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+
+        let modal = document.getElementById("alert_modal");
+        let span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+
+        span.onclick = function() {
+            modal.style.display = "none";
+            }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        window.ontouchend = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+    //open copy mail
+    $('#link_mail').on('click',function(){
+        $('#popmail').fadeToggle(600)
+    });
+    //copy mail 
+    $('#popmail').click(function(){
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($('#copyMail').text()).select();
         document.execCommand("copy");
         $temp.remove();
 

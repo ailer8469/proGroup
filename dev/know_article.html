@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <title>法律小知識_文章</title>
 </head>
 <body data-scroll-container>
@@ -60,20 +62,29 @@
         </div>
     </header>
     <div class="nav-sp-bar">
+        <div class="bar_background first"></div>
+        <div class="bar_background second"></div>
+        <div class="bar_background third"></div>
+        <div class="bar_background forth"></div>
         <div class="bar_wrap">
             <ul>
                 <a href="about.html"><li>關於博群</li></a>
                 <a href="member.html"><li>夥伴介紹</li></a>
                 <a href="new.html"><li>最新消息</li></a>
                 <a href="knowledge.html"><li>法律小知識</li></a>
-                <a href="ask.html"><li class="sb_bar_ask">我要詢問</li></a>
+                <a id="bar_ask_click"><li class="sb_bar_ask">我要詢問</li></a>
             </ul>
             <div class="nav_link">
                 <ul>
-                    <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
-                    <li><a href="tel:0436022825"></a></li>
-                    <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
-                    <li><a href=""></a></li>
+                    <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
+                    <a href="tel:0436022825"><li></li></a>
+                    <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
+                    <a id="sp_link_mail"><li>
+                        <p id="sp_popmail">
+                            progrouplaw@gmail.com<span>複製</span>
+                            <p id="sp_copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                        </p>
+                    </li></a>
                 </ul>
             </div>
         </div>
@@ -149,7 +160,72 @@
         </div>
     </main>
 
+    <!--▼ ASK ▼-->
+    <section class="postcard_wrap">
+        <div id="open_animate"></div>
+        <div class="postcard">
+            <button class="close" id="ask_close"></button>
+        <div class="card_text">
+            <h1>有話想說</h1>
+            <p>我們願意傾聽您的需求，也歡迎撥打<br>
+                ：04-36022825</p> 
+            <form class="consult_form" name="consult">
+                <div class="consult_box">
+                    <h2>姓名</h2>
+                    <input type="text" name="realname" placeholder="填寫與您聯繫之姓名">
+                    <p class="warning name_check">
+                        <img src="img/ask/notice.svg" alt="">
+                        尚未填寫聯繫姓名
+                    </p>              
+                </div>
 
+                <div class="consult_box">
+                    <h2>信箱</h2>
+                    <input type="email" name="mail" id="email" placeholder="填寫與您聯繫之信箱">
+                    <p class="warning mail_check">
+                        <img src="img/ask/notice.svg" alt="">
+                        信箱為無效信箱
+                    </p>
+                </div>
+
+                <div class="consult_box">
+                    <h2>咨詢類別</h2>
+                    <div class="select">
+                        <span class="placeholder">
+                            請選擇咨詢類別
+                        </span>
+                        <input type="text" name="select" value="請選擇咨詢類別">
+                        <ul>
+                            <li>公司投資</li>
+                            <li>投資保險</li>
+                            <li>智慧財產權</li>
+                            <li>產權分配</li>
+                            <li>產權分配</li>
+                            <li>產權分配</li>
+                            <li>產權分配</li>
+                        </ul>
+                    </div>
+                    <p class="warning select_check">
+                        <img src="img/ask/notice.svg" alt="">
+                        尚未選擇咨詢類別
+                    </p>
+                </div>
+
+                <div class="consult_box">
+                    <textarea placeholder="填寫與您聯繫之信箱" name=comments id="consult_text" cols="30" rows="10" required></textarea>
+                    <p class="warning talk_check">
+                        <img src="img/ask/notice.svg" alt=""> 尚未填寫諮詢內容
+                    </p>
+                </div>
+                <div class="submit" >
+                    <input id="ask_submit" type="submit" value="發送" >
+                </div>
+            
+            </form>
+        </div>
+        </div> 
+    </section>
+    <!--▼ ASK ▼-->
     <!--▼ footer ▼-->
     <footer>
         <div class="footer_wrap">
@@ -192,12 +268,13 @@
         </div>
     </footer>
     <!--▲ footer ▲-->
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- javascript -->
-    <script src="js/layout/locomotive.js"></script>
+    <!-- <script src="js/layout/locomotive.js"></script> -->
     <script src="js/layout/burger.js"></script>
     <!-- <script src="js/layout/loading.js"></script> -->
+    <!-- ask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/ask.js"></script>
     <script src="js/new.js"></script>
 </body>
 </html>

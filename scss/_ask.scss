@@ -9,7 +9,7 @@
 #open_animate{
     @include flex("",center,center);
     position: absolute;
-    top: 118px;
+    top: 108px;
     left: -10px;
     width: 100vw;
     height: 100%;
@@ -26,7 +26,7 @@
 }
 //postcard
 .postcard_wrap{
-    position: absolute;
+    position: fixed;
     top: 0;
     @include flex("",center,center);
     width: 100vw;

@@ -129,7 +129,7 @@ header{
     background-color:$green;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 30px;
 }
 body.active{
     overflow: hidden;
@@ -143,10 +143,27 @@ body.active{
     position: absolute;
     left: 0;
     top:60px;
-    background: rgba(55, 149, 149, 0.5);
+    background:transparent;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 4;
+    .bar_background{
+        background: rgba(55, 149, 149, 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25%;
+        z-index: -1;
+    }
+    .bar_background:nth-child(2){
+        left: 25%;
+    }
+    .bar_background:nth-child(3){
+        left: 50%;
+    }
+    .bar_background:nth-child(4){
+        left: 75%;
+    }
 }
 .bar_wrap{
     @include flex(column,center,center);
@@ -155,6 +172,7 @@ body.active{
         width: 80%;
     }
     li{
+        opacity: 0;
         margin-bottom: 90px;
         font-size: 18px;
         font-weight: 700;
@@ -170,6 +188,7 @@ body.active{
     
 }
 .nav_link{
+    opacity: 0;
     margin-top: -60px;
     ul{
         @include flex("",center,center);
@@ -183,20 +202,46 @@ body.active{
         background-position: center;
         background-size: contain;
         cursor: $click;
-        
     }
-    li:nth-child(1){
+    a:nth-child(1) li{
         background-image: url('../img/link/facebook/sp.svg');
     }
-    li:nth-child(2){
+    a:nth-child(2) li{
         background-image: url('../img/link/phone/sp.svg');
     }
-    li:nth-child(3){
+    a:nth-child(3) li{
         background-image: url('../img/link/line/sp.svg');
     }
-    li:nth-child(4){
+    a:nth-child(4) li{
         background-image: url('../img/link/mail/sp.svg');
     }
+}
+#sp_popmail {
+    display: none;
+    width: 200px;
+    background: #FFFFFF80;
+    color:$gray3;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    &:hover{
+        span{
+            color: $green;
+        }
+    }
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 @media (max-width: $desktop){
     .nav-pc{

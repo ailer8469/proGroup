@@ -70,20 +70,29 @@
         </div>
     </header>
     <div class="nav-sp-bar">
+        <div class="bar_background first"></div>
+        <div class="bar_background second"></div>
+        <div class="bar_background third"></div>
+        <div class="bar_background forth"></div>
         <div class="bar_wrap">
             <ul>
                 <a href="about.html"><li>關於博群</li></a>
                 <a href="member.html"><li>夥伴介紹</li></a>
                 <a href="new.html"><li>最新消息</li></a>
                 <a href="knowledge.html"><li>法律小知識</li></a>
-                <a href="ask.html"><li class="sb_bar_ask">我要詢問</li></a>
+                <a id="bar_ask_click"><li class="sb_bar_ask">我要詢問</li></a>
             </ul>
             <div class="nav_link">
                 <ul>
-                    <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
-                    <li><a></a></li>
-                    <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
-                    <li><a href=""></a></li>
+                    <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
+                    <a href="tel:0436022825"><li></li></a>
+                    <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
+                    <a id="sp_link_mail"><li>
+                        <p id="sp_popmail">
+                            progrouplaw@gmail.com<span>複製</span>
+                            <p id="sp_copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                        </p>
+                    </li></a>
                 </ul>
             </div>
         </div>
@@ -182,7 +191,7 @@
 
         <div class="index_link">
             <ul>
-                <li><a href="https://www.facebook.com/progrouplaw/"></a></li>
+                <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
                 <li id="link_phone"><a>
                     <p class="poptext" id="popnumber">
                         04 3602 2825
@@ -190,8 +199,13 @@
                         <p id="copyPhone" style="opacity: 0;">0436022825</p>
                     </p>
                 </a></li>
-                <li><a href="https://page.line.me/?accountId=918ohinu"></a></li>
-                <li><a href=""></a></li>
+                <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
+                <li id="link_mail"><a>
+                    <p class="poptext" id="popmail">
+                        progrouplaw@gmail.com   <span>複製</span>
+                        <p id="copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                    </p>
+                </a></li>
             </ul>
         </div>
         <div class="scroll_box">
@@ -308,7 +322,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -323,7 +337,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -338,7 +352,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -354,7 +368,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -368,7 +382,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -382,7 +396,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -396,7 +410,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -410,7 +424,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -424,7 +438,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
                 <div class="card_box"
@@ -438,7 +452,7 @@
                     </div>
                     <div class="card_hover">
                         <img src="img/index/consult.svg" alt="">
-                        <a href="ask.html"><button>我要諮詢</button></a>
+                        <a onclick="openModal()"><button>我要諮詢</button></a>
                     </div>
                 </div>
             </div>
@@ -706,9 +720,11 @@
     <script src="js/layout/burger.js"></script>
     <!-- <script src="js/layout/locomotive.js"></script> -->
     <!-- <script src="js/layout/loading.js"></script> -->
+    <!-- ask -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/index.js"></script>
     <script src="js/ask.js"></script>
+
+    <script src="js/index.js"></script>
     <script src="js/layout/lightball.js"></script>
 </body>
 </html>
