@@ -1,4 +1,3 @@
-
 @import 'mixins/mix';
 @import 'base/var';
 @import 'base/reset';
@@ -868,6 +867,13 @@ text-decoration: none;
         }
     }
 }
+@media (max-width:1500px){
+    .map{
+        .body_map{
+            right: 6%;
+        }
+    }
+}
 @media (max-width:1260px){
     .page02_01{
         .ask_item:nth-child(4){
@@ -887,6 +893,66 @@ text-decoration: none;
     }
 }
 @media (max-width:$desktop){
+    .page_01{
+        height: 105vh;
+    }
+    .page_01 .page_01_title{
+        top: 10%;
+    }
+    .map{
+        @include flex("",center,center);
+        .body_map{
+            max-width: none;
+            width: 450px;
+            top:70px;
+        }
+    }
+    .map_box .map_topic {
+        opacity: 0;
+    }
+    .map_box{
+        .lottie{
+            opacity: 0;
+        }
+    } 
+    .gif {
+        left: 88px;
+        top: -38px;
+    }
+    .map .stairs {
+        right: 78%;
+        top: 232px
+    }
+    .map .pig_map_off {
+        top: 200px;
+    }
+    .map .book_off {
+        right: 32%;
+        top: 25%;
+    }
+    .map_box .know_ball {
+        left: 50%;
+        top: 179px;
+    }
+    .map_box .about_ball {
+        top: 100px;
+    }
+    .map_box .ask_ball {
+        top: 120px;
+    }
+    .map .up_board_off {
+        right: 24%;
+        top: -7%;
+    }
+    .map_box .mem_ball {
+        top: -120px;
+    }
+    .map .down_board_off {
+        top: 15%;
+    }
+    #top_cloud_wrap{
+        margin-top: 40px;
+    }
     .index_link{
         display: none;
     }
@@ -950,7 +1016,14 @@ text-decoration: none;
             width: 60%;
         }
     }
-
+}
+@media (max-width:900px){
+    .map{
+        .body_map{
+            right: -5%;
+            top:170px;
+        }
+    }
 }
 @media (max-width:860px){
     .page02_02{
@@ -973,12 +1046,56 @@ text-decoration: none;
 }
 @media (max-width:768px){
     .page_01{
-        height:117vh;
+        height:130vh;
         background-size: 120px 120px,cover;
-
     }
     .page_01 .page_01_title {
-        top: 15%;
+        top: 8%;
+    }
+    .map{
+        .body_map{
+            width: 400px;
+        }
+    }
+    .gif {
+        left: 77px;
+        width: 25%;
+    }
+    .map .stairs {
+        display: none;
+    }
+    .map .pig_map_off {
+        width: 66%;
+        top: 210px;
+        right: 58%;
+    }
+    .map_box .new_ball {
+        left: 28%;
+    }
+    .map .book_off {
+        right: 34%;
+        top: 24%;
+        width: 90px;
+    }
+    .map_box .know_ball {
+        left: 49%;
+        top: 158px;
+    }
+    .map_box .about_ball {
+        left: 65%;
+    }
+    .map_box .ask_ball {
+        top: 160px;
+        left: 5%;
+    }
+    .map .up_board_off {
+        right: 22%;
+        top: -8%;
+        width: 100px;
+    }
+    .map .down_board_off {
+        right: 16%;
+        width: 80px;
     }
     // bottom cloud
     .top_cloud_01,.top_cloud_06{
@@ -1105,7 +1222,8 @@ text-decoration: none;
 @media (max-width:420px){
     .page_01{
         background-size: 80px 80px,cover;
-         // bottom cloud
+        height: 100vh;
+    // bottom cloud
     .top_cloud_02{
         right: 27%;
         transform: translateY(12px);
@@ -1128,6 +1246,59 @@ text-decoration: none;
             font-size: 14px;
         }    
     }
+    }
+    .map{
+        .body_map{
+            width: 250px;
+            right: 0;
+            top: 140px;
+        }
+    }
+    #top_cloud_wrap{
+        margin-top: -160px;
+    }
+    .gif {
+        left: 50px;
+        top:-20px;
+    }
+    .map_box .loader-disc-bouncer{
+        width: 15px;
+    }
+    .map .pig_map_off {
+        top: 130px;
+        right: 60%;
+    }
+    .map_box .new_ball {
+        left: 31%;
+    }
+    .map .book_off {
+        right: 33%;
+        top: 16%;
+        width: 70px;
+    }
+    .map_box .know_ball {
+        left: 53%;
+        top: 75px;
+    }
+    .map_box .about_ball {
+        left: 68%;
+        top: 40px;
+    }
+    .map_box .ask_ball {
+        top: 80px;
+    }
+    .map .up_board_off {
+        right: 17%;
+        top: -7%;
+    }
+    .map_box .mem_ball {
+        top: -100px;
+        left: 62%;
+    }
+    .map .down_board_off {
+        right: 13%;
+        width: 60px;
+        top: 9%;
     }
     .page_01 .page_01_title {
         top: 10%;
@@ -1191,6 +1362,11 @@ text-decoration: none;
     .page_01 .top_cloud_03 {
         right: -83%;
     }
+    .map{
+        .body_map{
+            right: -4%;
+        }
+    }
     .page_02 h2 {
         margin: 100px 10px;
         font-size: 20px;
@@ -1216,6 +1392,11 @@ text-decoration: none;
     .page_01 .top_cloud_03 {
         right: -106%;
         transform: translateY(3px);
+    }
+    .map{
+        .body_map{
+            right: -8%;
+        }
     }
 
 

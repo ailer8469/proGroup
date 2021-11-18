@@ -25,7 +25,7 @@ function openModal(){
         let tl = new TimelineMax();
             tl.fromTo(postcard,1.5, {
                 display:'none',
-                scale:0.68,
+                scale:0.65,
             },{
                 display:'flex',
             }).to(card,1,{

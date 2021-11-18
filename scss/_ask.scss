@@ -9,12 +9,12 @@
 #open_animate{
     @include flex("",center,center);
     position: absolute;
-    top: 108px;
+    top: 105px;
     left: -10px;
     width: 100vw;
     height: 100%;
     display: none;
-    transform: scale(0.65);
+    transform: scale(0.75);
 }
 @keyframes fadein{
     0%{

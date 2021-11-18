@@ -81,77 +81,102 @@ $(document).ready(function(){
             })
         }
     });  
+    // change size
+    var wdth=$(window).width();
+    $(window).resize(function(){
+        wdth=$(window).width();
+    });
     //hover animation
     $('.map_box.ask').hover(function(){
-        $('.pig_map_off').hide();
-        $('.pig_map_on').show();
-        $('.ask .path-line').animate({
-            'stroke-dashoffset':'0'
-        },1500);
-        $('.ask span').fadeIn(2000);
+        if(wdth>1200){
+            $('.pig_map_off').hide();
+            $('.pig_map_on').show();
+            $('.ask .path-line').animate({
+                'stroke-dashoffset':'0'
+            },1500);
+            $('.ask span').fadeIn(2000);
+        };
     },function(){
+        if(wdth>1200){
         $('.pig_map_off').show();
         $('.pig_map_on').hide();
         $('.ask .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.ask span').fadeOut();
+    };
     });
     $('.map_box.member').hover(function(){
+        if(wdth>1200){
         $('.up_board_off').hide();
         $('.up_board_on').show();
         $('.member .path-line').animate({
             'stroke-dashoffset':'0'
         },1500);
         $('.member span').fadeIn(2000);
+    };
     },function(){
+        if(wdth>1200){
         $('.up_board_off').show();
         $('.up_board_on').hide();
         $('.member .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.member span').fadeOut();
+    };
     });
     $('.map_box.about').hover(function(){
+        if(wdth>1200){
         $('.down_board_off').hide();
         $('.down_board_on').show();
         $('.about .path-line').animate({
             'stroke-dashoffset':'0'
         },1500);
         $('.about span').fadeIn(2000);
+    };
     },function(){
+        if(wdth>1200){
         $('.down_board_off').show();
         $('.down_board_on').hide();
         $('.about .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.about span').fadeOut();
+    };
     });
     $('.map_box.knowledge').hover(function(){
+        if(wdth>1200){
         $('.book_off').hide();
         $('.book_on').show();
         $('.knowledge .path-line').animate({
             'stroke-dashoffset':'0'
         },1500);
         $('.knowledge span').fadeIn(2000);
+    };
     },function(){
+        if(wdth>1200){
         $('.book_off').show();
         $('.book_on').hide();
         $('.knowledge .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.knowledge span').fadeOut();
+    };
     });
     $('.map_box.new').hover(function(){
+        if(wdth>1200){
         $('.new .path-line').animate({
             'stroke-dashoffset':'0'
         },1500);
         $('.new span').fadeIn(2000);
+    };
     },function(){
+        if(wdth>1200){
         $('.new .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.new span').fadeOut();
+    };
     });
     gsap.registerPlugin(ScrollTrigger);
     gsap.from('#mask_clip_1', {

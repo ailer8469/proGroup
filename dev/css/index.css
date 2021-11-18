@@ -1568,13 +1568,13 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 108px;
+  top: 105px;
   left: -10px;
   width: 100vw;
   height: 100%;
   display: none;
-  -webkit-transform: scale(0.65);
-          transform: scale(0.65);
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 @-webkit-keyframes fadein {
@@ -3282,6 +3282,12 @@ section {
   color: #4f4f4f;
 }
 
+@media (max-width: 1500px) {
+  .map .body_map {
+    right: 6%;
+  }
+}
+
 @media (max-width: 1260px) {
   .page02_01 .ask_item:nth-child(4) {
     left: 14%;
@@ -3298,6 +3304,76 @@ section {
 }
 
 @media (max-width: 1200px) {
+  .page_01 {
+    height: 105vh;
+  }
+  .page_01 .page_01_title {
+    top: 10%;
+  }
+  .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: "";
+            flex-direction: "";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .map .body_map {
+    max-width: none;
+    width: 450px;
+    top: 70px;
+  }
+  .map_box .map_topic {
+    opacity: 0;
+  }
+  .map_box .lottie {
+    opacity: 0;
+  }
+  .gif {
+    left: 88px;
+    top: -38px;
+  }
+  .map .stairs {
+    right: 78%;
+    top: 232px;
+  }
+  .map .pig_map_off {
+    top: 200px;
+  }
+  .map .book_off {
+    right: 32%;
+    top: 25%;
+  }
+  .map_box .know_ball {
+    left: 50%;
+    top: 179px;
+  }
+  .map_box .about_ball {
+    top: 100px;
+  }
+  .map_box .ask_ball {
+    top: 120px;
+  }
+  .map .up_board_off {
+    right: 24%;
+    top: -7%;
+  }
+  .map_box .mem_ball {
+    top: -120px;
+  }
+  .map .down_board_off {
+    top: 15%;
+  }
+  #top_cloud_wrap {
+    margin-top: 40px;
+  }
   .index_link {
     display: none;
   }
@@ -3359,6 +3435,13 @@ section {
   }
 }
 
+@media (max-width: 900px) {
+  .map .body_map {
+    right: -5%;
+    top: 170px;
+  }
+}
+
 @media (max-width: 860px) {
   .page02_02 .card_wrap {
     margin-top: 50px;
@@ -3380,11 +3463,54 @@ section {
 
 @media (max-width: 768px) {
   .page_01 {
-    height: 117vh;
+    height: 130vh;
     background-size: 120px 120px,cover;
   }
   .page_01 .page_01_title {
-    top: 15%;
+    top: 8%;
+  }
+  .map .body_map {
+    width: 400px;
+  }
+  .gif {
+    left: 77px;
+    width: 25%;
+  }
+  .map .stairs {
+    display: none;
+  }
+  .map .pig_map_off {
+    width: 66%;
+    top: 210px;
+    right: 58%;
+  }
+  .map_box .new_ball {
+    left: 28%;
+  }
+  .map .book_off {
+    right: 34%;
+    top: 24%;
+    width: 90px;
+  }
+  .map_box .know_ball {
+    left: 49%;
+    top: 158px;
+  }
+  .map_box .about_ball {
+    left: 65%;
+  }
+  .map_box .ask_ball {
+    top: 160px;
+    left: 5%;
+  }
+  .map .up_board_off {
+    right: 22%;
+    top: -8%;
+    width: 100px;
+  }
+  .map .down_board_off {
+    right: 16%;
+    width: 80px;
   }
   .top_cloud_01, .top_cloud_06 {
     display: none;
@@ -3510,6 +3636,7 @@ section {
 @media (max-width: 420px) {
   .page_01 {
     background-size: 80px 80px,cover;
+    height: 100vh;
   }
   .page_01 .top_cloud_02 {
     right: 27%;
@@ -3536,6 +3663,57 @@ section {
   }
   .page_01 .scroll_box .index_scrolldown {
     font-size: 14px;
+  }
+  .map .body_map {
+    width: 250px;
+    right: 0;
+    top: 140px;
+  }
+  #top_cloud_wrap {
+    margin-top: -160px;
+  }
+  .gif {
+    left: 50px;
+    top: -20px;
+  }
+  .map_box .loader-disc-bouncer {
+    width: 15px;
+  }
+  .map .pig_map_off {
+    top: 130px;
+    right: 60%;
+  }
+  .map_box .new_ball {
+    left: 31%;
+  }
+  .map .book_off {
+    right: 33%;
+    top: 16%;
+    width: 70px;
+  }
+  .map_box .know_ball {
+    left: 53%;
+    top: 75px;
+  }
+  .map_box .about_ball {
+    left: 68%;
+    top: 40px;
+  }
+  .map_box .ask_ball {
+    top: 80px;
+  }
+  .map .up_board_off {
+    right: 17%;
+    top: -7%;
+  }
+  .map_box .mem_ball {
+    top: -100px;
+    left: 62%;
+  }
+  .map .down_board_off {
+    right: 13%;
+    width: 60px;
+    top: 9%;
   }
   .page_01 .page_01_title {
     top: 10%;
@@ -3602,6 +3780,9 @@ section {
   .page_01 .top_cloud_03 {
     right: -83%;
   }
+  .map .body_map {
+    right: -4%;
+  }
   .page_02 h2 {
     margin: 100px 10px;
     font-size: 20px;
@@ -3631,6 +3812,9 @@ section {
     right: -106%;
     -webkit-transform: translateY(3px);
             transform: translateY(3px);
+  }
+  .map .body_map {
+    right: -8%;
   }
 }
 /*# sourceMappingURL=index.css.map */
