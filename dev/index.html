@@ -28,11 +28,13 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <!-- parallax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- waitForImage -->
+    <script src="js/jquery.waitforimages.min.js"></script>
     <title>博群國際商務 PRO GROUP LAW</title>
 </head>
 <body data-scroll-container>
     <!--▼ loading ▼-->
-    <!-- <div class="loadpage">
+    <div class="loadpage" id="loadpage">
         <lottie-player id="loading"
         src="https://assets8.lottiefiles.com/packages/lf20_a2dkrcwq.json" background="transparent" speed="1" loop autoplay>
         </lottie-player>
@@ -40,9 +42,9 @@
         src="https://assets7.lottiefiles.com/packages/lf20_wz1jiozw.json" background="transparent" speed="1" loop autoplay>
         </lottie-player>
         <p id="progress">
-            0%
+            0％
         </p>
-    </div> -->
+    </div>
     <!--▲ loading ▲-->
     <!--▼ header ▼-->
     <header>
@@ -163,7 +165,7 @@
                     </div>
                     <img src="img/index/stairs.svg" alt="" class="stairs">
                     <div class="map_box ask">
-                        <a href="ask.html">
+                        <a onclick="openModal()">
                             <div class="loader-disc-bouncer ask_ball"></div>
                             <div class="map_topic">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
@@ -243,7 +245,7 @@
         </div>
         <!-- bottom cloud -->   
     </section>
-    <section class="page_02">
+    <section class="page_02 section">
         <div class="page02_01">
             <h2 data-scroll data-scroll-speed="1">你也有法律相關的煩惱嗎？</h2>
             <div class="ask_wrap">
@@ -719,7 +721,7 @@
     <!-- javascript -->
     <script src="js/layout/burger.js"></script>
     <!-- <script src="js/layout/locomotive.js"></script> -->
-    <!-- <script src="js/layout/loading.js"></script> -->
+    <script src="js/layout/loading.js"></script>
     <!-- ask -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/ask.js"></script>
