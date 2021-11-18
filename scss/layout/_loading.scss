@@ -1,6 +1,6 @@
 .loadpage{
     @include flex(column,center,center);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
@@ -14,7 +14,7 @@
     width: 700px;
     height: 700px;
     position: absolute;
-    top: 20%;
+    top:0%;
 }
 #loaded{
     display: none;
@@ -43,6 +43,6 @@
     #loading,#loaded{
         width: 600px;
         height: 600px;
-        top: 25%;
+        top: 5%;
     }
 }

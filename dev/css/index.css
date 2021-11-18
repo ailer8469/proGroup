@@ -745,7 +745,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
@@ -760,7 +760,7 @@ footer {
   width: 700px;
   height: 700px;
   position: absolute;
-  top: 20%;
+  top: 0%;
 }
 
 #loaded {
@@ -790,7 +790,7 @@ footer {
   #loading, #loaded {
     width: 600px;
     height: 600px;
-    top: 25%;
+    top: 5%;
   }
 }
 
@@ -1504,7 +1504,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
@@ -1519,7 +1519,7 @@ footer {
   width: 700px;
   height: 700px;
   position: absolute;
-  top: 20%;
+  top: 0%;
 }
 
 #loaded {
@@ -1549,7 +1549,7 @@ footer {
   #loading, #loaded {
     width: 600px;
     height: 600px;
-    top: 25%;
+    top: 5%;
   }
 }
 
@@ -2537,6 +2537,10 @@ section {
 
 .poptext:hover span {
   color: #379595;
+}
+
+#popmail {
+  width: 220px;
 }
 
 .top_cloud {

@@ -20,9 +20,10 @@ html{
     .wave_line{
         position: absolute;
         top: 60px;
-        height: 400px;
+        height: 200px;
         width: 3px;
         background-color: white;
+        z-index: 0;
     }
 }
 .mem_wrap{
@@ -33,6 +34,7 @@ html{
     background: #FFFFFFB2;
     border: 3px solid #FFFFFF;
     border-radius: 10px;
+    z-index: 4;
     .mem_name{
         @include flex("",center,center);
         position: absolute;
