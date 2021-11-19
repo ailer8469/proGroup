@@ -1,5 +1,5 @@
 $(function(){
-    //hover animation
+    // hover animation
     $('#arrow_right').hover(function(){
         $('#arrow_right').addClass('active');
     },function(){
@@ -11,7 +11,9 @@ $(function(){
         $('#arrow_left').removeClass('active');
     });
 
-    //change title
+    // carousel
+
+    // change title
     let index= $('.member_slider.slick-current').index();
     $('.main_slider').on('afterChange', function(){
         // load item number
