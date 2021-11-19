@@ -228,11 +228,11 @@ html{
         transform: translateY(-5px);
     }
 }
-#arrow_right {
+#arrow_right,#arrow_left {
     position:absolute;
     right: 10%;
-    top: 40%;
-    width: 25%;
+    top: 30%;
+    width: 20%;
     cursor: $click;
 
     circle {
@@ -244,16 +244,24 @@ html{
     text-transform: uppercase;
     letter-spacing: 50px;
     fill: $green;
+    display: none;
     }
-    text{
-        display: none;
-    }
+}
+#arrow_left{
+    left: 10%;
 }
 #redstripe{
     path{
         fill: transparent;
         stroke:#BDBDBD;
         transform: scale(2) translateY(113px) translateX(121px);
+    }
+}
+#redstripe_left{
+    path{
+        fill: transparent;
+        stroke:#BDBDBD;
+        transform: scale(2) translateY(135px) translateX(129px) rotate(180deg);
     }
 }
 #arrow_right.active{
@@ -267,4 +275,16 @@ html{
         text{
             display: block;
         }
+}
+#arrow_left.active{
+    circle{
+        stroke: $green;
+        stroke-width: 2px;
+    }
+    path{
+        stroke:#379595;
+    }
+    text{
+        display: block;
+    }
 }

@@ -754,17 +754,15 @@ footer {
   background: url(../img/material.png);
   background-color: #379595;
   z-index: 1000;
+  -webkit-clip-path: none;
+          clip-path: none;
 }
 
-#loading, #loaded {
+#loaded {
   width: 700px;
   height: 700px;
   position: absolute;
   top: 0%;
-}
-
-#loaded {
-  display: none;
 }
 
 #progress {
@@ -774,6 +772,14 @@ footer {
   line-height: 56px;
   letter-spacing: 0.2em;
   color: white;
+}
+
+#mask_circle {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 1200px) {
@@ -1513,17 +1519,15 @@ footer {
   background: url(../img/material.png);
   background-color: #379595;
   z-index: 1000;
+  -webkit-clip-path: none;
+          clip-path: none;
 }
 
-#loading, #loaded {
+#loaded {
   width: 700px;
   height: 700px;
   position: absolute;
   top: 0%;
-}
-
-#loaded {
-  display: none;
 }
 
 #progress {
@@ -1533,6 +1537,14 @@ footer {
   line-height: 56px;
   letter-spacing: 0.2em;
   color: white;
+}
+
+#mask_circle {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 1200px) {
@@ -2358,28 +2370,29 @@ html {
   }
 }
 
-#arrow_right {
+#arrow_right, #arrow_left {
   position: absolute;
   right: 10%;
-  top: 40%;
-  width: 25%;
+  top: 30%;
+  width: 20%;
   cursor: url("../img/mouse/click.svg"), default;
 }
 
-#arrow_right circle {
+#arrow_right circle, #arrow_left circle {
   fill: #FFFFFF99;
 }
 
-#arrow_right text {
+#arrow_right text, #arrow_left text {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 50px;
   fill: #379595;
+  display: none;
 }
 
-#arrow_right text {
-  display: none;
+#arrow_left {
+  left: 10%;
 }
 
 #redstripe path {
@@ -2387,6 +2400,13 @@ html {
   stroke: #BDBDBD;
   -webkit-transform: scale(2) translateY(113px) translateX(121px);
           transform: scale(2) translateY(113px) translateX(121px);
+}
+
+#redstripe_left path {
+  fill: transparent;
+  stroke: #BDBDBD;
+  -webkit-transform: scale(2) translateY(135px) translateX(129px) rotate(180deg);
+          transform: scale(2) translateY(135px) translateX(129px) rotate(180deg);
 }
 
 #arrow_right.active circle {
@@ -2399,6 +2419,19 @@ html {
 }
 
 #arrow_right.active text {
+  display: block;
+}
+
+#arrow_left.active circle {
+  stroke: #379595;
+  stroke-width: 2px;
+}
+
+#arrow_left.active path {
+  stroke: #379595;
+}
+
+#arrow_left.active text {
   display: block;
 }
 /*# sourceMappingURL=member.css.map */

@@ -32,22 +32,31 @@
     <script src="js/jquery.waitforimages.min.js"></script>
     <title>博群國際商務 PRO GROUP LAW</title>
 </head>
-<body data-scroll-container>
+<body>
     <!--▼ loading ▼-->
-    <div class="loadpage" id="loadpage">
-        <lottie-player id="loading"
-        src="https://assets8.lottiefiles.com/packages/lf20_a2dkrcwq.json" background="transparent" speed="1" loop autoplay>
-        </lottie-player>
-        <lottie-player id="loaded"
-        src="https://assets7.lottiefiles.com/packages/lf20_wz1jiozw.json" background="transparent" speed="1" loop autoplay>
-        </lottie-player>
-        <p id="progress">
-            0％
-        </p>
+    <div id="loading">
+        <div class="loadpage" id="loadpage">
+            <div class="loaded" id="loaded">
+            </div>   
+            <p id="progress">
+                0％
+            </p>
+        </div>
+    <svg id="mask_circle">
+        <defs>
+        <mask id="mask" x="0" y="0" width="20" height="20">
+            <rect x="5" y="5" width="90" height="40" fill="#fff"/>
+            <circle cx="190" cy="145" r="110" fill="#A7C6C6"/>
+        </mask>
+        </defs>
+        <circle cx="190" cy="145" r="110" mask="url(#mask)" fill-opacity="0.7"/>
+    </svg>
     </div>
+    
     <!--▲ loading ▲-->
     <!--▼ header ▼-->
-    <header>
+    <main>
+        <header>
         <div class="nav-pc">
             <div class="nav_item">
                 <div class="nav_logo">
@@ -70,234 +79,146 @@
             </div>
             <button class="burger"></button>
         </div>
-    </header>
-    <div class="nav-sp-bar">
-        <div class="bar_background first"></div>
-        <div class="bar_background second"></div>
-        <div class="bar_background third"></div>
-        <div class="bar_background forth"></div>
-        <div class="bar_wrap">
-            <ul>
-                <a href="about.html"><li>關於博群</li></a>
-                <a href="member.html"><li>夥伴介紹</li></a>
-                <a href="new.html"><li>最新消息</li></a>
-                <a href="knowledge.html"><li>法律小知識</li></a>
-                <a id="bar_ask_click"><li class="sb_bar_ask">我要詢問</li></a>
-            </ul>
-            <div class="nav_link">
+        </header>
+        <div class="nav-sp-bar">
+            <div class="bar_background first"></div>
+            <div class="bar_background second"></div>
+            <div class="bar_background third"></div>
+            <div class="bar_background forth"></div>
+            <div class="bar_wrap">
+                <ul>
+                    <a href="about.html"><li>關於博群</li></a>
+                    <a href="member.html"><li>夥伴介紹</li></a>
+                    <a href="new.html"><li>最新消息</li></a>
+                    <a href="knowledge.html"><li>法律小知識</li></a>
+                    <a id="bar_ask_click"><li class="sb_bar_ask">我要詢問</li></a>
+                </ul>
+                <div class="nav_link">
+                    <ul>
+                        <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
+                        <a href="tel:0436022825"><li></li></a>
+                        <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
+                        <a id="sp_link_mail"><li>
+                            <p id="sp_popmail">
+                                progrouplaw@gmail.com<span>複製</span>
+                                <p id="sp_copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                            </p>
+                        </li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--▲ header ▲-->
+        <div class="top_header"></div>
+        <section class="page_01 section">
+            <!-- background animation -->
+            <div id="container">
+                <canvas id="pixie" width="1420" height="705"></canvas>
+            </div>
+            <!-- center -->
+            <div class="page_01_center">
+                <div class="map_wrap">
+                <div class="map">
+                    <img src="img/index/news-back.gif" alt="" class="gif gif_aft">
+                    <div class="body_map">
+                        <div class="map_box new">
+                            <a href="new.html">
+                                <div class="map_topic">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                    </svg>
+                                    <span>最新消息</span>
+                                </div>
+                                <div class="loader-disc-bouncer new_ball"></div>
+                                <img src="img/index/news-pre.gif" alt="" class="gif gif_pre">
+                            </a>
+                        </div>
+                        <div class="map_box member">
+                            <a href="member.html">
+                                <div class="map_topic">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                    </svg>
+                                    <span>夥伴介紹</span>
+                                </div>
+                                <div class="loader-disc-bouncer mem_ball"></div>
+                                <img src="img/index/up_board.svg" alt="" class="up_board_off">
+                                <lottie-player  class="up_board_on lottie" src="https://assets7.lottiefiles.com/packages/lf20_evqksvcg.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            </a>
+                        </div>
+                        <div class="map_box about">
+                            <a href="about.html">
+                                <div class="map_topic">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                    </svg>
+                                    <span>關於博群</span>
+                                </div>
+                                <div class="loader-disc-bouncer about_ball"></div>
+                                <img src="img/index/right_board.svg" alt="" class="down_board_off">
+                                <lottie-player class="down_board_on lottie" src="https://assets4.lottiefiles.com/packages/lf20_quec1s8f.json" background="transparent" speed="1"loop autoplay></lottie-player>
+                            </a>
+                        </div>
+                        <div class="map_box knowledge">
+                            <a href="knowledge.html">
+                                <div class="map_topic">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 300 0"/>
+                                    </svg>
+                                    <span>法律小知識</span>
+                                </div>
+                                <div class="loader-disc-bouncer know_ball"></div>
+                                <img src="img/index/book.svg" alt="" class="book_off">
+                                <lottie-player class="book_on lottie" src="https://assets3.lottiefiles.com/packages/lf20_mgm8khac.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            </a>
+                        </div>
+                        <img src="img/index/stairs.svg" alt="" class="stairs">
+                        <div class="map_box ask">
+                            <a onclick="openModal()">
+                                <div class="loader-disc-bouncer ask_ball"></div>
+                                <div class="map_topic">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                    </svg>
+                                    <span>我要詢問</span>
+                                </div>
+                                <img class="pig_map_off" src="img/index/pig.png" alt="">
+                                <lottie-player class="pig_map_on lottie" src="https://assets10.lottiefiles.com/packages/lf20_end7xcc1.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>      
+                <div class="page_01_title">
+                    <p
+                    data-aos="fade-up"
+                    data-aos-duration="1000">博群的專業</p>
+                    <p
+                    data-aos="fade-up"
+                    data-aos-duration="2000">來守護您的事業</p>
+                    <span>Protect Your bussiness</span>
+                </div>
+            </div>
+
+            <div class="index_link">
                 <ul>
                     <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
-                    <a href="tel:0436022825"><li></li></a>
-                    <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
-                    <a id="sp_link_mail"><li>
-                        <p id="sp_popmail">
-                            progrouplaw@gmail.com<span>複製</span>
-                            <p id="sp_copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                    <li id="link_phone"><a>
+                        <p class="poptext" id="popnumber">
+                            04 3602 2825
+                            <span>複製</span>
+                            <p id="copyPhone" style="opacity: 0;">0436022825</p>
                         </p>
-                    </li></a>
+                    </a></li>
+                    <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
+                    <li id="link_mail"><a>
+                        <p class="poptext" id="popmail">
+                            progrouplaw@gmail.com   <span>複製</span>
+                            <p id="copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
+                        </p>
+                    </a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <!--▲ header ▲-->
-    <div class="top_header"></div>
-    <section class="page_01 section">
-        <!-- background animation -->
-        <div id="container">
-            <canvas id="pixie" width="1420" height="705"></canvas>
-        </div>
-        <!-- center -->
-        <div class="page_01_center">
-            <div class="map_wrap">
-            <div class="map">
-                <img src="img/index/news-back.gif" alt="" class="gif gif_aft">
-                <div class="body_map">
-                    <div class="map_box new">
-                        <a href="new.html">
-                            <div class="map_topic">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
-                                </svg>
-                                <span>最新消息</span>
-                            </div>
-                            <div class="loader-disc-bouncer new_ball"></div>
-                            <img src="img/index/news-pre.gif" alt="" class="gif gif_pre">
-                        </a>
-                    </div>
-                    <div class="map_box member">
-                        <a href="member.html">
-                            <div class="map_topic">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
-                                </svg>
-                                <span>夥伴介紹</span>
-                            </div>
-                            <div class="loader-disc-bouncer mem_ball"></div>
-                            <img src="img/index/up_board.svg" alt="" class="up_board_off">
-                            <lottie-player  class="up_board_on lottie" src="https://assets7.lottiefiles.com/packages/lf20_evqksvcg.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                        </a>
-                    </div>
-                    <div class="map_box about">
-                        <a href="about.html">
-                            <div class="map_topic">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
-                                </svg>
-                                <span>關於博群</span>
-                            </div>
-                            <div class="loader-disc-bouncer about_ball"></div>
-                            <img src="img/index/right_board.svg" alt="" class="down_board_off">
-                            <lottie-player class="down_board_on lottie" src="https://assets4.lottiefiles.com/packages/lf20_quec1s8f.json" background="transparent" speed="1"loop autoplay></lottie-player>
-                        </a>
-                    </div>
-                    <div class="map_box knowledge">
-                        <a href="knowledge.html">
-                            <div class="map_topic">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 300 0"/>
-                                </svg>
-                                <span>法律小知識</span>
-                            </div>
-                            <div class="loader-disc-bouncer know_ball"></div>
-                            <img src="img/index/book.svg" alt="" class="book_off">
-                            <lottie-player class="book_on lottie" src="https://assets3.lottiefiles.com/packages/lf20_mgm8khac.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                        </a>
-                    </div>
-                    <img src="img/index/stairs.svg" alt="" class="stairs">
-                    <div class="map_box ask">
-                        <a onclick="openModal()">
-                            <div class="loader-disc-bouncer ask_ball"></div>
-                            <div class="map_topic">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                    <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
-                                </svg>
-                                <span>我要詢問</span>
-                            </div>
-                            <img class="pig_map_off" src="img/index/pig.png" alt="">
-                            <lottie-player class="pig_map_on lottie" src="https://assets10.lottiefiles.com/packages/lf20_end7xcc1.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </div>      
-            <div class="page_01_title">
-                <p
-                data-aos="fade-up"
-                data-aos-duration="1000">博群的專業</p>
-                <p
-                data-aos="fade-up"
-                data-aos-duration="2000">來守護您的事業</p>
-                <span>Protect Your bussiness</span>
-            </div>
-        </div>
-
-        <div class="index_link">
-            <ul>
-                <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
-                <li id="link_phone"><a>
-                    <p class="poptext" id="popnumber">
-                        04 3602 2825
-                        <span>複製</span>
-                        <p id="copyPhone" style="opacity: 0;">0436022825</p>
-                    </p>
-                </a></li>
-                <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
-                <li id="link_mail"><a>
-                    <p class="poptext" id="popmail">
-                        progrouplaw@gmail.com   <span>複製</span>
-                        <p id="copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
-                    </p>
-                </a></li>
-            </ul>
-        </div>
-        <div class="scroll_box">
-            <div class="index_scrolldown">
-            Scroll down
-            <svg width="2" height="47" viewBox="0 0 2 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 0V47" stroke="#8FCFC4" stroke-width="2"/>
-            </svg>
-            <svg class="move_line" width="2" height="14" viewBox="0 0 2 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 0L1 14" stroke="#379595" stroke-width="2"/>
-            </svg>                
-        </div>
-        </div>
-        <!-- bottom cloud -->
-        <div id="top_cloud_wrap">
-            <div class="layer" data-depth="0.3" >
-                <img class="top_cloud_01 top_cloud" src="img/index/cloud_01.png" alt="">
-            </div>
-            <div class="layer" data-depth="1">
-                <img class="top_cloud_02 top_cloud" src="img/index/cloud_02.png" alt="">
-            </div>
-            <div class="layer" data-depth="0.6">
-                <img class="top_cloud_03 top_cloud" src="img/index/cloud_03.png" alt="">
-            </div>
-            <div class="layer" data-depth="1">
-                <img class="top_cloud_04 top_cloud" src="img/index/cloud_04.png" alt="">
-            </div>
-            <div class="layer" data-depth="0.7">
-                <img class="top_cloud_05 top_cloud" src="img/index/cloud_05.png" alt="">
-            </div>
-            <div class="layer" data-depth="0.3">
-                <img class="top_cloud_06 top_cloud" src="img/index/cloud_06.png" alt="">
-            </div>
-            
-        </div>
-        <!-- bottom cloud -->   
-    </section>
-    <section class="page_02 section">
-        <div class="page02_01">
-            <h2 data-scroll data-scroll-speed="1">你也有法律相關的煩惱嗎？</h2>
-            <div class="ask_wrap">
-                <div class="ask_item quick">
-                    <img src="img/index/message.svg" alt="">
-                    <span>你們有提供商業公司諮詢嗎？</span>
-                </div>
-                <div class="ask_item normal">
-                    <img src="img/index/message.svg" alt="">
-                    <span>要怎麼避免法律糾紛呢？</span>
-                </div>
-                <div class="ask_item slow">
-                    <img src="img/index/message.svg" alt="">
-                    <span>要如何進行法律諮詢？</span>
-                </div>
-                <div class="ask_item quick">
-                    <img src="img/index/message.svg" alt="">
-                    <span>智慧財產權包含哪些範圍呢？</span>
-                </div>
-                <div class="ask_item slow">
-                    <img src="img/index/message.svg" alt="">
-                    <span>不動產的爭端要怎麼處理？</span>
-                </div>
-                <div class="ask_item slow">
-                    <img src="img/index/message.svg" alt="">
-                    <span>公司要如何申請節稅啊？</span>
-                </div>
-                <div class="ask_item quick">
-                    <img src="img/index/message.svg" alt="">
-                    <span>國際貿易時要注意什麼相關法律？</span>
-                </div>
-                <div class="ask_item slow">
-                    <img src="img/index/message.svg" alt="">
-                    <span>我對訴訟程序不了解，是否有提供此服務呢？</span>
-                </div>
-                <div class="ask_item quick">
-                    <img src="img/index/message.svg" alt="">
-                    <span>發生不動產消費糾紛，要怎麼辦？</span>
-                </div>
-                <div class="ask_item quick">
-                    <img src="img/index/message.svg" alt="">
-                    <span>我也能港澳投資移民嗎？</span>
-                </div>
-                <div class="ask_item normal">
-                    <img src="img/index/message.svg" alt="">
-                    <span>我要成立公司，要去哪邊請法律顧問？</span>
-                </div>
-                <div class="ask_item normal">
-                    <img src="img/index/message.svg" alt="">
-                    <span>勞資糾紛該怎麼處理？</span>
-                </div>
-            </div> 
             <div class="scroll_box">
                 <div class="index_scrolldown">
                 Scroll down
@@ -309,271 +230,361 @@
                 </svg>                
             </div>
             </div>
-        </div>
-        <div class="page02_02" id="ourwork">
-            <h2 data-scroll data-scroll-speed="1">交給我們，以下是我們的服務</h2>
-            <div class="card_wrap">
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>01</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/1.svg" alt="">
-                        <h3>公司投資</h3>
-                        <p>舉凡國內外企業併購、股權收購、增資、股東會、企業法律健診以及僑外資公司、辦事處設立登記、外籍白領聘僱等，均為本所服務範圍之內。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+            <!-- bottom cloud -->
+            <div id="top_cloud_wrap">
+                <div class="layer" data-depth="0.3" >
+                    <img class="top_cloud_01 top_cloud" src="img/index/cloud_01.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>02</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/2.svg" alt="">
-                        <h3>金融保險</h3>
-                        <p>包含金融、證券機構、基金管理機構法律顧問服務、保險理賠，及違反銀行法、證券交易法案件。
-                        </p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+                <div class="layer" data-depth="1">
+                    <img class="top_cloud_02 top_cloud" src="img/index/cloud_02.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>03</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/3.svg" alt="">
-                        <h3>智慧財產權</h3>
-                        <p>商標權、專利權之規劃、申請、異議；商標、專利、著作權等授權及轉讓契約之談判、審閱、撰擬，以及訴訟代理。<br>
-                            企業營業秘密之規劃、訴訟，保密契約(NDA)之審閱、撰擬。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+                <div class="layer" data-depth="0.6">
+                    <img class="top_cloud_03 top_cloud" src="img/index/cloud_03.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>04</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/4.svg" alt="">
-                        <h3>不動產爭議</h3>
-                        <p>不動產營造、買賣、租賃相關契約文件之審閱、撰擬及訴訟。<br>
-                            共有土地分割、繼承、祭祀公業之法律諮詢、規劃及訴訟。<br>
-                            公寓大廈法律問題諮詢、規約撰擬及爭議處理。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+                <div class="layer" data-depth="1">
+                    <img class="top_cloud_04 top_cloud" src="img/index/cloud_04.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>05</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/5.svg" alt="">
-                        <h3>學校法人</h3>
-                        <p>本所律師曾擔任大學主任秘書、人事主任及董事會法律顧問，對學校事務實務經驗豐富、熟稔教育法令，提供學校法人董事會及學校法務規劃，及代理教師調解、行政救濟。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+                <div class="layer" data-depth="0.7">
+                    <img class="top_cloud_05 top_cloud" src="img/index/cloud_05.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>06</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/6.svg" alt="">
-                        <h3>勞資關係</h3>
-                        <p>撰擬勞動契約、建立公司人事規章、規劃薪資結構、勞動調解及訴訟，為企業節省人事成本，共創勞資雙贏。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
+                <div class="layer" data-depth="0.3">
+                    <img class="top_cloud_06 top_cloud" src="img/index/cloud_06.png" alt="">
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>07</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/7.svg" alt="">
-                        <h3>遺產繼承</h3>
-                        <p>提供國內外遺產分配規劃、撰擬遺囑、見證、遺囑執行、信託、訴訟代理及家族傳承規劃。</p>
+                
+            </div>
+            <!-- bottom cloud -->   
+        </section>
+        <section class="page_02 section">
+            <div class="page02_01">
+                <h2 data-scroll data-scroll-speed="1">你也有法律相關的煩惱嗎？</h2>
+                <div class="ask_wrap">
+                    <div class="ask_item quick">
+                        <img src="img/index/message.svg" alt="">
+                        <span>你們有提供商業公司諮詢嗎？</span>
                     </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
+                    <div class="ask_item normal">
+                        <img src="img/index/message.svg" alt="">
+                        <span>要怎麼避免法律糾紛呢？</span>
                     </div>
+                    <div class="ask_item slow">
+                        <img src="img/index/message.svg" alt="">
+                        <span>要如何進行法律諮詢？</span>
+                    </div>
+                    <div class="ask_item quick">
+                        <img src="img/index/message.svg" alt="">
+                        <span>智慧財產權包含哪些範圍呢？</span>
+                    </div>
+                    <div class="ask_item slow">
+                        <img src="img/index/message.svg" alt="">
+                        <span>不動產的爭端要怎麼處理？</span>
+                    </div>
+                    <div class="ask_item slow">
+                        <img src="img/index/message.svg" alt="">
+                        <span>公司要如何申請節稅啊？</span>
+                    </div>
+                    <div class="ask_item quick">
+                        <img src="img/index/message.svg" alt="">
+                        <span>國際貿易時要注意什麼相關法律？</span>
+                    </div>
+                    <div class="ask_item slow">
+                        <img src="img/index/message.svg" alt="">
+                        <span>我對訴訟程序不了解，是否有提供此服務呢？</span>
+                    </div>
+                    <div class="ask_item quick">
+                        <img src="img/index/message.svg" alt="">
+                        <span>發生不動產消費糾紛，要怎麼辦？</span>
+                    </div>
+                    <div class="ask_item quick">
+                        <img src="img/index/message.svg" alt="">
+                        <span>我也能港澳投資移民嗎？</span>
+                    </div>
+                    <div class="ask_item normal">
+                        <img src="img/index/message.svg" alt="">
+                        <span>我要成立公司，要去哪邊請法律顧問？</span>
+                    </div>
+                    <div class="ask_item normal">
+                        <img src="img/index/message.svg" alt="">
+                        <span>勞資糾紛該怎麼處理？</span>
+                    </div>
+                </div> 
+                <div class="scroll_box">
+                    <div class="index_scrolldown">
+                    Scroll down
+                    <svg width="2" height="47" viewBox="0 0 2 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0V47" stroke="#8FCFC4" stroke-width="2"/>
+                    </svg>
+                    <svg class="move_line" width="2" height="14" viewBox="0 0 2 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0L1 14" stroke="#379595" stroke-width="2"/>
+                    </svg>                
                 </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>08</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/8.svg" alt="">
-                        <h3>大陸法律事務</h3>
-                        <p>本所除提供傳統兩岸民事糾紛與台商至大陸投資爭議事件處理，亦有提供兩岸遺產處理、合同及爭議，乃至於兩岸知識產權糾紛等相關法律事務。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
-                </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>09</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/9.svg" alt="">
-                        <h3>國內外訴訟暨仲裁</h3>
-                        <p>本所承辦業務包含跨國訴訟協助，及境內及境外的仲裁案件。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
-                </div>
-                <div class="card_box"
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <span>10</span>
-                    <div class="card_contain">
-                        <img src="img/index/service/10.svg" alt="">
-                        <h3>專業教育訓練課程</h3>
-                        <p>提供企業法律風險管理、公司內部規章制度等訓練課程。</p>
-                    </div>
-                    <div class="card_hover">
-                        <img src="img/index/consult.svg" alt="">
-                        <a onclick="openModal()"><button>我要諮詢</button></a>
-                    </div>
                 </div>
             </div>
-            
-            <!-- background -->
-            <svg class="cloud" width="324" height="122" viewBox="0 0 324 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-58.2304 122H319.196C323.314 116.089 324 108.902 324 101.152C324 80.9654 307.652 64.6055 287.48 64.6055C283.289 64.6055 279.27 65.3169 275.544 66.6168C267.358 52.7833 252.309 43.5118 235.078 43.5118C233.583 43.5118 232.088 43.5854 230.618 43.7326C223.118 27.7652 206.892 16.7033 188.093 16.7033C176.181 16.7033 165.323 21.1427 157.039 28.452C143.51 11.1355 122.431 0 98.7549 0C72.0392 0 48.6324 14.1769 35.6422 35.4178C35.6177 35.4178 35.5931 35.4178 35.5686 35.4178C17.3824 35.4178 2.13728 48.1476 -1.73528 65.1697C-4.99508 64.2376 -8.4265 63.7226 -11.9559 63.7226C-29.4804 63.7226 -44.1618 75.9373 -47.9608 92.2971C-50.1422 91.1689 -52.5932 90.5312 -55.2157 90.5312C-63.9412 90.5312 -71 97.5951 -71 106.327C-71 114.029 -65.4853 120.43 -58.2059 121.828V122H-58.2304ZM23.8039 110.08C24.1961 110.202 24.5882 110.325 25.0049 110.448H23.7059C23.7549 110.325 23.7794 110.202 23.8039 110.08Z" fill="url(#paint0_linear_456:2220)"/>
-                <defs>
-                <linearGradient id="paint0_linear_456:2220" x1="126.487" y1="122.002" x2="126.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
-                <stop offset="0.75296" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg>
-            <svg class="cloud cloud_02" width="395" height="122" viewBox="0 0 395 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.7696 122H390.196C394.314 116.089 395 108.902 395 101.152C395 80.9654 378.652 64.6055 358.48 64.6055C354.289 64.6055 350.27 65.3169 346.544 66.6168C338.358 52.7833 323.309 43.5118 306.078 43.5118C304.583 43.5118 303.088 43.5854 301.618 43.7326C294.118 27.7652 277.892 16.7033 259.093 16.7033C247.181 16.7033 236.323 21.1427 228.039 28.452C214.51 11.1355 193.431 0 169.755 0C143.039 0 119.632 14.1769 106.642 35.4178C106.618 35.4178 106.593 35.4178 106.569 35.4178C88.3824 35.4178 73.1373 48.1476 69.2647 65.1697C66.0049 64.2376 62.5735 63.7226 59.0441 63.7226C41.5196 63.7226 26.8382 75.9373 23.0392 92.2971C20.8578 91.1689 18.4068 90.5312 15.7843 90.5312C7.0588 90.5312 0 97.5951 0 106.327C0 114.029 5.51469 120.43 12.7941 121.828V122H12.7696ZM94.8039 110.08C95.1961 110.202 95.5882 110.325 96.0049 110.448H94.7059C94.7549 110.325 94.7794 110.202 94.8039 110.08Z" fill="url(#paint0_linear_530:5629)"/>
-                <defs>
-                <linearGradient id="paint0_linear_530:5629" x1="197.487" y1="122.002" x2="197.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
-                <stop offset="0.75296" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg>
-            <svg class="cloud cloud_03" width="324" height="122" viewBox="0 0 324 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-58.2304 122H319.196C323.314 116.089 324 108.902 324 101.152C324 80.9654 307.652 64.6055 287.48 64.6055C283.289 64.6055 279.27 65.3169 275.544 66.6168C267.358 52.7833 252.309 43.5118 235.078 43.5118C233.583 43.5118 232.088 43.5854 230.618 43.7326C223.118 27.7652 206.892 16.7033 188.093 16.7033C176.181 16.7033 165.323 21.1427 157.039 28.452C143.51 11.1355 122.431 0 98.7549 0C72.0392 0 48.6324 14.1769 35.6422 35.4178C35.6177 35.4178 35.5931 35.4178 35.5686 35.4178C17.3824 35.4178 2.13727 48.1476 -1.73527 65.1697C-4.99508 64.2376 -8.4265 63.7226 -11.9559 63.7226C-29.4804 63.7226 -44.1618 75.9373 -47.9608 92.2971C-50.1422 91.1689 -52.5932 90.5312 -55.2157 90.5312C-63.9412 90.5312 -71 97.5951 -71 106.327C-71 114.029 -65.4853 120.43 -58.2059 121.828V122H-58.2304ZM23.8039 110.08C24.1961 110.202 24.5882 110.325 25.0049 110.448H23.7059C23.7549 110.325 23.7794 110.202 23.8039 110.08Z" fill="url(#paint0_linear_456:2220)"/>
-                <defs>
-                <linearGradient id="paint0_linear_456:2220" x1="126.487" y1="122.002" x2="126.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
-                <stop offset="0.75296" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg>            
-            <svg class="cloud cloud_04" width="395" height="122" viewBox="0 0 395 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.7696 122H390.196C394.314 116.089 395 108.902 395 101.152C395 80.9654 378.652 64.6055 358.48 64.6055C354.289 64.6055 350.27 65.3169 346.544 66.6168C338.358 52.7833 323.309 43.5118 306.078 43.5118C304.583 43.5118 303.088 43.5854 301.618 43.7326C294.118 27.7652 277.892 16.7033 259.093 16.7033C247.181 16.7033 236.323 21.1427 228.039 28.452C214.51 11.1355 193.431 0 169.755 0C143.039 0 119.632 14.1769 106.642 35.4178C106.618 35.4178 106.593 35.4178 106.569 35.4178C88.3824 35.4178 73.1373 48.1476 69.2647 65.1697C66.0049 64.2376 62.5735 63.7226 59.0441 63.7226C41.5196 63.7226 26.8382 75.9373 23.0392 92.2971C20.8578 91.1689 18.4068 90.5312 15.7843 90.5312C7.0588 90.5312 0 97.5951 0 106.327C0 114.029 5.51469 120.43 12.7941 121.828V122H12.7696ZM94.8039 110.08C95.1961 110.202 95.5882 110.325 96.0049 110.448H94.7059C94.7549 110.325 94.7794 110.202 94.8039 110.08Z" fill="url(#paint0_linear_516:4103)"/>
-                <defs>
-                <linearGradient id="paint0_linear_516:4103" x1="197.487" y1="122.002" x2="197.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
-                <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
-                <stop offset="0.75296" stop-color="white"/>
-                </linearGradient>
-                </defs>
-            </svg>                
-        </div>
-    </section>
-    <section class="page_03 section">
-        <h2>
-            <img src="img/index/title.svg" alt="">
-            合作企業
-        </h2>
-        <div class="cooperate_wrap">
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+            <div class="page02_02" id="ourwork">
+                <h2 data-scroll data-scroll-speed="1">交給我們，以下是我們的服務</h2>
+                <div class="card_wrap">
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>01</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/1.svg" alt="">
+                            <h3>公司投資</h3>
+                            <p>舉凡國內外企業併購、股權收購、增資、股東會、企業法律健診以及僑外資公司、辦事處設立登記、外籍白領聘僱等，均為本所服務範圍之內。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>02</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/2.svg" alt="">
+                            <h3>金融保險</h3>
+                            <p>包含金融、證券機構、基金管理機構法律顧問服務、保險理賠，及違反銀行法、證券交易法案件。
+                            </p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>03</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/3.svg" alt="">
+                            <h3>智慧財產權</h3>
+                            <p>商標權、專利權之規劃、申請、異議；商標、專利、著作權等授權及轉讓契約之談判、審閱、撰擬，以及訴訟代理。<br>
+                                企業營業秘密之規劃、訴訟，保密契約(NDA)之審閱、撰擬。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>04</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/4.svg" alt="">
+                            <h3>不動產爭議</h3>
+                            <p>不動產營造、買賣、租賃相關契約文件之審閱、撰擬及訴訟。<br>
+                                共有土地分割、繼承、祭祀公業之法律諮詢、規劃及訴訟。<br>
+                                公寓大廈法律問題諮詢、規約撰擬及爭議處理。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>05</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/5.svg" alt="">
+                            <h3>學校法人</h3>
+                            <p>本所律師曾擔任大學主任秘書、人事主任及董事會法律顧問，對學校事務實務經驗豐富、熟稔教育法令，提供學校法人董事會及學校法務規劃，及代理教師調解、行政救濟。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>06</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/6.svg" alt="">
+                            <h3>勞資關係</h3>
+                            <p>撰擬勞動契約、建立公司人事規章、規劃薪資結構、勞動調解及訴訟，為企業節省人事成本，共創勞資雙贏。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>07</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/7.svg" alt="">
+                            <h3>遺產繼承</h3>
+                            <p>提供國內外遺產分配規劃、撰擬遺囑、見證、遺囑執行、信託、訴訟代理及家族傳承規劃。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>08</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/8.svg" alt="">
+                            <h3>大陸法律事務</h3>
+                            <p>本所除提供傳統兩岸民事糾紛與台商至大陸投資爭議事件處理，亦有提供兩岸遺產處理、合同及爭議，乃至於兩岸知識產權糾紛等相關法律事務。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>09</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/9.svg" alt="">
+                            <h3>國內外訴訟暨仲裁</h3>
+                            <p>本所承辦業務包含跨國訴訟協助，及境內及境外的仲裁案件。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
+                    <div class="card_box"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
+                        <span>10</span>
+                        <div class="card_contain">
+                            <img src="img/index/service/10.svg" alt="">
+                            <h3>專業教育訓練課程</h3>
+                            <p>提供企業法律風險管理、公司內部規章制度等訓練課程。</p>
+                        </div>
+                        <div class="card_hover">
+                            <img src="img/index/consult.svg" alt="">
+                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                        </div>
+                    </div>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
+                
+                <!-- background -->
+                <svg class="cloud" width="324" height="122" viewBox="0 0 324 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-58.2304 122H319.196C323.314 116.089 324 108.902 324 101.152C324 80.9654 307.652 64.6055 287.48 64.6055C283.289 64.6055 279.27 65.3169 275.544 66.6168C267.358 52.7833 252.309 43.5118 235.078 43.5118C233.583 43.5118 232.088 43.5854 230.618 43.7326C223.118 27.7652 206.892 16.7033 188.093 16.7033C176.181 16.7033 165.323 21.1427 157.039 28.452C143.51 11.1355 122.431 0 98.7549 0C72.0392 0 48.6324 14.1769 35.6422 35.4178C35.6177 35.4178 35.5931 35.4178 35.5686 35.4178C17.3824 35.4178 2.13728 48.1476 -1.73528 65.1697C-4.99508 64.2376 -8.4265 63.7226 -11.9559 63.7226C-29.4804 63.7226 -44.1618 75.9373 -47.9608 92.2971C-50.1422 91.1689 -52.5932 90.5312 -55.2157 90.5312C-63.9412 90.5312 -71 97.5951 -71 106.327C-71 114.029 -65.4853 120.43 -58.2059 121.828V122H-58.2304ZM23.8039 110.08C24.1961 110.202 24.5882 110.325 25.0049 110.448H23.7059C23.7549 110.325 23.7794 110.202 23.8039 110.08Z" fill="url(#paint0_linear_456:2220)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_456:2220" x1="126.487" y1="122.002" x2="126.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
+                    <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
+                    <stop offset="0.75296" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <svg class="cloud cloud_02" width="395" height="122" viewBox="0 0 395 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7696 122H390.196C394.314 116.089 395 108.902 395 101.152C395 80.9654 378.652 64.6055 358.48 64.6055C354.289 64.6055 350.27 65.3169 346.544 66.6168C338.358 52.7833 323.309 43.5118 306.078 43.5118C304.583 43.5118 303.088 43.5854 301.618 43.7326C294.118 27.7652 277.892 16.7033 259.093 16.7033C247.181 16.7033 236.323 21.1427 228.039 28.452C214.51 11.1355 193.431 0 169.755 0C143.039 0 119.632 14.1769 106.642 35.4178C106.618 35.4178 106.593 35.4178 106.569 35.4178C88.3824 35.4178 73.1373 48.1476 69.2647 65.1697C66.0049 64.2376 62.5735 63.7226 59.0441 63.7226C41.5196 63.7226 26.8382 75.9373 23.0392 92.2971C20.8578 91.1689 18.4068 90.5312 15.7843 90.5312C7.0588 90.5312 0 97.5951 0 106.327C0 114.029 5.51469 120.43 12.7941 121.828V122H12.7696ZM94.8039 110.08C95.1961 110.202 95.5882 110.325 96.0049 110.448H94.7059C94.7549 110.325 94.7794 110.202 94.8039 110.08Z" fill="url(#paint0_linear_530:5629)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_530:5629" x1="197.487" y1="122.002" x2="197.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
+                    <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
+                    <stop offset="0.75296" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <svg class="cloud cloud_03" width="324" height="122" viewBox="0 0 324 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-58.2304 122H319.196C323.314 116.089 324 108.902 324 101.152C324 80.9654 307.652 64.6055 287.48 64.6055C283.289 64.6055 279.27 65.3169 275.544 66.6168C267.358 52.7833 252.309 43.5118 235.078 43.5118C233.583 43.5118 232.088 43.5854 230.618 43.7326C223.118 27.7652 206.892 16.7033 188.093 16.7033C176.181 16.7033 165.323 21.1427 157.039 28.452C143.51 11.1355 122.431 0 98.7549 0C72.0392 0 48.6324 14.1769 35.6422 35.4178C35.6177 35.4178 35.5931 35.4178 35.5686 35.4178C17.3824 35.4178 2.13727 48.1476 -1.73527 65.1697C-4.99508 64.2376 -8.4265 63.7226 -11.9559 63.7226C-29.4804 63.7226 -44.1618 75.9373 -47.9608 92.2971C-50.1422 91.1689 -52.5932 90.5312 -55.2157 90.5312C-63.9412 90.5312 -71 97.5951 -71 106.327C-71 114.029 -65.4853 120.43 -58.2059 121.828V122H-58.2304ZM23.8039 110.08C24.1961 110.202 24.5882 110.325 25.0049 110.448H23.7059C23.7549 110.325 23.7794 110.202 23.8039 110.08Z" fill="url(#paint0_linear_456:2220)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_456:2220" x1="126.487" y1="122.002" x2="126.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
+                    <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
+                    <stop offset="0.75296" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                </svg>            
+                <svg class="cloud cloud_04" width="395" height="122" viewBox="0 0 395 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7696 122H390.196C394.314 116.089 395 108.902 395 101.152C395 80.9654 378.652 64.6055 358.48 64.6055C354.289 64.6055 350.27 65.3169 346.544 66.6168C338.358 52.7833 323.309 43.5118 306.078 43.5118C304.583 43.5118 303.088 43.5854 301.618 43.7326C294.118 27.7652 277.892 16.7033 259.093 16.7033C247.181 16.7033 236.323 21.1427 228.039 28.452C214.51 11.1355 193.431 0 169.755 0C143.039 0 119.632 14.1769 106.642 35.4178C106.618 35.4178 106.593 35.4178 106.569 35.4178C88.3824 35.4178 73.1373 48.1476 69.2647 65.1697C66.0049 64.2376 62.5735 63.7226 59.0441 63.7226C41.5196 63.7226 26.8382 75.9373 23.0392 92.2971C20.8578 91.1689 18.4068 90.5312 15.7843 90.5312C7.0588 90.5312 0 97.5951 0 106.327C0 114.029 5.51469 120.43 12.7941 121.828V122H12.7696ZM94.8039 110.08C95.1961 110.202 95.5882 110.325 96.0049 110.448H94.7059C94.7549 110.325 94.7794 110.202 94.8039 110.08Z" fill="url(#paint0_linear_516:4103)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_516:4103" x1="197.487" y1="122.002" x2="197.487" y2="-0.0252387" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#BFE2DA" stop-opacity="0.1"/>
+                    <stop offset="0.551606" stop-color="#F2F9F7" stop-opacity="0.814024"/>
+                    <stop offset="0.75296" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                
             </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+        </section>
+        <section class="page_03 section">
+            <h2>
+                <img src="img/index/title.svg" alt="">
+                合作企業
+            </h2>
+            <div class="cooperate_wrap">
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
-            <div class="cooperate_item">
-                <div class="item_pic">
-                    <img src="img/index/gotoo.svg" alt=""> 
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
                 </div>
-                <h4>跳跳資訊公司</h4>
-                <h4 class="totalname">跳跳資訊股份有限公司</h4>
-            </div>
+                <div class="cooperate_item">
+                    <div class="item_pic">
+                        <img src="img/index/gotoo.svg" alt=""> 
+                    </div>
+                    <h4>跳跳資訊公司</h4>
+                    <h4 class="totalname">跳跳資訊股份有限公司</h4>
+                </div>
 
-        </div>
-        <div class="page_03_bg">
-            <svg width="226" height="769" viewBox="0 0 226 769" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                <clipPath id="clipping">
-                    <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_1"
-                    d="M67.8445 129.447L0 184.297V769H67.8445V129.447Z"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_2"
-                    d="M80.1056 117.379L147.95 62.5292V767.903H80.1056V117.379Z"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_3" 
-                    d="M158.576 54.8502L226.421 0V767.903H158.576V54.8502Z"/>
-                </clipPath>
-                </defs>
-            </svg>    
-        </div>
-    </section>
+            </div>
+            <div class="page_03_bg">
+                <svg width="226" height="769" viewBox="0 0 226 769" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                    <clipPath id="clipping">
+                        <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_1"
+                        d="M67.8445 129.447L0 184.297V769H67.8445V129.447Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_2"
+                        d="M80.1056 117.379L147.95 62.5292V767.903H80.1056V117.379Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" class="mask_clip" id="mask_clip_3" 
+                        d="M158.576 54.8502L226.421 0V767.903H158.576V54.8502Z"/>
+                    </clipPath>
+                    </defs>
+                </svg>    
+            </div>
+        </section>
+    </main>
+
     <!-- the modal -->
     <div class="cooperate_modal">
         <div class="modal_wrap">
@@ -718,15 +729,15 @@
         </div>
     </footer>
     <!--▲ footer ▲-->
-    <!-- javascript -->
-    <script src="js/layout/burger.js"></script>
+    
     <!-- <script src="js/layout/locomotive.js"></script> -->
-    <script src="js/layout/loading.js"></script>
     <!-- ask -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/ask.js"></script>
-
-    <script src="js/index.js"></script>
+    <!-- javascript -->
     <script src="js/layout/lightball.js"></script>
+    <script src="js/layout/loading.js"></script>
+    <script src="js/layout/burger.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -754,17 +754,15 @@ footer {
   background: url(../img/material.png);
   background-color: #379595;
   z-index: 1000;
+  -webkit-clip-path: none;
+          clip-path: none;
 }
 
-#loading, #loaded {
+#loaded {
   width: 700px;
   height: 700px;
   position: absolute;
   top: 0%;
-}
-
-#loaded {
-  display: none;
 }
 
 #progress {
@@ -774,6 +772,14 @@ footer {
   line-height: 56px;
   letter-spacing: 0.2em;
   color: white;
+}
+
+#mask_circle {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 1200px) {
@@ -1513,17 +1519,15 @@ footer {
   background: url(../img/material.png);
   background-color: #379595;
   z-index: 1000;
+  -webkit-clip-path: none;
+          clip-path: none;
 }
 
-#loading, #loaded {
+#loaded {
   width: 700px;
   height: 700px;
   position: absolute;
   top: 0%;
-}
-
-#loaded {
-  display: none;
 }
 
 #progress {
@@ -1533,6 +1537,14 @@ footer {
   line-height: 56px;
   letter-spacing: 0.2em;
   color: white;
+}
+
+#mask_circle {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 1200px) {
