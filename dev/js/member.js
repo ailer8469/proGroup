@@ -13,15 +13,26 @@ $(function(){
 
     // carousel
     // slideshow style interval
+    let line= $('.shadow_line');
+    let icon= $('.shadow');
     //swap images function
     function swap(action) {
         var direction = action;
-        //moving carousel backwards
+
+        // prev
         if(direction == 'counter-clockwise') {
             var leftitem = $('.left-pos').attr('id') - 1;
             if(leftitem == 0) {
             leftitem = itemCount;
             }
+            // restart settimeout
+            clearInterval(autoSwap);
+            autoSwap = setInterval( swap , 4800 );
+
+            // restart css animate
+            $('.shadow_line').before($('.shadow_line').clone(true)).remove();
+            $('.load_icon .shadow').before($('.load_icon .shadow').clone(true)).remove();
+
             $('.right-pos').removeClass('right-pos').addClass('back-pos');
             $('.main-pos').removeClass('main-pos').addClass('right-pos');
             $('.left-pos').removeClass('left-pos').addClass('main-pos');
@@ -32,7 +43,7 @@ $(function(){
                 startItem = itemCount;
             }
         }
-        // moving carousel forward
+        // next
         if(direction == 'clockwise' || direction == '' || direction == null ) {
             function pos(positionvalue) {
             if(positionvalue != 'leftposition') {
@@ -51,6 +62,14 @@ $(function(){
             }
                 return position;
             }  
+            // restart settimeout
+            clearInterval(autoSwap);
+            autoSwap = setInterval( swap , 4800 );
+
+            // restart css animate
+            $('.shadow_line').before($('.shadow_line').clone(true)).remove();
+            $('.load_icon .shadow').before($('.load_icon .shadow').clone(true)).remove();
+
             $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
             $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
             $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
@@ -62,18 +81,32 @@ $(function(){
             }
         }
     }
-    var autoSwap = setInterval( swap,4800);
+    var autoSwap = window.setInterval( swap , 4800 );
     // pause slideshow and reinstantiate on mouseout
     $('.main_slider').hover(
     function () {
         clearInterval(autoSwap);
+        $('.shadow_line').css({
+            'animation':'none'
+        });
+        $('.load_icon .shadow').css({
+            opacity:0,
+            'animation':'none'
+        });
     }, 
     function () {
-        autoSwap = setInterval(swap,4800);
+        autoSwap = setInterval( swap , 4800 );
+        $('.shadow_line').css({
+            'animation':'load_line 5s linear infinite'
+        });
+        $('.load_icon .shadow').css({
+            opacity:1,
+            'animation':'load 5s linear infinite'
+        });
     });
     var items = [];
-    var startItem =1;
-    var position = 0;
+    var startItem = 1 ;
+    var position =  0 ;
     var itemCount = $('.main_slider .member_slider').length;
     var resetCount = itemCount;
 
@@ -89,15 +122,37 @@ $(function(){
         swap('counter-clockwise');
     });
     //if any visible items are clicked
-    $('li').click(function() {
-        if($(this).attr('class') == 'member_slider left-pos') {
-        swap('counter-clockwise'); 
+    $('.title_item').click(function() {
+        if($(this).attr('class') == 'title_item memactive') {
+            return;
         }
         else {
-        swap('clockwise'); 
+            window.clearInterval(autoSwap);
+
+            $('.title_item').removeClass('memactive');
+            $(this).addClass('memactive');
         }
     });
-    // change title
-    let current_item= $('li.member_slider.main-pos').index();
-    console.log(current_item);
+    // 偵測DOM變化
+    var mutationObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            /*********************************/
+            let curItem= ($('.member_slider.main-pos')).attr('id');
+            // change title
+            $('.title_item').removeClass('memactive');
+            $('.title_item').eq(curItem - 1).addClass('memactive');
+            
+            /*********************************/
+        });
+    });
+    /**Element**/
+    mutationObserver.observe($('.main_slider')[0], {
+        attributes: true,
+        characterData: true,
+        childList: true,
+        subtree: true,
+        attributeOldValue: true,
+        characterDataOldValue: true
+    });
+
 });

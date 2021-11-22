@@ -2202,7 +2202,7 @@ html {
 }
 
 .back-pos {
-  opacity: 0;
+  opacity: .3;
 }
 
 .right-pos {
@@ -2272,6 +2272,10 @@ html {
   width: 2px;
 }
 
+.title_slider .title_item .icon_active {
+  display: none;
+}
+
 .title_slider .memactive li {
   background-color: #379595;
 }
@@ -2280,6 +2284,14 @@ html {
   width: 25px;
   -webkit-animation: move 1.2s linear infinite;
           animation: move 1.2s linear infinite;
+}
+
+.title_slider .memactive .icon_active {
+  display: block;
+}
+
+.title_slider .memactive .icon_normal {
+  display: none;
 }
 
 .loading_line {
@@ -2345,8 +2357,7 @@ html {
 .load_icon .shadow {
   stroke-width: 2px;
   position: absolute;
-  stroke-dasharray: 800;
-  stroke-dasharray: 800;
+  stroke-dasharray: 600;
   -webkit-filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.7));
           filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.7));
   -webkit-animation: load 5s linear infinite;
@@ -2355,19 +2366,19 @@ html {
 
 @-webkit-keyframes load {
   from {
-    stroke-dashoffset: 800;
+    stroke-dashoffset: 600;
   }
   to {
-    stroke-dashoffset: 400;
+    stroke-dashoffset: 200;
   }
 }
 
 @keyframes load {
   from {
-    stroke-dashoffset: 800;
+    stroke-dashoffset: 600;
   }
   to {
-    stroke-dashoffset: 400;
+    stroke-dashoffset: 200;
   }
 }
 
