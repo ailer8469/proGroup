@@ -34,8 +34,8 @@ $(function(){
             $('.load_icon .shadow').before($('.load_icon .shadow').clone(true)).remove();
 
             $('.right-pos').removeClass('right-pos').addClass('back-pos');
-            $('.main-pos').removeClass('main-pos').addClass('right-pos');
-            $('.left-pos').removeClass('left-pos').addClass('main-pos');
+            $('.main-pos').removeClass('main-pos animate__animated animate__headShake animate__slow').addClass('right-pos');
+            $('.left-pos').removeClass('left-pos').addClass('main-pos animate__animated animate__headShake animate__slow');
             $('#'+leftitem+'').removeClass('back-pos').addClass('left-pos');
             
             startItem--;
@@ -70,8 +70,8 @@ $(function(){
             $('.shadow_line').before($('.shadow_line').clone(true)).remove();
             $('.load_icon .shadow').before($('.load_icon .shadow').clone(true)).remove();
 
-            $('#'+ startItem +'').removeClass('main-pos').addClass('left-pos');
-            $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos');
+            $('#'+ startItem +'').removeClass('main-pos animate__animated animate__headShake animate__slow').addClass('left-pos');
+            $('#'+ (startItem+pos()) +'').removeClass('right-pos').addClass('main-pos animate__animated animate__headShake animate__slow');
             $('#'+ (startItem+pos()) +'').removeClass('back-pos').addClass('right-pos');
             $('#'+ pos('leftposition') +'').removeClass('left-pos').addClass('back-pos');
             startItem++;
