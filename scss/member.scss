@@ -7,16 +7,20 @@
 @import 'layout/loading';
 @import 'ask';
 
-html{
+body{
     width: 100vw;
     height: 100%;
+    position: fixed;
+    top: 0;
     overflow: hidden;
     background: linear-gradient(180deg, #FFEBC1 0%, #C1EDE2 87.5%);
 }
 .main_slider{
     width: 100vw;
     height: 100%;
+    overflow: hidden;
     position: absolute;
+    top: 0;
     @include flex("",center,center);
 }
 .member_slider{
@@ -27,13 +31,14 @@ html{
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    z-index: 0;
     .wave_line{
         position: absolute;
         top: 60px;
-        height: 200px;
+        height: 25%;
         width: 3px;
-        background-color: white;
-        z-index: 0;
+        background-color: #FFFFFFB2;
+        z-index: -1;
     }
 }
 .mem_wrap{
@@ -127,23 +132,53 @@ html{
 .main-pos {
 margin:auto;
 z-index: 4;
+    .mem_box{
+        opacity:0;
+    }
 }
+.fadeUp{
+    animation: fadeInUp 1s 1s forwards;
+}
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        transform: translate3d(0,20%,0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+@keyframes swing{
+    20% {
+        transform: rotate(9deg);}
+    40% {
+        transform: rotate(-8deg);}
+    60% {
+        transform: rotate(3deg);}
+    80% {
+        transform: rotate(-3deg);}
+    100% {
+        transform: rotate(0deg);}
+}
+
 
 .left-pos {
 opacity: .7;
-margin-left: -90% ;
+margin-left: -100% ;
 z-index: 3;
 transform: scale(.85);
 }
 
 .back-pos {
-opacity: .3;
+opacity: 0;
 }
 
 .right-pos {
 width: 100% !important;
 opacity: .7;
-margin-left:90%;
+margin-left:100%;
 z-index: 3;
 transform: scale(.85);
 }
@@ -152,6 +187,7 @@ transform: scale(.85);
     position: absolute;
     bottom: 45px;
     width: 100vw;
+    overflow-x: scroll;
     ul{
         @include flex("",center,center);
     }
@@ -169,8 +205,8 @@ transform: scale(.85);
         line-height: 16px;
         letter-spacing: 0.1em;
         text-align: center;
-        cursor: $click;
         z-index: 10;
+        white-space: nowrap;
     }
         img{
             width: 2px; 
@@ -215,10 +251,10 @@ transform: scale(.85);
 .load_icon{
     @include flex(column,center,center);
     position: absolute;
-    bottom: 5%;
-    right: -2%;
-    width: 250px;
-    height: 250px;
+    bottom: 10%;
+    right: 0;
+    width: 240px;
+    height: 240px;
     z-index: 3;
     svg{
         stroke-width: 0.6px;
@@ -243,10 +279,6 @@ transform: scale(.85);
         filter: drop-shadow( 1px 1px 3px rgba(255, 255, 255, 0.7));
         animation: load 5s linear infinite;
     }
-}
-.load_animate{
-}
-.line_animate{
 }
 @keyframes load{
     from{
@@ -278,19 +310,19 @@ transform: scale(.85);
 #arrow_right,#arrow_left {
     position:absolute;
     right: 10%;
-    top: 30%;
-    width: 20%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 300px;
     cursor: $click;
     z-index: 10;
-
     circle {
         fill: #FFFFFF99;
     }
     text{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 50px;
+    letter-spacing: 70px;
     fill: $green;
     display: none;
     }
@@ -334,5 +366,55 @@ transform: scale(.85);
     }
     text{
         display: block;
+    }
+}
+.sp{
+    display: none;
+}
+@media (max-width:$desktop){
+    .main_slider.pc,#arrow_right,#arrow_left{
+        display: none;
+    }
+    .sp{
+        display: flex;
+    }
+    .main_slider_sp{
+        position: absolute;
+        @include flex(column,center,center);
+        .wave_line{
+            position: absolute;
+            top: 60px;
+            height: 25%;
+            width: 3px;
+            background-color: #FFFFFFB2;
+            z-index: -1;
+        }
+    }
+    .member_slider{
+        display: flex !important;
+        height: 100vh !important;
+        position: relative;
+    }
+    .title_item{
+        cursor: $click;
+    }
+    .load_icon{
+        width: 200px;
+        bottom: 12%;
+    }
+}
+@media (max-width:650px){
+    .main_slider_sp .wave_line {
+        height: 15%;
+    }
+    .name_row,.load_icon{
+        display: none;
+    }
+    .main_slider_sp .mem_wrap{
+        padding: 40px 0;
+        max-width: 500px;
+    }
+    .mem_wrap .mem_box .mem_content {
+        margin: 40px;
     }
 }
