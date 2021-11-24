@@ -1996,6 +1996,8 @@ footer {
 body {
   width: 100vw;
   height: 100%;
+  position: fixed;
+  top: 0;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFEBC1), color-stop(87.5%, #C1EDE2));
   background: linear-gradient(180deg, #FFEBC1 0%, #C1EDE2 87.5%);
@@ -2003,7 +2005,7 @@ body {
 
 .main_slider {
   width: 100vw;
-  height: 40%;
+  height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
