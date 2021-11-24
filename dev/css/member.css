@@ -1996,8 +1996,6 @@ footer {
 body {
   width: 100vw;
   height: 100%;
-  position: fixed;
-  top: 0;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFEBC1), color-stop(87.5%, #C1EDE2));
   background: linear-gradient(180deg, #FFEBC1 0%, #C1EDE2 87.5%);
@@ -2005,7 +2003,7 @@ body {
 
 .main_slider {
   width: 100vw;
-  height: 100%;
+  height: 40%;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -2046,15 +2044,6 @@ body {
   z-index: 0;
 }
 
-.member_slider .wave_line {
-  position: absolute;
-  top: 60px;
-  height: 25%;
-  width: 3px;
-  background-color: #FFFFFFB2;
-  z-index: -1;
-}
-
 .mem_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2076,6 +2065,15 @@ body {
   border: 3px solid #FFFFFF;
   border-radius: 10px;
   z-index: 4;
+}
+
+.mem_wrap .wave_line {
+  background-color: #FFFFFFB2;
+  position: absolute;
+  top: -135px;
+  height: 35%;
+  width: 3px;
+  z-index: -1;
 }
 
 .mem_wrap .mem_name {
@@ -2301,13 +2299,6 @@ body {
 }
 
 .title_slider {
-  position: absolute;
-  bottom: 45px;
-  width: 100vw;
-  overflow-x: scroll;
-}
-
-.title_slider ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2321,6 +2312,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.title_slider ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 45px;
+  width: 100%;
+  overflow: scroll;
 }
 
 .title_slider .title_item {
@@ -2337,7 +2348,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 35px;
+  padding: 3%;
 }
 
 .title_slider .title_item li {
@@ -2615,11 +2626,11 @@ body {
             align-items: center;
   }
   .main_slider_sp .wave_line {
-    position: absolute;
-    top: 60px;
-    height: 25%;
-    width: 3px;
     background-color: #FFFFFFB2;
+    position: absolute;
+    top: -135px;
+    height: 35%;
+    width: 3px;
     z-index: -1;
   }
   .member_slider {
@@ -2640,7 +2651,8 @@ body {
 
 @media (max-width: 650px) {
   .main_slider_sp .wave_line {
-    height: 15%;
+    top: -110px;
+    height: 25%;
   }
   .name_row, .load_icon {
     display: none;
@@ -2651,6 +2663,102 @@ body {
   }
   .mem_wrap .mem_box .mem_content {
     margin: 40px;
+  }
+  .title_slider {
+    bottom: 0;
+  }
+  .loading_line {
+    bottom: 0%;
+  }
+}
+
+@media (max-width: 550px) {
+  .main_slider_sp .mem_wrap {
+    max-width: 400px;
+  }
+  .main_slider_sp .wave_line {
+    top: -98px;
+    height: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_slider_sp .wave_line {
+    top: -108px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .main_slider_sp .mem_wrap {
+    max-width: 320px;
+    margin-top: -40px;
+  }
+  .main_slider_sp .wave_line {
+    top: -96px;
+  }
+  .mem_wrap .mem_name {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    white-space: nowrap;
+    background-size: contain;
+  }
+  .mem_wrap .mem_name h2 {
+    font-size: 14px;
+    margin-right: 30px;
+  }
+  .mem_wrap .mem_name h1 {
+    font-size: 16px;
+  }
+  .mem_wrap .mem_box .mem_content {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .main_slider_sp .mem_wrap {
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main_slider_sp .mem_wrap {
+    max-width: 270px;
+  }
+  .main_slider_sp .wave_line {
+    top: -77px;
+    height: 16%;
+  }
+  .title_slider .title_item {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 280px) {
+  .main_slider_sp .mem_wrap {
+    padding: 15px 0;
+    max-width: 250px;
+  }
+  .main_slider_sp .wave_line {
+    top: -77px;
+    height: 16%;
+  }
+  .title_slider .title_item {
+    margin: 20px;
+  }
+  .mem_wrap .mem_name {
+    width: 200px;
+  }
+  .mem_wrap .mem_name h2 {
+    font-size: 12px;
+    margin-right: 20px;
+  }
+  .mem_wrap .mem_name h1 {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=member.css.map */
