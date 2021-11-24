@@ -2184,6 +2184,7 @@ footer {
 }
 
 .page_02 .page02_circle .out_circle {
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2225,10 +2226,6 @@ footer {
   letter-spacing: 0.15em;
 }
 
-.page_02 .page02_circle .ball_item svg {
-  background-color: aqua;
-}
-
 .page_02 .page02_circle .ball_item #smpath {
   stroke-width: 3px;
   fill: transparent;
@@ -2265,8 +2262,8 @@ footer {
 .page_03 {
   padding: 30px 0;
   width: 100vw;
-  height: 200vh;
-  overflow-x: hidden;
+  height: 220vh;
+  overflow: hidden;
   background: #84d6db;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 0);
   background-size: 150px 150px;

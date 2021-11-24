@@ -17,7 +17,7 @@ body{
 }
 .main_slider{
     width: 100vw;
-    height: 100%;
+    height: calc(100% - 60px );
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -187,12 +187,14 @@ transform: scale(.85);
     @include flex("",center,center);
     ul{
         position: absolute;
-        @include flex("",center,center);
-        bottom: 45px;
-        width: 100%;
+        @include flex("","",center);
+        width: 90%;
+        bottom: 30px;
+        margin: auto;
         overflow: scroll;
     }
     .title_item{
+        margin: auto;
         @include flex(column,center,center);
         padding: 3%;
         li{

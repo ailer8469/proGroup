@@ -1996,7 +1996,7 @@ footer {
 .top_slider {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 100%;
   overflow: hidden;
   background-image: url("../img/new/background.png");
   background-repeat: no-repeat;

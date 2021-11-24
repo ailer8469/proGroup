@@ -38,6 +38,7 @@ $(function(){
         scale: 0,
     },{
         scale: 1,
+        opacity:1,
         ease:Circ.easeOut,
     }).fromTo('.inner_circle',1,{
         scale: 0,
@@ -95,6 +96,7 @@ var rotate= function(){
         ease:Linear.easeNone,
         repeat:-1,
         type: "cubic",
+        rotationZ:'360',
         motionPath: {
             path: MotionPathPlugin.convertToPath("#path")[0],
             align: "#path",
@@ -104,42 +106,24 @@ var rotate= function(){
             end:1.8
         }
     });
-    gsap.to('#span_01',50,{
-        ease:Linear.easeNone,
-        repeat:-1,
-        type: "cubic",
-        motionPath: {
-            path: MotionPathPlugin.convertToPath("#smpath_1")[0].reverse(),
-            align: "#smpath_1",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.4,
-            end:1.2
-        }
-    });
-}
+};
+
 //aos init
 AOS.init();
 //button switch
 let learnMore=document.getElementById('page01_learnMore');
-
 learnMore.addEventListener('click',() => {
     window.location.href='index.html';
 });
 
-// page transform
-// var controller = new ScrollMagic.Controller();
-// var page = new TimelineMax()
-// .fromTo("#page02", 1, {y:'-100%'},
-// { y: '0%',ease: Expo.easeInOut});
-
-// // create scene to pin and link animation
-// new ScrollMagic.Scene({
-//     triggerElement: "#page02",
-//     duration: '100%',
-//     triggerHook:0
-// })
-// .setPin("#page02")
-// .setTween(page)
-// .addIndicators() 
-// .addTo(controller);
+new fullpage('#fullpage', {
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    scrollBar: true
+});
+// ScrollMagic
+var controller = new ScrollMagic.Controller()
+var first = new ScrollMagic.Scene({
+    triggerElement: '.page_02',
+    duration: "100%",
+})
+.addTo(controller);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.ico" type="image/x-icon" />
     <!-- font -->
@@ -26,6 +26,8 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/MotionPathPlugin.min.js"></script>
     <title>關於博群</title>
@@ -88,7 +90,7 @@
         </div>
     </div>
     <!--▲ header ▲-->
-    <main>
+    <main id="fullpage">
         <section class="page_01 box" id="page01">
             <div class="office_pic" 
                 data-aos="fade-left"
@@ -120,15 +122,12 @@
             <div class="page02_circle">
                 <div class="inner_circle">
                 </div>
-                <div class="out_circle">
+                <div class="out_circle">  
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
                     <circle id="path" r="200" cx="200" cy="200"  fill-opacity="0" stroke-opacity="1"></circle>
                     </svg>
                     
                     <div class="ball_item" id="ball_01"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
-                            <circle id="smpath_1" r="28" cx="28" cy="28"  fill-opacity="0" stroke-opacity="1"></circle>
-                        </svg>
                         <span class="ball_span" id="span_01">最專業性企業法律支持</span>
                         <img src="img/about/ball.svg" alt="" class="ball_img">
                     </div>
@@ -149,7 +148,7 @@
                 </div>
             </div>
         </section>
-        <section class="page_03 box" id="page03">
+        <section class="page_03" id="page03">
             <div class="dream_box">
                 <div class="dream_text"
                 data-aos="fade-left">
@@ -202,7 +201,7 @@
                 </div>
             </div>
         </section>
-        <section class="page_04 box" id="page04">
+        <section class="page_04" id="page04">
             <ul>
                 <li
                 data-aos="fade-up"
@@ -348,6 +347,9 @@
     </footer>
     <!--▲ footer ▲-->
     <!-- javascript -->
+    <!-- fullpage -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.1/fullpage.css">
     <!-- <script src="js/layout/locomotive.js"></script> -->
     <script src="js/about.js"></script> 
     <script src="js/layout/burger.js"></script>
