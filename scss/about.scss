@@ -12,12 +12,16 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    position: relative;
 }
 .page_01{
     @include flex("",center,center);
     position: relative;
     background-color: white;
     z-index: 2;
+    .page01_wrap{
+        display: flex;
+    }
     .about_intro{
         margin: auto 100px;
         letter-spacing: 0.15em;
@@ -67,6 +71,15 @@
         }
     }
 }
+.check_end{
+    width: 100%;
+    position: absolute;
+}
+.check_end{
+top: 0;
+}
+
+
 .page_02{
     @include flex("",center,center);
     position: relative;
@@ -95,89 +108,92 @@
         color: transparent;
         -webkit-text-stroke: 1px rgba(130, 130, 130, 0.5);
     }
-    svg{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    #path{
-        fill: transparent;
-        stroke: transparent;
-    }
-    // .word_path{
-    //     width: 520px;
-    //     height: 520px;
-    // }
-    // #word_path{
-    //     stroke: black;
-    // }
 
     .page02_circle{
         @include flex("",center,center);
         position: relative;
-        width: 401.67px;
-        height: 401.67px;
+        width: 100%;
+        height: 60%;
         .inner_circle{
             margin: auto;
+            position: absolute;
             z-index: 2;
-            width: 311.05px;
-            height: 311.05px;
+            width: 275px;
+            height: 275px;
             background-image: url('../img/about/ball_up.png');
+            background-position: center;
+            background-repeat:no-repeat;
         }
         .out_circle{
             opacity: 0;
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 375px;
+            height: 375px;
             z-index: 1;
             background-image: url('../img/about/ball_down.png');
             background-position: center;
+            background-repeat:no-repeat;
+        }
+        .orbit{
+            @include flex("",center,center);
+            position: relative;
+            width: 600px;
+            height: 600px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+            #path{
+                fill: transparent;
+                stroke: white;
+                stroke-width: 2px;
+            }
+        }    
+        .small_ball{
+            position: absolute
+        }
+        .white{
+            right: 4%;
+            top: 60%;
+        }
+        .green{
+            left: 30%;
+            top: 7%;
         }
         .ball_item{
             @include flex(column,center,center);
+            width: 150px;
+            height: 150px;
             position: absolute;
-            img{
-                opacity: 0;
-                width: 56px;
+            circle{
+                fill: #FFFFFF4D;
             }
-            span{
-                opacity: 0;
+            .text_ball_shadow{
+                cursor:crosshair; 
+                fill: #FFFFFF4D;
+                z-index: 4;
+            }
+            text{
+                fill:$gray2;
+                // opacity: 0;
                 position: absolute;
-                width: 250px;
-                color: $gray2;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 21px;
                 letter-spacing: 0.15em;
             }
-            svg{
-            }
-            #smpath{
-                stroke-width: 3px;
-                fill: transparent;
-            }
         }
         .ball_item:nth-child(4){
-            right: 130px;
-            top: -30px;
-            span{
-                top: -40px;
-                left: -70px;
-            }
+            left:38%;
+            top: 82%;
         }
         .ball_item:nth-child(2){
             right: 345px;
             top: 270px;
-            span{
-                left: -220px;
-            }
         }
         .ball_item:nth-child(3){
             right: -26px;
             top: 170px;
-            span{
-                left: 70px;
-            }
         }
     }
 }
