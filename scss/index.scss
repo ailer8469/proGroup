@@ -34,8 +34,8 @@ section{
     background-size: 150px 150px,cover;
     .page_01_title{
         position: absolute;
-        left: 25%;
-        top: 25%;
+        left: 22%;
+        top: 18%;
         width: 300px;
         letter-spacing: 0.1em;
         font-weight: 700;
@@ -108,13 +108,13 @@ text-decoration: none;
 //MAP
 .map{
     position: absolute;
-    top: 20%;
+    top: 25%;
     right: 6%;
     width: 100%;
     .body_map{
         position: absolute;
         right: 15%;
-        background-image: url('../img/index/body.png');
+        background-image: url('../img/index/ground.png');
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
@@ -122,68 +122,73 @@ text-decoration: none;
         height: 100vh;
         z-index: 1;
     }
+    .purple_building{
+        position: absolute;
+        right: 43%;
+        top: 14%;
+        width: 24%;
+        z-index: 3;
+    }
     .up_board_off{
         position: absolute;
         right: 30%;
-        top: -3%;
-        width: 136px;
+        top: -9%;
+        width: 23%;
     }
     .up_board_on{
         display: none;
         position: absolute;
         right: -6%;
-        top: -26%;
+        top: -29%;
         width: 650px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
     .down_board_off{
         position: absolute;
         right: 14%;
-        top: 23%;
-        width: 100px;
+        top: 18%;
+        width: 17%;
     }
     .down_board_on{
         display: none;
         position: absolute;
         right: -20%;
-        top: -24%;
+        top: -29%;
         width: 700px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
     .book_off{
         position: absolute;
-        right: 36%;
-        top: 35%;
-        width: 125px;
+        right: 35%;
+        top: 31%;
+        width: 21%;
     }
     .book_on{
         display: none;
         position: absolute;
         right: 14%;
-        top: -10%;
+        top: -14%;
         width: 276px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
     .stairs{
         position: absolute;
         right: 80%;
-        top: 300px;
-        width: 100%;
-        max-width:96px;
+        top: 258px;
+        width: 16%;
         z-index: 1;
     }
     .pig_map_off{
         position: absolute;
         right: 90%;
-        top: 267px;
-        width: 100%;
-        max-width:294px;
+        top: 225px;
+        width: 49%;
     }
     .pig_map_on{
         display: none;
         position: absolute;
         right: 84%;
-        top: -170px;
+        top: -150px;
         width: 100%;
         max-width:354px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
@@ -210,20 +215,34 @@ text-decoration: none;
     }
 }
 .gif{
-    position: absolute;
-    left: 109px;
-    top:-28px;
     width: 27%;
+    position: absolute;
+    left: 83px;
+    top:-28px;
+}
+.gif_pre{
+    z-index: 3;
 }
 .gif_aft{
-    z-index: 0;
-    width: 10%;
-    left: 53%;
+    z-index: 1;
+}
+.boat{
+    position: absolute;
+    width: 27%;
+    left: 75px;
+    top:-20px;
+    z-index: 2;
+}
+// when new is hovered
+.boat_hover{
+    .boat,.gif{
+        filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
+    }  
 }
 .map_box.new{
     .map_topic{
-        top: -45px;
-        left: -2%;
+        top: -65px;
+        left: -8%;
     }
     svg{
         top: 7px;
@@ -234,7 +253,7 @@ text-decoration: none;
 .map_box.about{
     .map_topic{
         width: 100px;
-        top: 170px;
+        top: 145px;
         left: 98%;
     }
     svg{
@@ -246,8 +265,8 @@ text-decoration: none;
 .map_box.knowledge{
     .map_topic{
         width: 100px;
-        top: 294px;
-        left: 108%;
+        top: 235px;
+        left: 102%;
     }
     svg{
         width: 240px;
@@ -257,8 +276,8 @@ text-decoration: none;
 }
 .map_box.ask{
     .map_topic{
-        top: 235px;
-        left: -61%;
+        top: 157px;
+        left: -50%;
     }
     svg{
         top: 7px;
@@ -267,8 +286,8 @@ text-decoration: none;
 }
 .map_box.member{
     .map_topic{
-        top: -70px;
-        left:82%;
+        top: -113px;
+        left:83%;
     }
     svg{
         top: 10px;
@@ -311,24 +330,24 @@ text-decoration: none;
         }
     }
     .new_ball{
-        left: 29%;
-        top: -60px;
-    }
-    .mem_ball{
-        left: 56%;
+        left: 25%;
         top: -80px;
     }
+    .mem_ball{
+        left: 55%;
+        top: -125px;
+    }
     .about_ball{
-        left: 71%;
-        top: 155px;
+        left: 70%;
+        top: 130px;
     }
     .know_ball{
-        left: 58%;
-        top: 280px;
+        left: 50%;
+        top: 220px;
     }
     .ask_ball{
-        left: -30%;
-        top: 220px;
+        left: -17%;
+        top: 140px;
     }
 
 }
@@ -698,7 +717,7 @@ text-decoration: none;
 }
 .page_03{
     position: relative;
-    height: 95vh;
+    height: 101vh;
     background-color: white;
     h2{
         @include flex("",flex-start,center);
@@ -768,7 +787,7 @@ text-decoration: none;
     .page_03_bg{
         position: absolute;
         right: -5px;
-        top: 0;
+        top: 100px;
         max-width: 230px;
         width: 100%;
         height: 100%;
@@ -776,6 +795,7 @@ text-decoration: none;
         background-position: center;
         background-size: cover;
         clip-path: url(#clipping);
+        transform: scale(1.2);
     }
 }
 // the madal
@@ -896,8 +916,8 @@ text-decoration: none;
     }
 }
 @media (max-width:$desktop){
-    .page_01{
-        height: 105vh;
+    .page_01 {
+        height: 90vh;
     }
     .page_01 .page_01_title{
         top: 10%;
@@ -907,11 +927,24 @@ text-decoration: none;
         .body_map{
             max-width: none;
             width: 450px;
-            top:70px;
+            top:15px;
         }
+    }
+    .map .boat{
+        width: 28%;
+        left: 51px;
+        top: -24px;
+    }
+    .map .purple_building{
+        right: 45%;
+        top: 11%;
+        width: 25%;
     }
     .map_box .map_topic {
         opacity: 0;
+    }
+    .map_box .new_ball{
+        top:-90px;
     }
     .map_box{
         .lottie{
@@ -919,42 +952,45 @@ text-decoration: none;
         }
     } 
     .gif {
-        left: 88px;
+        left: 66px;
         top: -38px;
     }
     .map .stairs {
         right: 78%;
-        top: 232px
+        top: 193px;
+        width: 20%;
     }
     .map .pig_map_off {
-        top: 200px;
+        top: 180px;
+        width: 54%;
     }
     .map .book_off {
-        right: 32%;
-        top: 25%;
+        z-index: 4;
+        right: 35%;
+        top: 24%;
     }
     .map_box .know_ball {
         left: 50%;
-        top: 179px;
+        top: 160px;
     }
     .map_box .about_ball {
-        top: 100px;
+        top: 75px;
     }
     .map_box .ask_ball {
         top: 120px;
     }
     .map .up_board_off {
-        right: 24%;
+        right: 30%;
         top: -7%;
     }
     .map_box .mem_ball {
-        top: -120px;
+        top: -115px;
     }
     .map .down_board_off {
-        top: 15%;
+        top: 13%;
     }
     #top_cloud_wrap{
-        margin-top: 40px;
+        margin-top: -120px;
     }
     .index_link{
         display: none;
@@ -1021,10 +1057,22 @@ text-decoration: none;
     }
 }
 @media (max-width:900px){
+    .page_01{
+        height: 100vh;
+    }
+    #top_cloud_wrap{
+        margin-top: 0;
+    }
     .map{
         .body_map{
             right: -5%;
-            top:170px;
+            top:60px;
+        }
+        .book_off {
+            top: 28%;
+        }
+        .down_board_off {
+            top: 16%;
         }
     }
 }
@@ -1061,44 +1109,43 @@ text-decoration: none;
         }
     }
     .gif {
-        left: 77px;
-        width: 25%;
+        left: 56px;
+        width: 30%;
     }
     .map .stairs {
         display: none;
     }
     .map .pig_map_off {
-        width: 66%;
-        top: 210px;
+        width: 60%;
+        top: 185px;
         right: 58%;
     }
     .map_box .new_ball {
-        left: 28%;
+        left: 25%;
     }
     .map .book_off {
         right: 34%;
         top: 24%;
-        width: 90px;
     }
     .map_box .know_ball {
-        left: 49%;
-        top: 158px;
+        left: 50%;
+        top: 125px;
     }
     .map_box .about_ball {
         left: 65%;
     }
     .map_box .ask_ball {
-        top: 160px;
+        top: 130px;
         left: 5%;
     }
     .map .up_board_off {
-        right: 22%;
-        top: -8%;
-        width: 100px;
+        right: 29%;
+        top: -7%;
     }
     .map .down_board_off {
-        right: 16%;
-        width: 80px;
+        right: 14%;
+        top: 14%;
+        width: 18%;
     }
     // bottom cloud
     .top_cloud_01,.top_cloud_06{
@@ -1191,6 +1238,11 @@ text-decoration: none;
     }
 }
 @media (max-width:670px){
+    .map{
+        .body_map{
+            top:100px;
+        }
+    }
     .page_03 .cooperate_wrap{
         margin: auto;
         justify-content: space-between;
@@ -1222,10 +1274,46 @@ text-decoration: none;
         padding: 50px 20px;
     }
 }
+@media (max-width:$mobile){
+    .page_01{
+        background-size: 65px 65px,cover;
+    }
+    .page_01 .page_01_title {
+        p {
+        font-size: 21px;
+        margin: 5px 0;
+    }
+        span{
+            font-size: 14px;
+        }
+    }
+    #top_cloud_wrap{
+        margin-top: 60px;
+    }
+    .page_01 .top_cloud_04 {
+        right: -20%;
+    }
+    .page_01 .top_cloud_03 {
+        right: -43%;
+    }
+    .map{
+        .body_map{
+            right: -4%;
+        }
+    }
+    .page_02 h2 {
+        margin: 100px 10px;
+        font-size: 20px;
+    }
+    .page02_01 .ask_item {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
 @media (max-width:420px){
     .page_01{
         background-size: 80px 80px,cover;
-        height: 100vh;
+        height: 105vh;
     // bottom cloud
     .top_cloud_02{
         right: 27%;
@@ -1244,7 +1332,7 @@ text-decoration: none;
         transform: translateY(-65px);
     } 
     .scroll_box{
-        bottom: 80px;
+        bottom: 50px;
         .index_scrolldown{
             font-size: 14px;
         }    
@@ -1252,17 +1340,16 @@ text-decoration: none;
     }
     .map{
         .body_map{
-            width: 250px;
-            right: 0;
+            width: 300px;
+            right: -5%;
             top: 140px;
         }
     }
     #top_cloud_wrap{
-        margin-top: -160px;
+        margin-top: -100px;
     }
     .gif {
         left: 50px;
-        top:-20px;
     }
     .map_box .loader-disc-bouncer{
         width: 15px;
@@ -1272,12 +1359,13 @@ text-decoration: none;
         right: 60%;
     }
     .map_box .new_ball {
-        left: 31%;
+        left: 29%;
+        top: -80px;
     }
     .map .book_off {
-        right: 33%;
-        top: 16%;
-        width: 70px;
+        right: 34%;
+        top: 18%;
+        width: 24%;
     }
     .map_box .know_ball {
         left: 53%;
@@ -1291,17 +1379,26 @@ text-decoration: none;
         top: 80px;
     }
     .map .up_board_off {
-        right: 17%;
-        top: -7%;
+        right: 29%;
+        top: -6%;
+        width: 24%;
+    }
+    .map .purple_building{
+        top: 8%;
     }
     .map_box .mem_ball {
         top: -100px;
         left: 62%;
     }
     .map .down_board_off {
-        right: 13%;
-        width: 60px;
-        top: 9%;
+        right: 14%;
+        width: 20%;
+        top: 10%;
+    }
+    .map .boat{
+        width: 28%;
+        left: 42px;
+        top: -16px;
     }
     .page_01 .page_01_title {
         top: 10%;
@@ -1329,10 +1426,15 @@ text-decoration: none;
     }
     .page_03 .cooperate_wrap {
         max-width: none;
-        width: 90%;
+        width: 70%;
         .cooperate_item{
             margin: 10px;
         }
+    }
+}
+@media (max-width:400px){
+    .page_03 .cooperate_wrap {
+        width: 80%;
     }
 }
 @media (max-width:375px){
@@ -1345,38 +1447,8 @@ text-decoration: none;
             margin-left: 0;
         }
     }
-}
-@media (max-width:$mobile){
-    .page_01{
-        background-size: 65px 65px,cover;
-    }
-    .page_01 .page_01_title {
-        p {
-        font-size: 21px;
-        margin: 5px 0;
-    }
-        span{
-            font-size: 14px;
-        }
-    }
-    .page_01 .top_cloud_04 {
-        right: -80%;
-    }
-    .page_01 .top_cloud_03 {
-        right: -83%;
-    }
-    .map{
-        .body_map{
-            right: -4%;
-        }
-    }
-    .page_02 h2 {
-        margin: 100px 10px;
-        font-size: 20px;
-    }
-    .page02_01 .ask_item {
-        padding: 8px 20px;
-        font-size: 14px;
+    .page_03 .cooperate_wrap {
+        width: 90%;
     }
 }
 @media (max-width:310px){

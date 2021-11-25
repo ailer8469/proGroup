@@ -1,4 +1,24 @@
 $(function(){
+    gsap.registerPlugin(ScrollToPlugin);
+        var ctrl = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                } 
+        });
+        $('.slider').each(function(index,element) {  
+            new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: 'onEnter',
+                offset:50
+            }).addTo(ctrl)
+            .on('enter', function () {
+            TweenLite.to(window, 1, {
+                scrollTo:{y:".page_0" + (index+1),  
+                autoKill:false
+            },ease:Back.easeOut});
+            });   
+        }); 
+
+
     // bottom carousel
     $('.pic_carousel').slick({
         arrows:false,
@@ -33,30 +53,30 @@ $(function(){
         ease:'back',
     })
     .fromTo('.out_circle',.5,{
-        scrollTrigger:'.out_circle',
-        delay:2,
         scale: 0,
     },{
         scale: 1,
         opacity:1,
-        ease:Circ.easeOut,
+        ease:Back.easeOut,
     }).fromTo('.inner_circle',1,{
         scale: 0,
     },{
         scale: 1,
         ease:Circ.easeOut,
-    }).fromTo('.ball_img',.5,{
-        scale: 0,
+    }).fromTo('#path_svg',1,{
+        opacity:0,
+        scale: 0
     },{
         scale: 1,
         opacity:1,
-        ease:Circ.easeOut,
-    }).fromTo('.ball_span',1,{
-        y:'-50'
-    },{
-        y:0,
-        opacity:1,
         ease:Back.easeOut,
+    }).fromTo('.small_ball',.5,{
+        opacity:0,
+        scale: 0
+    },{
+        scale: 1,
+        opacity:1,
+        ease:Back.easeOut
     }).to('.animation_01',1, {
         x:'-500',
         ease:Back.easeOut,
@@ -66,7 +86,7 @@ $(function(){
     },"-=1");
 });   
 var rotate= function(){
-    gsap.to('#ball_01',30,{
+    gsap.to('.small_ball.white',30,{
         ease:Linear.easeNone,
         repeat:-1,
         type: "cubic",
@@ -75,35 +95,21 @@ var rotate= function(){
             align: "#path",
             autoRotate: true,
             alignOrigin: [0.5, 0.5],
-            start: 0.42,
-            end:1.5
-        }
-    });
-    gsap.to('#ball_02',14,{
-        ease:Linear.easeNone,
-        repeat:-1,
-        type: "cubic",
-        motionPath: {
-            path: MotionPathPlugin.convertToPath("#path")[0],
-            align: "#path",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0,
+            start: 0.05,
             end:1
         }
     });
-    gsap.to('#ball_03',15,{
+    gsap.to('.small_ball.green',30,{
         ease:Linear.easeNone,
         repeat:-1,
         type: "cubic",
-        rotationZ:'360',
         motionPath: {
             path: MotionPathPlugin.convertToPath("#path")[0],
             align: "#path",
             autoRotate: true,
             alignOrigin: [0.5, 0.5],
-            start: 0.8,
-            end:1.8
+            start: 0.7,
+            end:1.7
         }
     });
 };
@@ -111,19 +117,7 @@ var rotate= function(){
 //aos init
 AOS.init();
 //button switch
-let learnMore=document.getElementById('page01_learnMore');
+let learnMore=document.getElementById('page01learnMore');
 learnMore.addEventListener('click',() => {
     window.location.href='index.html';
 });
-
-new fullpage('#fullpage', {
-    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    scrollBar: true
-});
-// ScrollMagic
-var controller = new ScrollMagic.Controller()
-var first = new ScrollMagic.Scene({
-    triggerElement: '.page_02',
-    duration: "100%",
-})
-.addTo(controller);

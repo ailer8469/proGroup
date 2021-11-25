@@ -1997,6 +1997,7 @@ footer {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
 
 .page_01 {
@@ -2016,6 +2017,12 @@ footer {
   position: relative;
   background-color: white;
   z-index: 2;
+}
+
+.page_01 .page01_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .page_01 .about_intro {
@@ -2101,6 +2108,15 @@ footer {
   max-width: 654px;
 }
 
+.check_end {
+  width: 100%;
+  position: absolute;
+}
+
+.check_end {
+  top: 0;
+}
+
 .page_02 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2145,17 +2161,6 @@ footer {
   -webkit-text-stroke: 1px rgba(130, 130, 130, 0.5);
 }
 
-.page_02 svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.page_02 #path {
-  fill: transparent;
-  stroke: transparent;
-}
-
 .page_02 .page02_circle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2171,26 +2176,74 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  width: 401.67px;
-  height: 401.67px;
+  width: 100%;
+  height: 60%;
 }
 
 .page_02 .page02_circle .inner_circle {
   margin: auto;
+  position: absolute;
   z-index: 2;
-  width: 311.05px;
-  height: 311.05px;
+  width: 275px;
+  height: 275px;
   background-image: url("../img/about/ball_up.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page_02 .page02_circle .out_circle {
   opacity: 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 375px;
+  height: 375px;
   z-index: 1;
   background-image: url("../img/about/ball_down.png");
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page_02 .page02_circle .orbit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.page_02 .page02_circle .orbit svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page_02 .page02_circle .orbit #path {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.page_02 .page02_circle .small_ball {
+  position: absolute;
+}
+
+.page_02 .page02_circle .white {
+  right: 4%;
+  top: 60%;
+}
+
+.page_02 .page02_circle .green {
+  left: 30%;
+  top: 7%;
 }
 
 .page_02 .page02_circle .ball_item {
@@ -2207,38 +2260,33 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 300px;
+  height: 300px;
   position: absolute;
 }
 
-.page_02 .page02_circle .ball_item img {
-  opacity: 0;
-  width: 56px;
+.page_02 .page02_circle .ball_item circle {
+  fill: #FFFFFF4D;
 }
 
-.page_02 .page02_circle .ball_item span {
-  opacity: 0;
+.page_02 .page02_circle .ball_item .text_ball_shadow {
+  cursor: crosshair;
+  fill: #FFFFFF4D;
+  z-index: 4;
+}
+
+.page_02 .page02_circle .ball_item text {
+  fill: #4f4f4f;
   position: absolute;
-  width: 250px;
-  color: #4f4f4f;
   font-size: 18px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: 0.15em;
 }
 
-.page_02 .page02_circle .ball_item #smpath {
-  stroke-width: 3px;
-  fill: transparent;
-}
-
 .page_02 .page02_circle .ball_item:nth-child(4) {
-  right: 130px;
-  top: -30px;
-}
-
-.page_02 .page02_circle .ball_item:nth-child(4) span {
-  top: -40px;
-  left: -70px;
+  left: 38%;
+  top: 82%;
 }
 
 .page_02 .page02_circle .ball_item:nth-child(2) {
@@ -2246,17 +2294,9 @@ footer {
   top: 270px;
 }
 
-.page_02 .page02_circle .ball_item:nth-child(2) span {
-  left: -220px;
-}
-
 .page_02 .page02_circle .ball_item:nth-child(3) {
   right: -26px;
   top: 170px;
-}
-
-.page_02 .page02_circle .ball_item:nth-child(3) span {
-  left: 70px;
 }
 
 .page_03 {

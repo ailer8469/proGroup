@@ -1,4 +1,27 @@
 $(document).ready(function(){
+    gsap.registerPlugin(ScrollTrigger);
+
+    // scroll to page_03
+    gsap.registerPlugin(ScrollToPlugin);
+    var ctrl = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            } 
+    });
+    $('.page_03').each(function() {  
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 'onEnter',
+            offset:50
+        }).addTo(ctrl)
+        .on('enter', function () {
+        TweenLite.to(window, 1, {
+            scrollTo:{y:".page_03",  
+            autoKill:false
+        },ease:Back.easeOut});
+        });   
+    }); 
+
+
     //open copy phone
     $('#link_phone').on('click',function(){
         $('#popnumber').fadeToggle(600)
@@ -165,6 +188,7 @@ $(document).ready(function(){
     });
     $('.map_box.new').hover(function(){
         if(wdth>1200){
+        $('.new').addClass('boat_hover');
         $('.new .path-line').animate({
             'stroke-dashoffset':'0'
         },1500);
@@ -172,29 +196,29 @@ $(document).ready(function(){
     };
     },function(){
         if(wdth>1200){
+        $('.new').removeClass('boat_hover');
         $('.new .path-line').animate({
             'stroke-dashoffset':'1000'
         });
         $('.new span').fadeOut();
     };
     });
-    gsap.registerPlugin(ScrollTrigger);
     gsap.from('#mask_clip_1', {
-        scrollTrigger:'#clipping',
+        scrollTrigger:'.page_03',
         duration: 2,
         opacity:0,
         y:'1000',
         ease:'back',
     }); 
     gsap.from('#mask_clip_2', {
-        scrollTrigger:'#clipping',
+        scrollTrigger:'.page_03',
         duration: 2.3,
         opacity:0,
         y:'1000',
         ease:'back',
     }); 
     gsap.from('#mask_clip_3', {
-        scrollTrigger:'#clipping',
+        scrollTrigger:'.page_03',
         duration: 2.5,
         opacity:0,
         y:'1000',
