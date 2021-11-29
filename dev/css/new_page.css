@@ -749,13 +749,11 @@ footer {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
   background: url(../img/material.png);
   background-color: #379595;
-  z-index: 1000;
-  -webkit-clip-path: none;
-          clip-path: none;
+  z-index: 998;
+  overflow: hidden;
 }
 
 #loaded {
@@ -774,12 +772,46 @@ footer {
   color: white;
 }
 
+.mask_wrap {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 998;
+  overflow: hidden;
+}
+
 #mask_circle {
-  opacity: 1;
-  position: absolute;
-  top: 0;
   width: 400px;
   height: 400px;
+}
+
+#mask_circle_deep {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+#mask_circle_deep circle {
+  opacity: 1;
+  fill: red;
 }
 
 @media (max-width: 1200px) {
@@ -1514,13 +1546,11 @@ footer {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
   background: url(../img/material.png);
   background-color: #379595;
-  z-index: 1000;
-  -webkit-clip-path: none;
-          clip-path: none;
+  z-index: 998;
+  overflow: hidden;
 }
 
 #loaded {
@@ -1539,12 +1569,46 @@ footer {
   color: white;
 }
 
+.mask_wrap {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 998;
+  overflow: hidden;
+}
+
 #mask_circle {
-  opacity: 1;
-  position: absolute;
-  top: 0;
   width: 400px;
   height: 400px;
+}
+
+#mask_circle_deep {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+#mask_circle_deep circle {
+  opacity: 1;
+  fill: red;
 }
 
 @media (max-width: 1200px) {

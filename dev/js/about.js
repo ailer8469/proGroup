@@ -1,5 +1,5 @@
 $(function(){
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollToPlugin,MotionPathPlugin,ScrollTrigger);
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
                 } 
@@ -30,7 +30,6 @@ $(function(){
         cssEase: 'ease',
     });
     // word animation
-    gsap.registerPlugin(ScrollTrigger);
     gsap.from('.animation_01', {
         scrollTrigger:'.animation_01',
         duration: 2,
@@ -39,7 +38,6 @@ $(function(){
         ease:'back',
     }); 
     // ball animation
-    gsap.registerPlugin(MotionPathPlugin);
     let tl = new TimelineMax({
         onComplete:function(){
             rotate();
@@ -70,6 +68,13 @@ $(function(){
         scale: 1,
         opacity:1,
         ease:Back.easeOut,
+    }).fromTo(['.ball_item','#path_shadow'],.5,{
+        opacity:0,
+        scale: 0
+    },{
+        scale: 0.905,
+        opacity:1,
+        ease:Back.easeOut
     }).fromTo('.small_ball',.5,{
         opacity:0,
         scale: 0
@@ -86,33 +91,34 @@ $(function(){
     },"-=1");
 });   
 var rotate= function(){
-    gsap.to('.small_ball.white',30,{
+    gsap.to('#path_shadow',20,{
         ease:Linear.easeNone,
         repeat:-1,
         type: "cubic",
-        motionPath: {
-            path: MotionPathPlugin.convertToPath("#path")[0],
-            align: "#path",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.05,
-            end:1
-        }
+        rotation:360
     });
-    gsap.to('.small_ball.green',30,{
+    gsap.to('#span_01',30,{
         ease:Linear.easeNone,
         repeat:-1,
         type: "cubic",
-        motionPath: {
-            path: MotionPathPlugin.convertToPath("#path")[0],
-            align: "#path",
-            autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            start: 0.7,
-            end:1.7
-        }
+        rotation:-360,
+        transformOrigin:"50% 50%"
+    });
+    gsap.to('#ball_01',{
+        duration:30,
+        ease:Linear.easeNone,
+        repeat:-1,
+            motionPath: {
+                path: MotionPathPlugin.convertToPath("#path")[0],
+                align: "#path",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start:0.8,
+                end:1.8
+            }
     });
 };
+
 
 //aos init
 AOS.init();

@@ -35,27 +35,27 @@
 </head>
 <body>
     <!--▼ loading ▼-->
-    <!-- <div id="loading">
+    <div id="loading">
         <div class="loadpage" id="loadpage">
             <div class="loaded" id="loaded">
             </div>   
             <p id="progress">
                 0％
             </p>
+            <div class="mask_wrap">
+                <svg id="mask_circle">
+                    <circle cx="200" cy="200" r="110" fill="#A7C6C6"/>
+                </svg>
+                <svg id="mask_circle_deep">
+                    <circle cx="5" cy="5" r="5"/>
+                </svg>
+            </div>
         </div>
-    <svg id="mask_circle">
-        <defs>
-        <mask id="mask" x="0" y="0" width="20" height="20">
-            <rect x="5" y="5" width="90" height="40" fill="#fff"/>
-            <circle cx="190" cy="145" r="110" fill="#A7C6C6"/>
-        </mask>
-        </defs>
-        <circle cx="190" cy="145" r="110" mask="url(#mask)" fill-opacity="0.7"/>
-    </svg>
-    </div> -->
-    
+    </div> 
+
+    </div>
     <!--▲ loading ▲-->
-    <!--▼ header ▼-->
+    <!--▼ header ▼--> 
     <main>
         <header>
         <div class="nav-pc">
@@ -742,7 +742,7 @@
     <script src="js/ask.js"></script>
     <!-- javascript -->
     <script src="js/layout/lightball.js"></script>
-    <!-- <script src="js/layout/loading.js"></script> -->
+    <script src="js/layout/loading.js"></script>
     <script src="js/layout/burger.js"></script>
     <script src="js/index.js"></script>
 </body>

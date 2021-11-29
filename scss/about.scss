@@ -134,36 +134,9 @@ top: 0;
             background-position: center;
             background-repeat:no-repeat;
         }
-        .orbit{
-            @include flex("",center,center);
-            position: relative;
-            width: 600px;
-            height: 600px;
-            svg{
-                width: 100%;
-                height: 100%;
-            }
-            #path{
-                fill: transparent;
-                stroke: white;
-                stroke-width: 2px;
-            }
-        }    
-        .small_ball{
-            position: absolute
-        }
-        .white{
-            right: 4%;
-            top: 60%;
-        }
-        .green{
-            left: 30%;
-            top: 7%;
-        }
         .ball_item{
-            @include flex(column,center,center);
-            width: 150px;
-            height: 150px;
+            width: 25%;
+            height: 25%;
             position: absolute;
             circle{
                 fill: #FFFFFF4D;
@@ -174,29 +147,50 @@ top: 0;
                 z-index: 4;
             }
             text{
+                dominant-baseline: middle;
+                vertical-align: baseline;
                 fill:$gray2;
-                // opacity: 0;
-                position: absolute;
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: 21px;
                 letter-spacing: 0.15em;
             }
         }
-        .ball_item:nth-child(4){
-            left:38%;
-            top: 82%;
+        #ball_01{
+            right: 4%;
+            top: 6%;
         }
-        .ball_item:nth-child(2){
-            right: 345px;
-            top: 270px;
+        #ball_02{
+            left:35%;
+            top: 84%;
         }
-        .ball_item:nth-child(3){
-            right: -26px;
-            top: 170px;
+        #ball_03{
+            left: -10%;
+            top: 23%;
         }
     }
-}
+} 
+.orbit{
+    @include flex("",center,center);
+    position: relative;
+    width: 600px;
+    height: 600px;
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+    #path{
+        fill: transparent;
+        // stroke:red;
+        stroke-width: 1px;
+    }
+
+    #path_shadow{
+        position: absolute;
+        left: 0px;
+        top: -6px;
+    }
+}    
 .page_03{
     padding:30px 0;
     width: 100vw;
