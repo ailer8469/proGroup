@@ -24,9 +24,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
-    <!-- locomotive -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <!-- parallax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- waitForImage -->
@@ -46,10 +43,12 @@
                 <svg id="mask_circle">
                     <circle cx="200" cy="200" r="110" fill="#A7C6C6"/>
                 </svg>
-                <svg id="mask_circle_deep">
-                    <circle cx="5" cy="5" r="5"/>
-                </svg>
             </div>
+        </div>
+        <div class="mask_circle_deep">
+            <svg id="mask_hole" width="556" height="556" viewBox="0 0 556 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M278 556C431.535 556 556 431.535 556 278C556 124.465 431.535 0 278 0C124.465 0 0 124.465 0 278C0 431.535 124.465 556 278 556ZM277.999 450.749C373.406 450.749 450.748 373.407 450.748 278C450.748 182.594 373.406 105.251 277.999 105.251C182.593 105.251 105.25 182.594 105.25 278C105.25 373.407 182.593 450.749 277.999 450.749Z" fill="#A7C6C6"/>
+            </svg>
         </div>
     </div> 
 
@@ -133,10 +132,7 @@
                                     <span>最新消息</span>
                                 </div>
                                 <div class="loader-disc-bouncer new_ball"></div>
-                                <img src="img/index/news-pre.gif" alt="" class="gif gif_pre">
-                                <img src="img/index/news-back.gif" alt="" class="gif gif_aft">
-                                <img src="img/index/boat.svg" alt="" class="boat">
-                                
+                                <img src="img/index/building_news.gif" alt="" class="boat">
                             </a>
                         </div>
                         <div class="map_box member">

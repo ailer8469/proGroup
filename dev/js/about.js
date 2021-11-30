@@ -91,31 +91,23 @@ $(function(){
     },"-=1");
 });   
 var rotate= function(){
-    gsap.to('#path_shadow',20,{
-        ease:Linear.easeNone,
-        repeat:-1,
-        type: "cubic",
-        rotation:360
-    });
-    gsap.to('#span_01',30,{
-        ease:Linear.easeNone,
-        repeat:-1,
-        type: "cubic",
-        rotation:-360,
-        transformOrigin:"50% 50%"
-    });
-    gsap.to('#ball_01',{
+    gsap.to('#path_shadow',{
         duration:30,
-        ease:Linear.easeNone,
         repeat:-1,
-            motionPath: {
-                path: MotionPathPlugin.convertToPath("#path")[0],
-                align: "#path",
-                autoRotate: true,
-                alignOrigin: [0.5, 0.5],
-                start:0.8,
-                end:1.8
-            }
+        rotation:360,
+        ease:Power0.easeNone
+    });
+    gsap.to('.orbit_line',{
+        duration:30,
+        repeat:-1,
+        rotation:360,
+        ease:Power0.easeNone
+    });
+    gsap.to('.ball_item',{
+        duration:30,
+        rotation:-360,
+        repeat:-1,     
+        ease:Power0.easeNone           
     });
 };
 

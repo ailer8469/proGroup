@@ -119,55 +119,58 @@ text-decoration: none;
         background-size: contain;
         width: 100%;
         max-width:600px;
-        height: 100vh;
+        height: 600px;
+        max-height:600px;
         z-index: 1;
     }
     .purple_building{
         position: absolute;
-        right: 43%;
-        top: 14%;
-        width: 24%;
+        right: 41%;
+        top: 15%;
+        width: 28%;
         z-index: 3;
     }
     .up_board_off{
         position: absolute;
-        right: 30%;
-        top: -9%;
-        width: 23%;
+        right: 31%;
+        top: -11%;
+        width: 21%;
     }
     .up_board_on{
         display: none;
         position: absolute;
         right: -6%;
-        top: -29%;
+        top: -18%;
         width: 650px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
     .down_board_off{
         position: absolute;
-        right: 14%;
-        top: 18%;
-        width: 17%;
+        right: 15%;
+        top: 30%;
+        width: 15%;
     }
     .down_board_on{
         display: none;
         position: absolute;
-        right: -20%;
-        top: -29%;
+        right: -21%;
+        top: -15%;
         width: 700px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
     .book_off{
+        z-index: 5;
         position: absolute;
-        right: 35%;
-        top: 31%;
+        right: 34%;
+        top: 50%;
         width: 21%;
     }
     .book_on{
+        z-index: 5;
         display: none;
         position: absolute;
         right: 14%;
-        top: -14%;
+        top: 8%;
         width: 276px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }
@@ -188,7 +191,7 @@ text-decoration: none;
         display: none;
         position: absolute;
         right: 84%;
-        top: -150px;
+        top: 10px;
         width: 100%;
         max-width:354px;
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
@@ -214,28 +217,16 @@ text-decoration: none;
         position: absolute;
     }
 }
-.gif{
-    width: 27%;
-    position: absolute;
-    left: 83px;
-    top:-28px;
-}
-.gif_pre{
-    z-index: 3;
-}
-.gif_aft{
-    z-index: 1;
-}
 .boat{
     position: absolute;
-    width: 27%;
-    left: 75px;
-    top:-20px;
+    width: 35%;
+    left: 54px;
+    top:5px;
     z-index: 2;
 }
 // when new is hovered
 .boat_hover{
-    .boat,.gif{
+    .boat{
         filter: drop-shadow(0 0 20px rgba(255, 254, 245, 0.7));
     }  
 }
@@ -931,13 +922,13 @@ text-decoration: none;
         }
     }
     .map .boat{
-        width: 28%;
-        left: 51px;
-        top: -24px;
+        width: 42%;
+        left: 13px;
+        top: -36px;
     }
     .map .purple_building{
-        right: 45%;
-        top: 11%;
+        right: 44%;
+        top: 14%;
         width: 25%;
     }
     .map_box .map_topic {
@@ -951,10 +942,6 @@ text-decoration: none;
             opacity: 0;
         }
     } 
-    .gif {
-        left: 66px;
-        top: -38px;
-    }
     .map .stairs {
         right: 78%;
         top: 193px;
@@ -967,7 +954,7 @@ text-decoration: none;
     .map .book_off {
         z-index: 4;
         right: 35%;
-        top: 24%;
+        top: 37%;
     }
     .map_box .know_ball {
         left: 50%;
@@ -987,7 +974,7 @@ text-decoration: none;
         top: -115px;
     }
     .map .down_board_off {
-        top: 13%;
+        top: 22%;
     }
     #top_cloud_wrap{
         margin-top: -120px;
@@ -1037,6 +1024,10 @@ text-decoration: none;
 
 }
 @media (max-width:980px){
+    .body_map{
+        height: auto;
+        max-height:none;
+    }
     .page02_01{
         .ask_item{
             padding: 10px 25px;
@@ -1068,12 +1059,6 @@ text-decoration: none;
             right: -5%;
             top:60px;
         }
-        .book_off {
-            top: 28%;
-        }
-        .down_board_off {
-            top: 16%;
-        }
     }
 }
 @media (max-width:860px){
@@ -1096,6 +1081,7 @@ text-decoration: none;
 
 }
 @media (max-width:768px){
+
     .page_01{
         height:130vh;
         background-size: 120px 120px,cover;
@@ -1107,10 +1093,6 @@ text-decoration: none;
         .body_map{
             width: 400px;
         }
-    }
-    .gif {
-        left: 56px;
-        width: 30%;
     }
     .map .stairs {
         display: none;
@@ -1124,8 +1106,7 @@ text-decoration: none;
         left: 25%;
     }
     .map .book_off {
-        right: 34%;
-        top: 24%;
+        top: 33%;
     }
     .map_box .know_ball {
         left: 50%;
@@ -1143,8 +1124,7 @@ text-decoration: none;
         top: -7%;
     }
     .map .down_board_off {
-        right: 14%;
-        top: 14%;
+        top: 18%;
         width: 18%;
     }
     // bottom cloud
@@ -1348,9 +1328,6 @@ text-decoration: none;
     #top_cloud_wrap{
         margin-top: -100px;
     }
-    .gif {
-        left: 50px;
-    }
     .map_box .loader-disc-bouncer{
         width: 15px;
     }
@@ -1363,8 +1340,7 @@ text-decoration: none;
         top: -80px;
     }
     .map .book_off {
-        right: 34%;
-        top: 18%;
+        top: 23%;
         width: 24%;
     }
     .map_box .know_ball {
@@ -1379,25 +1355,24 @@ text-decoration: none;
         top: 80px;
     }
     .map .up_board_off {
-        right: 29%;
-        top: -6%;
+        right: 30%;
+        top: -8%;
         width: 24%;
     }
     .map .purple_building{
-        top: 8%;
+        top: 11%;
     }
     .map_box .mem_ball {
         top: -100px;
         left: 62%;
     }
     .map .down_board_off {
-        right: 14%;
         width: 20%;
-        top: 10%;
+        top: 12%;
     }
     .map .boat{
-        width: 28%;
-        left: 42px;
+        width: 42%;
+        left: 15px;
         top: -16px;
     }
     .page_01 .page_01_title {
