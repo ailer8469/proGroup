@@ -225,7 +225,6 @@ $(document).ready(function(){
         ease:'back',
     }); 
     
-
 });
 AOS.init();
 //cloud parallax
@@ -234,10 +233,6 @@ const scene = new Parallax(wrap,{
     scalarX: 10,
 	scalarY: 10,
 });
-// for (var i = 0, l = this.layers.length; i < l; i++) {
-//     var layer = this.layers[i];
-//     if (this.transform3DSupport) this.accelerate(layer);
-// } 
 //talk animation
 var controller = new ScrollMagic.Controller();
 const talkPath= new TimelineMax()

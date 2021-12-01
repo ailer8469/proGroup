@@ -2460,6 +2460,14 @@ footer {
   display: none;
 }
 
+.slick-frame {
+  visibility: hidden;
+}
+
+.slick-frame.slick-initialized {
+  visibility: visible;
+}
+
 @media (max-width: 1200px) {
   .top_new_wrap .top_new_pic img {
     width: 90%;
