@@ -18,15 +18,33 @@
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- locomotive -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script> -->
-    <title>夥伴介紹</title>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <!-- waitForImage -->
+    <script src="js/jquery.waitforimages.min.js"></script>
+    <title>博群國際商務 │ 夥伴介紹</title>
 </head>
 <body>
     <!--▼ loading ▼-->
-
+    <div id="loading">
+        <div class="loadpage" id="loadpage">
+            <div class="loaded" id="loaded">
+            </div>   
+            <p id="progress">
+                0％
+            </p>
+            <div class="mask_wrap">
+                <svg id="mask_circle">
+                    <circle cx="200" cy="200" r="110" fill="#A7C6C6"/>
+                </svg>
+            </div>
+        </div>
+        <div class="mask_circle_deep">
+            <svg id="mask_hole" width="556" height="556" viewBox="0 0 556 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M278 556C431.535 556 556 431.535 556 278C556 124.465 431.535 0 278 0C124.465 0 0 124.465 0 278C0 431.535 124.465 556 278 556ZM277.999 450.749C373.406 450.749 450.748 373.407 450.748 278C450.748 182.594 373.406 105.251 277.999 105.251C182.593 105.251 105.25 182.594 105.25 278C105.25 373.407 182.593 450.749 277.999 450.749Z" fill="#A7C6C6"/>
+            </svg>
+        </div>
+    </div> 
     <!--▲ loading ▲-->
     <main>
         <!--▼ header ▼-->
@@ -647,15 +665,12 @@
         </div> 
     </section>
     <!--▼ ASK ▼-->
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <!-- javascript -->
-    <!-- <script src="js/layout/locomotive.js"></script> -->
-    <script src="js/layout/burger.js"></script>
-    <!-- <script src="js/layout/loading.js"></script> -->
-    <script src="js/member.js"></script>
     <!-- ask -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/ask.js"></script>
+    <!-- javascript -->
+    <script src="js/layout/burger.js"></script>
+    <script src="js/layout/loading.js"></script>
+    <script src="js/member.js"></script>
 </body>
 </html>

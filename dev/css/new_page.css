@@ -821,11 +821,15 @@ footer {
     font-size: 60px;
     line-height: 70px;
   }
+  #progress {
+    bottom: -15%;
+  }
 }
 
 @media (max-width: 500px) {
   #progress {
     font-size: 32px;
+    bottom: -5%;
   }
   #loaded {
     width: 600px;
@@ -1620,11 +1624,15 @@ footer {
     font-size: 60px;
     line-height: 70px;
   }
+  #progress {
+    bottom: -15%;
+  }
 }
 
 @media (max-width: 500px) {
   #progress {
     font-size: 32px;
+    bottom: -5%;
   }
   #loaded {
     width: 600px;

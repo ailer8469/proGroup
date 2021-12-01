@@ -28,7 +28,7 @@ function openModal(){
                 scale:0.65,
             },{
                 display:'flex',
-            }).to(card,1,{
+            },'-=2').to(card,1,{
                 display:'none',
             },'-=10').to(postcard,2, {
                 scale:1,

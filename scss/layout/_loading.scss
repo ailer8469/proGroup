@@ -55,16 +55,19 @@
 
 
 @media (max-width: $desktop){
-
     #progress{
         font-size: 60px;
         line-height: 70px;
+    }
+    #progress{
+        bottom: -15%;
     }
 }
 
 @media (max-width: $mobile){
     #progress{
         font-size: 32px;
+        bottom: -5%;
     }
     #loaded{
         width: 600px;
