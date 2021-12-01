@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
     // scroll to page_03
-    gsap.registerPlugin(ScrollToPlugin);
     var ctrl = new ScrollMagic.Controller({
         globalSceneOptions: {
             } 
@@ -203,22 +202,23 @@ $(document).ready(function(){
         $('.new span').fadeOut();
     };
     });
+    // page03 animation 
     gsap.from('#mask_clip_1', {
-        scrollTrigger:'.page_03',
+        scrollTrigger:'.cooperate_wrap',
         duration: 2,
         opacity:0,
         y:'1000',
         ease:'back',
     }); 
     gsap.from('#mask_clip_2', {
-        scrollTrigger:'.page_03',
+        scrollTrigger:'.cooperate_wrap',
         duration: 2.3,
         opacity:0,
         y:'1000',
         ease:'back',
     }); 
     gsap.from('#mask_clip_3', {
-        scrollTrigger:'.page_03',
+        scrollTrigger:'.cooperate_wrap',
         duration: 2.5,
         opacity:0,
         y:'1000',
@@ -249,9 +249,8 @@ const talkPath= new TimelineMax()
 let talk_scene = new ScrollMagic.Scene({
     triggerElement: ".page02_01", 
     duration:1000,
-    triggerHook:0
+    triggerHook:0,
 })
 .setTween(talkPath)
-.addIndicators({name: "staggering"})
 .setPin(".page02_01")
 .addTo(controller);

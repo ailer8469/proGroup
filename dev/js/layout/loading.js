@@ -23,7 +23,7 @@ $(function(){
                 .to(circle,{
                     opacity:0
                 },'-=2')
-                .fromTo($('.mask_wrap'),2, {
+                .fromTo($('.mask_wrap'),1, {
                     opacity:1,
                 },{
                     opacity:0,
@@ -35,7 +35,7 @@ $(function(){
                 .to($('.mask_circle_deep'),{
                     opacity:1,
                 },'-=100')
-                .to($('#mask_hole'),1,{
+                .to($('#mask_hole'),.5,{
                     scale:20,
                 },'-=4')
                 .to($('main'),{
