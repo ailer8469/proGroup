@@ -15,6 +15,8 @@ $(function(){
         autoplaySpeed: 4500,
         lazyLoad: 'ondemand',
     });
+
+
     gsap.registerPlugin(ScrollTrigger);
     let tl = new TimelineMax();
     tl.from('.top_new_pic', {
