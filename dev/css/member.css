@@ -61,6 +61,11 @@ button, input[type="submit"], input[type="reset"] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
 }
 
 button, input, a {
@@ -341,7 +346,7 @@ body.active .burger {
   background: transparent;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 70;
 }
 
 .nav-sp-bar .bar_background {
@@ -388,7 +393,7 @@ body.active .burger {
 
 .bar_wrap li {
   opacity: 0;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
@@ -425,7 +430,7 @@ body.active .burger {
 }
 
 .nav_link li {
-  margin: 30px;
+  margin: 20px;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -510,6 +515,16 @@ body.active .burger {
   }
   .nav-sp-bar {
     top: 50px;
+  }
+}
+
+@media (max-width: 300px) {
+  .nav_link li {
+    margin: 15px;
+  }
+  .bar_wrap li {
+    margin: 30px 15px 55px 15px;
+    font-size: 16px;
   }
 }
 
@@ -662,6 +677,9 @@ footer {
   .footer_info_item {
     margin: 10px;
   }
+  .footer_info_item span {
+    color: white;
+  }
 }
 
 @media (max-width: 600px) {
@@ -759,13 +777,11 @@ footer {
 #loaded {
   width: 700px;
   height: 700px;
-  position: absolute;
-  top: 0%;
 }
 
 #progress {
   position: relative;
-  bottom: -20%;
+  top: -15%;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -821,20 +837,15 @@ footer {
     font-size: 60px;
     line-height: 70px;
   }
-  #progress {
-    bottom: -15%;
-  }
 }
 
 @media (max-width: 500px) {
   #progress {
     font-size: 32px;
-    bottom: -5%;
   }
   #loaded {
     width: 600px;
     height: 600px;
-    top: 0%;
   }
 }
 
@@ -900,6 +911,11 @@ button, input[type="submit"], input[type="reset"] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
 }
 
 button, input, a {
@@ -1153,7 +1169,7 @@ body.active .burger {
   background: transparent;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 70;
 }
 
 .nav-sp-bar .bar_background {
@@ -1200,7 +1216,7 @@ body.active .burger {
 
 .bar_wrap li {
   opacity: 0;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
@@ -1237,7 +1253,7 @@ body.active .burger {
 }
 
 .nav_link li {
-  margin: 30px;
+  margin: 20px;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -1313,6 +1329,16 @@ body.active .burger {
   }
   .nav-sp-bar {
     top: 50px;
+  }
+}
+
+@media (max-width: 300px) {
+  .nav_link li {
+    margin: 15px;
+  }
+  .bar_wrap li {
+    margin: 30px 15px 55px 15px;
+    font-size: 16px;
   }
 }
 
@@ -1465,6 +1491,9 @@ footer {
   .footer_info_item {
     margin: 10px;
   }
+  .footer_info_item span {
+    color: white;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1562,13 +1591,11 @@ footer {
 #loaded {
   width: 700px;
   height: 700px;
-  position: absolute;
-  top: 0%;
 }
 
 #progress {
   position: relative;
-  bottom: -20%;
+  top: -15%;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -1624,20 +1651,15 @@ footer {
     font-size: 60px;
     line-height: 70px;
   }
-  #progress {
-    bottom: -15%;
-  }
 }
 
 @media (max-width: 500px) {
   #progress {
     font-size: 32px;
-    bottom: -5%;
   }
   #loaded {
     width: 600px;
     height: 600px;
-    top: 0%;
   }
 }
 
@@ -1701,7 +1723,7 @@ footer {
           align-items: center;
   width: 100vw;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   display: none;
   background: #BE9E6D66;
   -webkit-animation-name: fadein;
@@ -1758,7 +1780,7 @@ footer {
 }
 
 .postcard .card_text h1 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -1888,6 +1910,11 @@ footer {
   color: white;
 }
 
+.postcard .card_text .consult_form textarea {
+  height: 12em;
+  width: 100%;
+}
+
 .warning {
   position: absolute;
   bottom: -28px;
@@ -1983,11 +2010,12 @@ footer {
 @media (max-width: 650px) {
   .postcard {
     padding: 0;
-    width: 550px;
+    width: 520px;
+    height: 92%;
   }
   .postcard .card_text {
-    padding: 20px;
-    width: 70%;
+    padding: 0px;
+    width: 60%;
   }
   .postcard .card_text h1 {
     font-size: 20px;
@@ -2012,15 +2040,24 @@ footer {
     top: 2%;
     width: 25px;
   }
+  .postcard .card_text {
+    width: 65%;
+  }
+  .postcard .card_text h1 {
+    margin: 20px;
+  }
+  .postcard .card_text .consult_form input[type="submit"] {
+    margin: 5px auto 20px auto;
+  }
 }
 
 @media (max-width: 450px) {
   .postcard {
-    padding: 20px;
+    width: 390px;
     background-image: url("../img/ask/paper_sp.png");
   }
   .postcard .card_text {
-    width: 60%;
+    width: 55%;
   }
   .postcard .card_text h1 {
     font-size: 18px;
@@ -2030,23 +2067,15 @@ footer {
     top: 2%;
     right: 21%;
   }
-}
-
-@media (max-width: 400px) {
-  .postcard .card_text {
-    width: 70%;
+  .postcard .consult_form input[type="submit"] {
+    padding: 10px 55px;
   }
-  .postcard .close {
-    right: 18%;
+  .postcard .card_text .consult_form textarea {
+    height: 9em;
+    width: 100%;
   }
-}
-
-@media (max-width: 350px) {
-  .postcard .card_text {
-    width: 80%;
-  }
-  .postcard .close {
-    right: 12%;
+  .postcard .card_text .consult_form input, .postcard .card_text .consult_form .select {
+    width: 100%;
   }
 }
 
@@ -2055,7 +2084,7 @@ footer {
     width: 260px;
   }
   .postcard .card_text {
-    width: 90%;
+    width: 80%;
   }
   .postcard .close {
     right: 7%;
@@ -2064,8 +2093,8 @@ footer {
 
 @media (max-width: 280px) {
   .postcard .close {
-    right: 5%;
-    top: 4%;
+    right: 6%;
+    top: 2%;
   }
 }
 
@@ -2077,6 +2106,7 @@ body {
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFEBC1), color-stop(87.5%, #C1EDE2));
   background: linear-gradient(180deg, #FFEBC1 0%, #C1EDE2 87.5%);
+  -webkit-overflow-scrolling: unset;
 }
 
 .main_slider {

@@ -31,7 +31,7 @@
     @include flex("",center,center);
     width: 100vw;
     height: 100%;
-    z-index: 10;
+    z-index: 100;
     display: none;
     background: #BE9E6D66;
     animation-name: fadein;
@@ -67,7 +67,7 @@
         letter-spacing: 0.15em;
         color:#886024;
         h1{
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-align: center;
             font-size: 24px;
             font-weight: 700;
@@ -143,6 +143,10 @@
                     background: #886024;
                     color: white;
                 }
+            }
+            textarea{
+                height: 12em;
+                width: 100%;
             }
         }
     }
@@ -221,10 +225,11 @@ ul{
 @media (max-width:650px){
     .postcard{
         padding: 0;
-        width: 550px;
+        width: 520px;
+        height: 92%;
         .card_text{
-            padding: 20px;
-            width: 70%;
+            padding: 0px;
+            width: 60%;
             h1{
                 font-size: 20px;
             }
@@ -248,14 +253,23 @@ ul{
             top: 2%;
             width: 25px;
         }
+        .card_text{
+            width: 65%;
+            h1{
+                margin: 20px;
+            }
+            .consult_form input[type="submit"] {
+                margin: 5px auto 20px auto;
+            }
+        }
     }
 }
 @media (max-width:450px){
     .postcard{
-        padding: 20px;
+        width: 390px;
         background-image: url('../img/ask/paper_sp.png');
         .card_text{
-            width: 60%;
+            width: 55%;
             h1{
                 font-size: 18px;
                 margin-bottom: 20px;
@@ -265,33 +279,24 @@ ul{
             top: 2%;
             right: 21%;
         }
-    }
-}
-@media (max-width:400px){
-    .postcard{
-        .card_text{
-            width: 70%;
+        .consult_form input[type="submit"] {
+            padding: 10px 55px;
         }
-        .close{
-            right: 18%;
+        .card_text .consult_form textarea{
+            height: 9em;
+            width: 100%;
         }
-    }
-}
-@media (max-width:350px){
-    .postcard{
-        .card_text{
-            width: 80%;
-        }
-        .close{
-            right: 12%;
+        .card_text .consult_form input,.card_text .consult_form .select {
+            width: 100%;
         }
     }
 }
+
 @media (max-width:300px){
     .postcard{
         width: 260px;
         .card_text{
-            width: 90%;
+            width: 80%;
         }
         .close{
             right: 7%;
@@ -301,8 +306,8 @@ ul{
 @media (max-width:280px){
     .postcard{
         .close{
-            right: 5%;
-            top: 4%;
+            right: 6%;
+            top: 2%;
         }
     }
 }

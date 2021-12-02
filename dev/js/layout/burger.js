@@ -11,34 +11,34 @@ $(function(){
             }) 
         }
         let tl = new TimelineMax();
-            tl.fromTo($('.bar_background.first'),.5, {
+            tl.fromTo($('.bar_background.first'),.3, {
                 height:'0',
             },{
                 height:'100%',
                 ease: Linear.easeInOut
-            }).fromTo($('.bar_background.second'),.5, {
+            }).fromTo($('.bar_background.second'),.3, {
                 height:'0',
             },{
                 height:'100%',
                 ease: Linear.easeInOut
-            }).fromTo($('.bar_background.third'),.5, {
+            }).fromTo($('.bar_background.third'),.3, {
                 height:'0',
             },{
                 height:'100%',
                 ease: Linear.easeInOut
-            }).fromTo($('.bar_background.forth'),.5, {
+            }).fromTo($('.bar_background.forth'),.3, {
                 height:'0',
             },{
                 height:'100%',
                 ease: Linear.easeInOut
-            }).fromTo($('.bar_wrap li'),1.5,{
+            }).fromTo($('.bar_wrap li'),1,{
                 y:60,
                 opacity:0
             },{
                 y:0,
                 opacity:1,
                 ease: Expo.easeInOut
-            }).fromTo($('.nav_link'),1,{
+            }).fromTo($('.nav_link'),.5,{
                 y:20,
                 opacity:0
             },{

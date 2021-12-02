@@ -1,10 +1,16 @@
 $(function(){
+    var wdth=$(window).width();
+    $(window).resize(function(){
+        wdth=$(window).width();
+    });
+
     gsap.registerPlugin(ScrollToPlugin,MotionPathPlugin,ScrollTrigger);
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
                 } 
         });
         $('.slider').each(function(index,element) {  
+            if(wdth>500){
             new ScrollMagic.Scene({
                 triggerElement: this,
                 triggerHook: 'onEnter',
@@ -15,7 +21,8 @@ $(function(){
                 scrollTo:{y:".page_0" + (index+1),  
                 autoKill:false
             },ease:Back.easeOut});
-            });   
+            });
+        }   
         }); 
 
 
@@ -110,8 +117,6 @@ var rotate= function(){
         ease:Power0.easeNone           
     });
 };
-
-
 //aos init
 AOS.init();
 //button switch

@@ -78,6 +78,9 @@ footer{
     }
     .footer_info_item{
         margin: 10px;
+        span{
+            color: white;
+        }
     }
 }
 @media (max-width: 600px){

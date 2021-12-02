@@ -13,12 +13,10 @@
 #loaded{
     width: 700px;
     height: 700px;
-    position: absolute;
-    top:0%;
 }
 #progress{
     position: relative;
-    bottom: -20%;
+    top: -15%;
     font-size: 48px;
     line-height: 56px;
     letter-spacing: 0.2em;
@@ -59,19 +57,14 @@
         font-size: 60px;
         line-height: 70px;
     }
-    #progress{
-        bottom: -15%;
-    }
 }
 
 @media (max-width: $mobile){
     #progress{
         font-size: 32px;
-        bottom: -5%;
     }
     #loaded{
         width: 600px;
         height: 600px;
-        top: 0%;
     }
 }
