@@ -16,9 +16,9 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- owl -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <!-- waitForImage -->
@@ -301,7 +301,7 @@
             </li>
         </ul>
         <!-- slider in sp(width<1200) -->
-        <ul class="main_slider_sp sp">
+        <ul class="main_slider_sp sp owl-carousel">
             <li class="member_slider animate__animated animate__headShake">
             <div class="mem_wrap"> 
                 <div class="wave_line">
@@ -558,8 +558,8 @@
         
         <!-- down name -->
         <div class="title_slider">
-            <ul>
-                <div class="title_item memactive">
+            <ul id="sync2">
+                <div class="title_item">
                     <li>所長/邱奕賢</li> 
                     <img class="icon_active" src="img/member/Exclude.png" alt="">
                     <img class="icon_normal" src="img/member/memberline.svg" alt="">
@@ -584,7 +584,6 @@
                     <img class="icon_active" src="img/member/Exclude.png" alt="">
                     <img class="icon_normal" src="img/member/memberline.svg" alt="">
                 </div>
-                
             </ul>
         </div>
         <div class="loading_line">
