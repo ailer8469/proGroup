@@ -10,12 +10,13 @@ $(function(){
     $('.top_carousel').owlCarousel({
         items:1,
         loop:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        slideSpeed : 5000,
+        autoplay:false,
+        autoplayTimeout:6000,
+        slideSpeed : 300,
     });
-    gsap.registerPlugin(ScrollTrigger);
-    let tl = new TimelineMax();
+    let tl = new TimelineMax({
+        onComplete:init()
+    });
     tl.from('.top_carousel', {
         delay:2,
         duration: 1,
@@ -32,14 +33,20 @@ $(function(){
         opacity:1,
         x:'0',
     }).from('.top_new_title_tp',{
+        delay:.5,
         opacity:0,
         duration: 1.4,
         x:'100',
         ease:'circ.easeIn',
     });
-    $('.top_carousel').on('initialized.owl.carousel', function(){
+    function init(){
         $('#icon_num').text(1);
-    });
+        $('.owl-carousel').trigger('play.owl.autoplay');
+        var carousel = $('.owl-carousel').data('owl.carousel');
+        carousel.settings.autoplay = true; 
+        carousel.options.autoplay = true;
+        $('.owl-carousel').trigger('refresh.owl.carousel');
+    } 
     $('.top_carousel').on('translate.owl.carousel', function(){
         $('.top_new_title').css({
             'opacity':'0'
@@ -57,7 +64,7 @@ $(function(){
             scrollTrigger:'.top_new_title',
             duration: .7,
             opacity:0,
-            y:'150',
+            y:'50',
             ease:'slow.easeIn',
         },{
             opacity:1,
