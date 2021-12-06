@@ -10,7 +10,6 @@ $(function(){
                 } 
         });
         $('.slider').each(function(index,element) {  
-            if(wdth>500){
             new ScrollMagic.Scene({
                 triggerElement: this,
                 triggerHook: 'onEnter',
@@ -22,9 +21,7 @@ $(function(){
                 autoKill:false
             },ease:Back.easeOut});
             });
-        }   
         }); 
-
 
     // bottom carousel
     $('.pic_carousel').slick({
@@ -116,7 +113,6 @@ var rotate= function(){
         repeat:-1,     
         ease:Power0.easeNone           
     });
-
 };
 //aos init
 AOS.init();

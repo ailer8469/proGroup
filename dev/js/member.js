@@ -180,6 +180,7 @@ $(function(){
         autoplayTimeout:5000,
         slideSpeed : 200,
         mouseDrag:false,
+        pullDrag:false
     }).on('changed.owl.carousel', syncPosition);
 
     // sync1 animation when they changed
@@ -196,6 +197,7 @@ $(function(){
         slideSpeed : 500,
         margin:30,
         slideBy: 5,
+        mouseDrag:false,
         responsiveRefreshRate : 100,
         responsive:{
             0:{

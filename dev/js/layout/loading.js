@@ -7,7 +7,12 @@ const load = lottie.loadAnimation({
 
 $(function(){
     circle= $('#loaded');
-    $('body').waitForImages({
+        // switch to index ourwork
+        const url = location.hash;
+        if (url == "#ourwork") {     
+            $("html, body").animate({ scrollTop: $(".ourwork").offset().top }, 1000);
+        }else{
+            $('body').waitForImages({
         finished: function() {
             $('main').css('display', 'none');
             // animation up
@@ -48,7 +53,8 @@ $(function(){
             $('#loadpage').find('#progress').text(pNum+'%');
         },
         waitForAll: true
-    });
+            });
+        }
     function animateComplete(){
         var tl2 = new TimelineMax();
         tl2.to('#loading', {opacity: 1, onComplete: function(){

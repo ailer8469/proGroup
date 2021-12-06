@@ -470,7 +470,7 @@ body.active .burger {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
+  left: 0;
   margin-left: -80px;
 }
 
@@ -1293,7 +1293,7 @@ body.active .burger {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
+  left: 0;
   margin-left: -80px;
 }
 
