@@ -20,7 +20,6 @@ $(document).ready(function(){
         });   
     }); 
 
-
     //open copy phone
     $('#link_phone').on('click',function(){
         $('#popnumber').fadeToggle(600)
@@ -224,7 +223,6 @@ $(document).ready(function(){
         y:'1000',
         ease:'back',
     }); 
-    
 });
 AOS.init();
 //cloud parallax
