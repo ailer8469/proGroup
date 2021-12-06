@@ -10,10 +10,11 @@ $(function(){
         // switch to index ourwork
         const url = location.hash;
         if (url == "#ourwork") {     
+            $('#loading').hide();
             $("html, body").animate({ scrollTop: $(".ourwork").offset().top }, 1000);
         }else{
             $('body').waitForImages({
-        finished: function() {
+            finished: function() {
             $('main').css('display', 'none');
             // animation up
             load.playSegments([250,360], true);
