@@ -116,11 +116,7 @@ var rotate= function(){
         repeat:-1,     
         ease:Power0.easeNone           
     });
+
 };
 //aos init
 AOS.init();
-//button switch
-let learnMore=document.getElementById('page01learnMore');
-learnMore.addEventListener('click',() => {
-    window.location.href='index.html';
-});

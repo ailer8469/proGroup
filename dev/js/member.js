@@ -179,6 +179,7 @@ $(function(){
         autoplay:true,
         autoplayTimeout:5000,
         slideSpeed : 200,
+        mouseDrag:false,
     }).on('changed.owl.carousel', syncPosition);
 
     // sync1 animation when they changed

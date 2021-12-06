@@ -50,6 +50,15 @@
         button{
             margin-top: 20px;
             @include learnmore(12px,50px);
+            &:hover{
+                a{
+                    color: white;
+                }
+            }
+        }
+        a{
+            display: block;
+            color:$green;
         }
     }
 

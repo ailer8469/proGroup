@@ -2180,6 +2180,15 @@ footer {
   background-color: #379595;
 }
 
+.page_01 .about_intro button:hover a {
+  color: white;
+}
+
+.page_01 .about_intro a {
+  display: block;
+  color: #379595;
+}
+
 .page_01 img {
   position: absolute;
   right: 0;
