@@ -21,7 +21,8 @@ header{
     width: 120px;
 }
 .nav_item{
-    background-color: $nav_back;
+    background: #FFFFFF4D;
+    box-shadow: 0px 4px 4px 0px #BEBEBE33;
     border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     width: 100%;
     @include flex("",space-between,center);
