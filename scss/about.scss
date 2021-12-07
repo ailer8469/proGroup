@@ -302,6 +302,9 @@ top: 0;
     .page_02 .animation_02{
         bottom: 40px;
     }
+    .page_02 .animation_01,.page_02 .animation_02{
+        font-size: 60px;
+    }
     .page02_circle{
         width: 70%;
         height: 40%;
@@ -354,6 +357,9 @@ top: 0;
         p{
             font-weight: 400;
         }
+    }
+    .page_02 .animation_01,.page_02 .animation_02{
+        font-size: 50px;
     }
     .page_02 .page02_circle .inner_circle {
         background-size: contain;

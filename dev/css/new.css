@@ -784,6 +784,8 @@ footer {
 #progress {
   position: relative;
   top: -15%;
+  left: 1%;
+  margin: auto;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -1600,6 +1602,8 @@ footer {
 #progress {
   position: relative;
   top: -15%;
+  left: 1%;
+  margin: auto;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -1921,7 +1925,7 @@ footer {
 
 .warning {
   position: absolute;
-  bottom: -28px;
+  bottom: -25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2015,7 +2019,7 @@ footer {
   .postcard {
     padding: 0;
     width: 520px;
-    height: 92%;
+    height: 98%;
   }
   .postcard .card_text {
     padding: 0px;
@@ -2027,9 +2031,6 @@ footer {
   .postcard .card_text .consult_form {
     padding: 5px;
   }
-  .postcard .card_text .consult_form .consult_box {
-    margin: 0 0 10px 0;
-  }
 }
 
 @media (max-width: 550px) {
@@ -2040,15 +2041,18 @@ footer {
     width: 450px;
   }
   .postcard .close {
-    right: 6%;
-    top: 2%;
+    right: 4%;
+    top: 3%;
     width: 25px;
   }
   .postcard .card_text {
-    width: 65%;
+    width: 70%;
   }
   .postcard .card_text h1 {
-    margin: 20px;
+    margin: 10px;
+  }
+  .postcard .card_text .consult_form h2 {
+    margin: 2px 0;
   }
   .postcard .card_text .consult_form input[type="submit"] {
     margin: 5px auto 20px auto;
@@ -2129,16 +2133,15 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: "";
-      -ms-flex-align: "";
-          align-items: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  margin: 140px 0 140px 80px;
+  margin: 140px auto 160px;
   cursor: url("../img/mouse/click.svg"), default;
 }
 
 .top_new_wrap .top_new_pic img {
-  margin-left: 30px;
   width: 100%;
   max-width: 1000px;
   border-radius: 10px;
@@ -2161,11 +2164,11 @@ footer {
           align-items: center;
   position: absolute;
   bottom: -20px;
-  left: -20px;
   width: 50%;
-  padding: 30px 60px;
-  -webkit-clip-path: polygon(2% 0, 92% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(2% 0, 92% 0, 100% 100%, 0% 100%);
+  padding: 30px 55px;
+  margin-left: -20px;
+  -webkit-clip-path: polygon(2% 0, 95% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(2% 0, 95% 0, 100% 100%, 0% 100%);
   background-color: #4f4f4f;
   color: white;
   -webkit-transition: all .8s;
@@ -2394,21 +2397,14 @@ footer {
 }
 
 .new_global .new_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: "";
-          flex-direction: "";
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: (280px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 280px);
+  grid-gap: 20px;
   width: 100%;
   max-width: 900px;
   margin: 50px auto;
@@ -2506,8 +2502,10 @@ footer {
     margin-left: 0;
   }
   .top_new_wrap .top_new_title {
-    width: 70%;
+    width: 60%;
     background-color: #379595;
+    padding: 30px 50px;
+    margin-left: 0;
   }
   .top_new_wrap .top_new_title .top_new_word .top_new_title_tm {
     font-size: 20px;
@@ -2526,6 +2524,7 @@ footer {
   }
   .owl-carousel .owl-item img {
     width: 90% !important;
+    margin: auto;
   }
 }
 
@@ -2535,7 +2534,6 @@ footer {
     width: 600px;
   }
   .top_new_wrap .top_new_title {
-    width: 80%;
     padding: 16px 40px;
   }
   .top_new_wrap .top_new_title .top_new_word .top_new_title_tm {
@@ -2549,6 +2547,27 @@ footer {
   }
   .top_new_wrap .top_new_title .top_new_title_more .more_arrow .shadow {
     right: 40px;
+  }
+  .new_global .new_wrap {
+    width: 80%;
+  }
+}
+
+@media (max-width: 740px) {
+  .new_global .new_wrap {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .new_global .new_wrap {
+    width: 95%;
+  }
+}
+
+@media (max-width: 620px) {
+  .new_global .new_wrap {
+    width: 100%;
   }
 }
 
@@ -2611,6 +2630,8 @@ footer {
     display: block;
   }
   .new_global .new_wrap {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
     max-width: auto;
     margin: 30px;
   }

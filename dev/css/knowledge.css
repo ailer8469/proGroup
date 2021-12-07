@@ -784,6 +784,8 @@ footer {
 #progress {
   position: relative;
   top: -15%;
+  left: 1%;
+  margin: auto;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -1600,6 +1602,8 @@ footer {
 #progress {
   position: relative;
   top: -15%;
+  left: 1%;
+  margin: auto;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: 0.2em;
@@ -1921,7 +1925,7 @@ footer {
 
 .warning {
   position: absolute;
-  bottom: -28px;
+  bottom: -25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2015,7 +2019,7 @@ footer {
   .postcard {
     padding: 0;
     width: 520px;
-    height: 92%;
+    height: 98%;
   }
   .postcard .card_text {
     padding: 0px;
@@ -2027,9 +2031,6 @@ footer {
   .postcard .card_text .consult_form {
     padding: 5px;
   }
-  .postcard .card_text .consult_form .consult_box {
-    margin: 0 0 10px 0;
-  }
 }
 
 @media (max-width: 550px) {
@@ -2040,15 +2041,18 @@ footer {
     width: 450px;
   }
   .postcard .close {
-    right: 6%;
-    top: 2%;
+    right: 4%;
+    top: 3%;
     width: 25px;
   }
   .postcard .card_text {
-    width: 65%;
+    width: 70%;
   }
   .postcard .card_text h1 {
-    margin: 20px;
+    margin: 10px;
+  }
+  .postcard .card_text .consult_form h2 {
+    margin: 2px 0;
   }
   .postcard .card_text .consult_form input[type="submit"] {
     margin: 5px auto 20px auto;
@@ -2128,32 +2132,20 @@ header {
   padding-top: 60px;
   margin-top: -10px;
   width: 100vw;
-  height: 280px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 235, 193, 0.4)), color-stop(87.5%, rgba(193, 237, 226, 0.4)));
-  background: linear-gradient(180deg, rgba(255, 235, 193, 0.4) 0%, rgba(193, 237, 226, 0.4) 87.5%);
-  color: white;
-}
-
-.top::after {
-  content: "";
-  opacity: 0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-image: url("../img/knowledge/knowledge_background.jpeg");
+  height: 240px;
+  color: #3E6C6F;
+  background-image: url("../img/knowledge/knowledge_background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  line-height: 21px;
+  letter-spacing: 0.2em;
 }
 
 .top h1 {
   z-index: 1;
   font-size: 18px;
   font-weight: 700;
-  line-height: 21px;
-  letter-spacing: 0.2em;
   margin-bottom: 15px;
 }
 
@@ -2161,8 +2153,6 @@ header {
   z-index: 1;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0.2em;
 }
 
 .tabs {
@@ -2346,7 +2336,6 @@ header {
 @media (max-width: 770px) {
   .tabs {
     display: block;
-    padding: 15px 0;
     overflow-x: auto;
     white-space: nowrap;
   }
@@ -2360,6 +2349,13 @@ header {
 }
 
 @media (max-width: 500px) {
+  .tabs {
+    top: 50px;
+    padding: 0;
+  }
+  .tabs .tablink {
+    font-size: 14px;
+  }
   .content_wrap .content_box {
     border-bottom: none;
     margin: 30px 0;
@@ -2388,10 +2384,7 @@ header {
   }
 }
 
-@media (max-width: 500px) {
-  .tabs {
-    top: 50px;
-  }
+@media (max-width: 420px) {
   .content_wrap .content_box {
     margin: 30px 20px;
     display: -webkit-box;

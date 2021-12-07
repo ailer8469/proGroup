@@ -737,12 +737,14 @@ text-decoration: none;
             &:hover{
                 transform: scale(1.1);
                 h4{
-                    display: none;
+                    color: $green;
+                    &::after{
+                        content: "";
+                        display: block;
+                        margin-top: 10.5px;
+                        border-bottom: 3px solid $green;
+                    }
                 }
-                h4.totalname{
-                    display: block;
-                }
-
             }
             .item_pic{
                 margin-bottom: 25px;
@@ -760,24 +762,13 @@ text-decoration: none;
                 line-height: 21px;
                 letter-spacing: 0.15em;
                 text-align: center;
-                white-space: nowrap;
-            }
-            h4.totalname{
-                display: none;
-                color: $green;
-                &::after{
-                    content: "";
-                    display: block;
-                    margin-top: 10.5px;
-                    border-bottom: 3px solid $green;
-                }
             }
         }
     }
     .page_03_bg{
         position: absolute;
         right: -5px;
-        top: 100px;
+        top: 120px;
         max-width: 230px;
         width: 100%;
         height: 100%;
@@ -1266,6 +1257,16 @@ text-decoration: none;
             font-size: 14px;
         }
     }
+    .page02_02{
+        margin-top: -100px;
+    }
+    .page02_01 .ask_item:nth-child(5),.page02_01 .ask_item:nth-child(10),.page02_01 .ask_item:nth-child(4){
+        display: none;
+    }
+    .page02_01 .ask_wrap{
+        margin-bottom: 0;
+        height: 100vh;
+    }
     #top_cloud_wrap{
         margin-top: 60px;
     }
@@ -1281,7 +1282,7 @@ text-decoration: none;
         }
     }
     .page_02 h2 {
-        margin: 100px 10px;
+        margin: 70px 10px;
         font-size: 20px;
     }
     .page02_01 .ask_item {
@@ -1386,11 +1387,7 @@ text-decoration: none;
     }
 }
     .page_02 h2 {
-        margin: 100px 20px;
         font-size: 24px;
-    }
-    .page_02 .ask_wrap{
-        margin-bottom: 150px;
     }
     .page02_01 .ask_item:nth-child(2) {
         bottom: 260px;

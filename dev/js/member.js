@@ -15,6 +15,7 @@ $(function(){
     },function(){
         $('#arrow_left').removeClass('active');
     });
+
     // carousel
     $('.main-pos .mem_box').addClass('fadeUp');
     //swap images function
@@ -123,15 +124,6 @@ $(function(){
     $('#arrow_left').click(function() {
         swap('counter-clockwise');
     });
-    //if any visible items are clicked
-    $('.member_slider').click(function() {
-        if($(this).attr('class') == 'member_slider left-pos') {
-            swap('counter-clockwise'); 
-        }
-        else {
-            swap('clockwise'); 
-        }
-    });
     if(wdth>1200){
         $('.title_item').eq(0).addClass('current');
     }
@@ -173,21 +165,22 @@ $(function(){
         sync2.addClass('owl-carousel');
         $('.title_item').removeClass('current');
     }
-    sync1.owlCarousel({
-        items:1,
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        slideSpeed : 200,
-        mouseDrag:false,
-        pullDrag:false
-    }).on('changed.owl.carousel', syncPosition);
-
+    if(wdth<1200){
+        sync1.owlCarousel({
+            items:1,
+            loop:true,
+            slideSpeed : 200,
+            mouseDrag:false,
+            singleItem:true,
+            touchDrag:false,
+        }).on('changed.owl.carousel', syncPosition);
+    }
     // sync1 animation when they changed
     sync1.on('translated.owl.carousel', function(){
         sync1.find('.owl-item').removeClass('animate__animated animate__headShake');
         sync1.find('.owl-item.active').addClass('animate__animated animate__headShake');
     });
+    if(wdth<1200){
     sync2.on('initialized.owl.carousel', function () {
         sync2.find(".owl-item").removeClass("current");
         sync2.find(".owl-item").eq(0).addClass("current");
@@ -198,26 +191,29 @@ $(function(){
         margin:30,
         slideBy: 5,
         mouseDrag:false,
+        pullDrag:false,
+        touchDrag:false,
         responsiveRefreshRate : 100,
         responsive:{
             0:{
                 items:2,
-                slideBy: 2,
+                slideBy: 1,
             },
             380:{
                 items:3,
-                slideBy: 3,
+                slideBy: 2,
             },
             500:{
                 items:4,
-                slideBy: 4,
+                slideBy: 3,
             },
             800:{
                 items:5,
-                slideBy: 5,
+                slideBy: 3,
             }
         }
     }).on('changed.owl.carousel', syncPosition2);
+}
 
     function syncPosition(el) {
         var count = el.item.count-1;
@@ -256,7 +252,6 @@ $(function(){
             sync1.data('owl.carousel').to(number, 100, true);
         }
     };
-        
     sync2.on("click", ".owl-item", function(e){
         e.preventDefault();
         // change to click number's item

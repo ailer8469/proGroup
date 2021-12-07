@@ -13,7 +13,8 @@ let modal=document.querySelector('.postcard_wrap');
 let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
-function openModal(){
+function openModal(e){
+    e.preventDefault();
     card.style.display = "flex";
     modal.style.display = "flex"; 
     if(animationCompleted = true){
@@ -77,18 +78,18 @@ $(function(){
         e.preventDefault();
         index = $("input[name='mail']").val().indexOf ('@', 0);
         if ($("input[name='realname']").val() == "") {
-            $('.warning.name_check').show();
+            $('.warning.name_check').css('display','flex');
             return (false);
         }else if ($("input[name='mail']").val().length==0 ||index==-1||index==0||index==$("input[name='mail']").val().length-1) {
             $('.warning.name_check').hide();
-            $('.warning.mail_check').show();
+            $('.warning.mail_check').css('display','flex');
             return (false);
         }else if ( $("input[name='select']").val() == "請選擇咨詢類別") {
-            $('.warning.select_check').show();
+            $('.warning.select_check').css('display','flex');
             $('.warning.mail_check').hide();
             return (false);
         }else if ($("#consult_text").val() == "") {
-            $('.warning.talk_check').show();
+            $('.warning.talk_check').css('display','flex');
             $('.warning.select_check').hide();
             return (false);
         }else{

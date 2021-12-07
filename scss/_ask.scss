@@ -153,7 +153,7 @@
 }
 .warning{
     position: absolute;
-    bottom: -28px;
+    bottom: -25px;
     @include flex("","",center);
     display: none;
     margin-bottom: 5px;
@@ -226,7 +226,7 @@ ul{
     .postcard{
         padding: 0;
         width: 520px;
-        height: 92%;
+        height: 98%;
         .card_text{
             padding: 0px;
             width: 60%;
@@ -235,9 +235,6 @@ ul{
             }
             .consult_form{
                 padding: 5px;
-                .consult_box{
-                    margin: 0 0 10px 0;
-                }
             }
         }
     }
@@ -249,14 +246,17 @@ ul{
         height: auto;
         width: 450px;
         .close{
-            right: 6%;
-            top: 2%;
+            right: 4%;
+            top: 3%;
             width: 25px;
         }
         .card_text{
-            width: 65%;
+            width: 70%;
             h1{
-                margin: 20px;
+                margin: 10px;
+            }
+            .consult_form h2{
+                margin: 2px 0;
             }
             .consult_form input[type="submit"] {
                 margin: 5px auto 20px auto;

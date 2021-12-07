@@ -406,6 +406,10 @@ transform: scale(.85);
         height: 100vh !important;
         position: relative;
     }
+    .owl-carousel{
+    }
+    .owl-carousel, .owl-carousel .owl-item{
+    }
     .title_item{
         cursor: $click;
     }

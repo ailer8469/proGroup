@@ -19,36 +19,24 @@ header{
     padding-top: 60px;
     margin-top: -10px;
     width: 100vw;
-    height: 280px;
-    background: linear-gradient(180deg, rgba(255, 235, 193, 0.4) 0%, rgba(193, 237, 226, 0.4) 87.5%);
-    color: white;
-    &::after{
-        content: "";
-        opacity: 0.6;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        background-image: url('../img/knowledge/knowledge_background.jpeg'); 
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+    height: 240px;
+    color: #3E6C6F;
+    background-image: url('../img/knowledge/knowledge_background.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    line-height: 21px;
+    letter-spacing: 0.2em;
     h1{
         z-index: 1;
         font-size: 18px;
         font-weight: 700;
-        line-height: 21px;
-        letter-spacing: 0.2em;
         margin-bottom: 15px;
     }
     h2{
         z-index: 1;
         font-size: 18px;
         font-weight: 400;
-        line-height: 21px;
-        letter-spacing: 0.2em;
     }
 }
 .tabs{
@@ -170,7 +158,6 @@ header{
 @media (max-width:770px){
     .tabs{
         display: block;
-        padding: 15px 0;
         overflow-x: auto;
         white-space: nowrap;
         .tablink{
@@ -183,6 +170,13 @@ header{
     }
 }
 @media (max-width:500px){
+    .tabs{
+        top: 50px;
+        padding: 0;
+    }
+    .tabs .tablink{
+        font-size: 14px;
+    }
     .content_wrap .content_box {
         border-bottom: none;
         margin: 30px 0;
@@ -198,10 +192,7 @@ header{
     }
 }
 }
-@media (max-width:$mobile){
-    .tabs{
-        top: 50px;
-    }
+@media (max-width:420px){
     .content_wrap .content_box {
         margin: 30px 20px;
         @include flex(column,center,center);
