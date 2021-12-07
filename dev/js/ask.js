@@ -14,7 +14,6 @@ let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
 function openModal(e){
-    e.preventDefault();
     card.style.display = "flex";
     modal.style.display = "flex"; 
     if(animationCompleted = true){
