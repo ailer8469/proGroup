@@ -172,7 +172,7 @@ $(function(){
             slideSpeed : 200,
             mouseDrag:false,
             singleItem:true,
-            touchDrag:false,
+            touchDrag:true,
         }).on('changed.owl.carousel', syncPosition);
     }
     // sync1 animation when they changed
@@ -186,24 +186,23 @@ $(function(){
         sync2.find(".owl-item").eq(0).addClass("current");
     })
     .owlCarousel({
-        items : 5,
+        items:5,
         slideSpeed : 500,
-        margin:30,
-        slideBy: 1,
+        slideBy: 3,
         mouseDrag:false,
         pullDrag:false,
-        touchDrag:false,
+        touchDrag:true,
         responsiveRefreshRate : 100,
         responsive:{
             0:{
                 items:2,
-                slideBy: 1,
+                slideBy: 2,
             },
-            380:{
+            400:{
                 items:3,
                 slideBy: 2,
             },
-            500:{
+            570:{
                 items:4,
                 slideBy: 3,
             },

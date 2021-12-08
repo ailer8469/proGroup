@@ -53,15 +53,26 @@ $(function(){
 
         //open copy phone
         $('#sp_link_mail').on('click',function(){
-            $('#sp_popmail').fadeToggle(600)
-        });
-        //copy phone number
-        $('#sp_popmail').click(function(){
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($('#sp_copyMail').text()).select();
-            document.execCommand("copy");
-            $temp.remove();
+            $('#sp_popmail').fadeToggle(600);
+            //copy phone number
+            $('#sp_popmail').click(function(){
+                $('#sp_popmail .copiedspan').show();
+                $('#sp_popmail .copyspan').hide();
+    
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($('#sp_popmail').text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+    
+                setTimeout(function(){
+                    $('#sp_popmail').fadeOut();
+                },1000);
+                setTimeout(function(){
+                    $('#sp_popmail .copiedspan').hide();
+                    $('#sp_popmail .copyspan').show();
+                },2000);
+            });
         });
     });
 });

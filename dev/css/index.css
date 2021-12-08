@@ -459,7 +459,7 @@ body.active .burger {
 
 #sp_popmail {
   display: none;
-  width: 200px;
+  width: auto;
   background: #FFFFFF80;
   color: #828282;
   font-size: 12px;
@@ -468,7 +468,7 @@ body.active .burger {
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -478,6 +478,31 @@ body.active .burger {
 
 #sp_popmail:hover span {
   color: #379595;
+}
+
+.copiedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  color: #379595;
+}
+
+.copiedspan img {
+  margin-bottom: -2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1286,7 +1311,7 @@ body.active .burger {
 
 #sp_popmail {
   display: none;
-  width: 200px;
+  width: auto;
   background: #FFFFFF80;
   color: #828282;
   font-size: 12px;
@@ -1295,7 +1320,7 @@ body.active .burger {
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -1305,6 +1330,31 @@ body.active .burger {
 
 #sp_popmail:hover span {
   color: #379595;
+}
+
+.copiedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  color: #379595;
+}
+
+.copiedspan img {
+  margin-bottom: -2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
 }
 
 @keyframes fadeIn {
@@ -2163,73 +2213,6 @@ section {
   line-height: 21px;
 }
 
-.alert_modal {
-  display: none;
-  position: fixed;
-  z-index: 6;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  cursor: url("../img/mouse/click.svg"), default;
-}
-
-.modal-content {
-  position: relative;
-  background: #ffebc122;
-  color: #121212;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid #888;
-  width: 50%;
-  -webkit-animation-name: animatetop;
-          animation-name: animatetop;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-}
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -200px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -200px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-/* The Close Button */
-.close {
-  color: rgba(18, 18, 18, 0.51);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-}
-
-.modal-body {
-  padding: 20px 30px;
-}
-
 .map {
   position: absolute;
   top: 25%;
@@ -2650,7 +2633,7 @@ section {
 
 .poptext {
   display: none;
-  width: 160px;
+  width: auto;
   background: #FFFFFF80;
   color: #828282;
   font-size: 14px;
@@ -2659,7 +2642,7 @@ section {
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -2673,7 +2656,32 @@ section {
 }
 
 #popmail {
-  width: 220px;
+  white-space: wrap;
+}
+
+.copiedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  color: #379595;
+}
+
+.copiedspan img {
+  margin-bottom: -2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
 }
 
 .top_cloud {
@@ -3230,6 +3238,17 @@ section {
           clip-path: url(#clipping);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {

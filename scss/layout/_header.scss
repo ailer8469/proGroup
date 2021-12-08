@@ -219,7 +219,7 @@ body.active{
 }
 #sp_popmail {
     display: none;
-    width: 200px;
+    width: auto;
     background: #FFFFFF80;
     color:$gray3;
     font-size: 12px;
@@ -228,7 +228,7 @@ body.active{
     text-align: center;
     border: 1px solid #FFFFFF;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 10px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -238,6 +238,17 @@ body.active{
         span{
             color: $green;
         }
+    }
+}
+.copiedspan{
+    @include flex("",center,center);
+    display: none;
+    color: $green;
+    img{
+        margin-bottom: -2px;
+        margin-left:10px;
+        display: inline-block;
+        width: 16px;
     }
 }
 @keyframes fadeIn {

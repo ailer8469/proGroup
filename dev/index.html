@@ -99,8 +99,13 @@
                         <a href="tel:0436022825"><li></li></a>
                         <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
                         <a id="sp_link_mail"><li>
-                            <p id="sp_popmail">
-                                progrouplaw@gmail.com<span>複製</span>
+                            <p id="sp_popmail" onClick="event.cancelBubble = true">
+                                progrouplaw@gmail.com
+                                <span class="copiedspan">
+                                    <img src="img/index/copyok.svg" alt="">
+                                    <span>複製成功</span> 
+                                </span>
+                                <span class="copyspan">複製</span>
                                 <p id="sp_copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
                             </p>
                         </li></a>
@@ -202,16 +207,25 @@
                 <ul>
                     <a href="https://www.facebook.com/progrouplaw/"><li></li></a>
                     <li id="link_phone"><a>
-                        <p class="poptext" id="popnumber">
+                        <p class="poptext" id="popnumber" onClick="event.cancelBubble = true">
                             04 3602 2825
-                            <span>複製</span>
+                            <span class="copiedspan">
+                                <img src="img/index/copyok.svg" alt="">
+                                <span>複製成功</span> 
+                            </span>
+                            <span class="copyspan">複製</span>
                             <p id="copyPhone" style="opacity: 0;">0436022825</p>
                         </p>
                     </a></li>
                     <a href="https://page.line.me/?accountId=918ohinu"><li></li></a>
                     <li id="link_mail"><a>
-                        <p class="poptext" id="popmail">
-                            progrouplaw@gmail.com   <span>複製</span>
+                        <p class="poptext" id="popmail" onClick="event.cancelBubble = true">
+                            progrouplaw@gmail.com
+                            <span class="copiedspan">
+                                <img src="img/index/copyok.svg" alt="">
+                                <span>複製成功</span> 
+                            </span>
+                            <span class="copyspan">複製</span>
                             <p id="copyMail" style="opacity: 0;">progrouplaw@gmail.com</p>
                         </p>
                     </a></li>
@@ -606,17 +620,6 @@
         </div>
     </div>
 
-    <!-- copy alert -->
-    <div id="alert_modal" class="alert_modal">
-        <div class="modal-content">
-            <div class="modal-header">
-            <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-            <p>複製成功！</p>
-            </div>
-        </div>  
-    </div>
     <!--▼ ASK ▼-->
     <section class="postcard_wrap">
         <div id="open_animate"></div>

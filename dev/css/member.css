@@ -459,7 +459,7 @@ body.active .burger {
 
 #sp_popmail {
   display: none;
-  width: 200px;
+  width: auto;
   background: #FFFFFF80;
   color: #828282;
   font-size: 12px;
@@ -468,7 +468,7 @@ body.active .burger {
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -478,6 +478,31 @@ body.active .burger {
 
 #sp_popmail:hover span {
   color: #379595;
+}
+
+.copiedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  color: #379595;
+}
+
+.copiedspan img {
+  margin-bottom: -2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1286,7 +1311,7 @@ body.active .burger {
 
 #sp_popmail {
   display: none;
-  width: 200px;
+  width: auto;
   background: #FFFFFF80;
   color: #828282;
   font-size: 12px;
@@ -1295,7 +1320,7 @@ body.active .burger {
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -1305,6 +1330,31 @@ body.active .burger {
 
 #sp_popmail:hover span {
   color: #379595;
+}
+
+.copiedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  color: #379595;
+}
+
+.copiedspan img {
+  margin-bottom: -2px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
 }
 
 @keyframes fadeIn {
@@ -2447,7 +2497,6 @@ body {
           align-items: center;
   width: 80%;
   bottom: 30px;
-  overflow-x: scroll;
 }
 
 .title_slider .title_item {
@@ -2507,14 +2556,6 @@ body {
 
 .title_slider .current .icon_normal {
   display: none;
-}
-
-.owl-carousel .owl-item img {
-  width: auto !important;
-}
-
-.owl-carousel .owl-stage-outer {
-  overflow-x: auto !important;
 }
 
 .loading_line {
@@ -2736,7 +2777,7 @@ body {
     display: flex;
   }
   .main_slider_sp {
-    position: absolute;
+    position: absolute !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2775,6 +2816,9 @@ body {
   }
   .title_slider ul {
     width: 100%;
+  }
+  .owl-carousel .owl-item img {
+    width: auto !important;
   }
 }
 

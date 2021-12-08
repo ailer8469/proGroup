@@ -408,7 +408,11 @@ transform: scale(.85);
     .title_slider ul{
         width: 100%;
     }
+    .owl-carousel .owl-item img{
+        width: auto !important;
+    }
 }
+
 @media (max-width:900px){
     .load_icon{
         right: -5%;

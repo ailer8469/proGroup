@@ -22,63 +22,49 @@ $(document).ready(function(){
 
     //open copy phone
     $('#link_phone').on('click',function(){
-        $('#popnumber').fadeToggle(600)
-    });
-    //copy phone number
-    $('#popnumber').click(function(){
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($('#copyPhone').text()).select();
-        document.execCommand("copy");
-        $temp.remove();
+        $('#popnumber').fadeToggle(600);
+        //copy phone number
+        $('#popnumber').click(function(){
+            $('#popnumber .copiedspan').show();
+            $('#popnumber .copyspan').hide();
 
-        let modal = document.getElementById("alert_modal");
-        let span = document.getElementsByClassName("close")[0];
-        modal.style.display = "block";
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($('#copyPhone').text()).select();
+            document.execCommand("copy");
+            $temp.remove();
 
-        span.onclick = function() {
-            modal.style.display = "none";
-            }
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        }
-        window.ontouchend = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+            setTimeout(function(){
+                $('#popnumber').fadeOut();
+            },1000);
+            setTimeout(function(){
+                $('#popnumber .copiedspan').hide();
+                $('#popnumber .copyspan').show();
+            },2000);
+        });
     });
     //open copy mail
     $('#link_mail').on('click',function(){
-        $('#popmail').fadeToggle(600)
-    });
-    //copy mail 
-    $('#popmail').click(function(){
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($('#copyMail').text()).select();
-        document.execCommand("copy");
-        $temp.remove();
+        $('#popmail').fadeToggle(600);  
+        //copy mail 
+        $('#popmail').click(function(){
+            $('#popmail .copiedspan').show();
+            $('#popmail .copyspan').hide();
 
-        let modal = document.getElementById("alert_modal");
-        let span = document.getElementsByClassName("close")[0];
-        modal.style.display = "block";
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($('#copyMail').text()).select();
+            document.execCommand("copy");
+            $temp.remove();
 
-        span.onclick = function() {
-            modal.style.display = "none";
-            }
-        window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        }
-        window.ontouchend = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+            setTimeout(function(){
+                $('#popmail').fadeOut();
+            },1000);
+            setTimeout(function(){
+                $('#popmail .copiedspan').hide();
+                $('#popmail .copyspan').show();
+            },2000);
+        });
     });
 
     //open cooperate modal
