@@ -189,7 +189,7 @@ $(function(){
         items : 5,
         slideSpeed : 500,
         margin:30,
-        slideBy: 5,
+        slideBy: 1,
         mouseDrag:false,
         pullDrag:false,
         touchDrag:false,

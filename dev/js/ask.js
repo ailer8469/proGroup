@@ -8,12 +8,13 @@ animation = lottie.loadAnimation({
     autoplay: false,
     path: "https://assets3.lottiefiles.com/packages/lf20_fpv1mcf5.json"
 });
+animation.setSpeed(1.8);
 //open ask modal
 let modal=document.querySelector('.postcard_wrap');
 let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
-function openModal(e){
+function openModal(){
     card.style.display = "flex";
     modal.style.display = "flex"; 
     if(animationCompleted = true){
@@ -69,7 +70,7 @@ $(function(){
         }).on('click','ul>li',function(){
         var parent = $(this).closest('.select');
         parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
-        $("input[name='select']").val( $(this).text() );
+        $("input[name='select']").val( $(this).text());
     });
 
     //check

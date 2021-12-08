@@ -191,7 +191,6 @@ transform: scale(.85);
         @include flex("","",center);
         width: 80%;
         bottom: 30px;
-        overflow-x: scroll;
     }
     .title_item{
         margin: auto;
@@ -235,13 +234,6 @@ transform: scale(.85);
     } 
     
 }
-.owl-carousel .owl-item img{
-    width: auto !important;
-}
-.owl-carousel .owl-stage-outer {
-    overflow-x: auto !important;
-}
-
 .loading_line{
     position: absolute;
     bottom: 20px;
@@ -390,7 +382,7 @@ transform: scale(.85);
         display: flex;
     }
     .main_slider_sp{
-        position: absolute;
+        position: absolute !important;
         @include flex(column,center,center);
         .wave_line{
             background-color: #FFFFFFB2;
@@ -405,10 +397,6 @@ transform: scale(.85);
         display: flex !important;
         height: 100vh !important;
         position: relative;
-    }
-    .owl-carousel{
-    }
-    .owl-carousel, .owl-carousel .owl-item{
     }
     .title_item{
         cursor: $click;
