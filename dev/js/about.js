@@ -101,7 +101,6 @@ $(function(){
     ScrollTrigger.create({
         trigger: "#page02",
         animation: tl,
-        markers: true,
         start: "top center +=300px",
         end: "+=300",
         scrub: 4,
