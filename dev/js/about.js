@@ -98,13 +98,15 @@ $(function(){
         });
     };
 
-    ScrollTrigger.create({
+    if(wdth >1200){
+        ScrollTrigger.create({
         trigger: "#page02",
         animation: tl,
         start: "top center +=300px",
         end: "+=300",
         scrub: 4,
-    });
+        }); 
+    }
 });   
 
 //aos init
