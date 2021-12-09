@@ -2773,6 +2773,9 @@ footer {
     left: 0;
     width: 70%;
   }
+  .top_new_wrap .top_new_title .top_new_title_tm {
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 470px) {
@@ -2780,8 +2783,8 @@ footer {
     width: 400px;
   }
   .top_new_wrap .top_new_title {
-    width: 80%;
     padding: 10px 20px;
+    width: 75%;
   }
   .top_new_wrap .top_new_title .top_new_title_more .more_arrow .shadow {
     right: 20px;
@@ -2810,9 +2813,9 @@ footer {
     width: 300px;
   }
   .top_new_wrap .top_new_title {
-    width: 90%;
     padding: 10px 10px;
     bottom: -30px;
+    width: 75%;
   }
   .top_new_wrap .top_new_title .top_new_word .top_new_title_tp {
     line-height: 15px;

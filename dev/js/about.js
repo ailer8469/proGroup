@@ -4,24 +4,24 @@ $(function(){
         wdth=$(window).width();
     });
 
-    gsap.registerPlugin(ScrollToPlugin,MotionPathPlugin,ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin,MotionPathPlugin);
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
                 } 
         });
-        $('.slider').each(function(index,element) {  
-            new ScrollMagic.Scene({
-                triggerElement: this,
-                triggerHook: 'onEnter',
-                offset:50
-            }).addTo(ctrl)
-            .on('enter', function () {
-            TweenLite.to(window, 1, {
-                scrollTo:{y:".page_0" + (index+1),  
-                autoKill:false
-            },ease:Back.easeOut});
-            });
-        }); 
+    $('.slider').each(function(index,element) {  
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 'onEnter',
+            offset:50
+        }).addTo(ctrl)
+        .on('enter', function () {
+        TweenLite.to(window, 1, {
+            scrollTo:{y:".page_0" + (index+1),  
+            autoKill:false
+        },ease:Back.easeOut});
+        });
+    }); 
 
     // bottom carousel
     $('.pic_carousel').slick({
@@ -34,6 +34,7 @@ $(function(){
         cssEase: 'ease',
     });
 
+    gsap.registerPlugin(ScrollTrigger);
     // ball animation
     let tl = new TimelineMax({
         onComplete:function(){
@@ -41,17 +42,16 @@ $(function(){
         }
     });
     tl.from('.animation_02', {
-        scrollTrigger: '.animation_02',
         duration: 2,
         opacity:0,
-        x:'-1000',
+        x:'-500',
         ease:'back',
     }).from('.animation_01', {
         duration: 2,
         opacity:0,
-        x:'1000',
+        x:'500',
         ease:'back',
-    },'-=20')
+    },'-=15')
     .fromTo('.out_circle',.5,{
         scale: 0,
     },{
@@ -63,25 +63,11 @@ $(function(){
     },{
         scale: 1,
         ease:Circ.easeOut,
-    }).fromTo('#path_svg',1,{
-        opacity:0,
-        scale: 0
-    },{
-        scale: 1,
-        opacity:1,
-        ease:Back.easeOut,
     }).fromTo(['.ball_item','#path_shadow'],.5,{
         opacity:0,
         scale: 0
     },{
         scale: 0.905,
-        opacity:1,
-        ease:Back.easeOut
-    }).fromTo('.small_ball',.5,{
-        opacity:0,
-        scale: 0
-    },{
-        scale: 1,
         opacity:1,
         ease:Back.easeOut
     }).to('.animation_01',1, {
@@ -111,6 +97,15 @@ $(function(){
             ease:Power0.easeNone           
         });
     };
+
+    ScrollTrigger.create({
+        trigger: "#page02",
+        animation: tl,
+        markers: true,
+        start: "top center +=300px",
+        end: "+=300",
+        scrub: 4,
+    });
 });   
 
 //aos init

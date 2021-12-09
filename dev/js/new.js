@@ -21,13 +21,13 @@ $(function(){
         delay:2,
         duration: 1,
         opacity:0,
-        x:'-700',
+        x:'-500',
         ease:'back',
     }).fromTo('.top_new_title', {
         scrollTrigger:'.top_new_title',
         duration: .7,
         opacity:0,
-        x:'100',
+        x:'50',
         ease:'slow.easeIn',
     },{
         opacity:1,
@@ -36,7 +36,7 @@ $(function(){
         delay:.5,
         opacity:0,
         duration: 1.4,
-        x:'100',
+        x:'50',
         ease:'circ.easeIn',
     });
     function init(){
