@@ -242,7 +242,7 @@ section{
 .map_box{
     a{
         @include flex("",center,flex-start);
-        width: 700px;
+        display: block;
     }
     .loader-disc-bouncer{
         @include flex(column,center,center);
@@ -1247,7 +1247,7 @@ section{
         }
     }
     .page_02 h2 {
-        margin: 70px 10px;
+        margin: 90px 10px;
         font-size: 20px;
     }
     .page02_01 .ask_item {
@@ -1293,15 +1293,12 @@ section{
     #top_cloud_wrap{
         margin-top: -100px;
     }
-    .map_box .loader-disc-bouncer{
-        width: 15px;
-    }
     .map .pig_map_off {
         top: 130px;
         right: 60%;
     }
     .map_box .new_ball {
-        left: 29%;
+        left: 21%;
         top: -80px;
     }
     .map .book_off {
@@ -1309,11 +1306,11 @@ section{
         width: 24%;
     }
     .map_box .know_ball {
-        left: 53%;
+        left: 44%;
         top: 75px;
     }
     .map_box .about_ball {
-        left: 68%;
+        left: 63%;
         top: 40px;
     }
     .map_box .ask_ball {
@@ -1329,7 +1326,7 @@ section{
     }
     .map_box .mem_ball {
         top: -100px;
-        left: 62%;
+        left: 52%;
     }
     .map .down_board_off {
         width: 20%;

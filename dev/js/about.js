@@ -33,14 +33,7 @@ $(function(){
         autoplay:true,
         cssEase: 'ease',
     });
-    // word animation
-    gsap.from('.animation_01', {
-        scrollTrigger:'.animation_01',
-        duration: 2,
-        opacity:0,
-        x:'1000',
-        ease:'back',
-    }); 
+
     // ball animation
     let tl = new TimelineMax({
         onComplete:function(){
@@ -48,12 +41,17 @@ $(function(){
         }
     });
     tl.from('.animation_02', {
-        scrollTrigger:'.animation_02',
+        scrollTrigger: '.animation_02',
         duration: 2,
         opacity:0,
         x:'-1000',
         ease:'back',
-    })
+    }).from('.animation_01', {
+        duration: 2,
+        opacity:0,
+        x:'1000',
+        ease:'back',
+    },'-=20')
     .fromTo('.out_circle',.5,{
         scale: 0,
     },{
@@ -93,26 +91,27 @@ $(function(){
         x:'500',
         ease:Back.easeOut,
     },"-=1");
+    var rotate= function(){
+        gsap.to('#path_shadow',{
+            duration:30,
+            repeat:-1,
+            rotation:360,
+            ease:Power0.easeNone
+        });
+        gsap.to('.orbit_line',{
+            duration:30,
+            repeat:-1,
+            rotation:360,
+            ease:Power0.easeNone
+        });
+        gsap.to('.ball_item',{
+            duration:30,
+            rotation:-360,
+            repeat:-1,     
+            ease:Power0.easeNone           
+        });
+    };
 });   
-var rotate= function(){
-    gsap.to('#path_shadow',{
-        duration:30,
-        repeat:-1,
-        rotation:360,
-        ease:Power0.easeNone
-    });
-    gsap.to('.orbit_line',{
-        duration:30,
-        repeat:-1,
-        rotation:360,
-        ease:Power0.easeNone
-    });
-    gsap.to('.ball_item',{
-        duration:30,
-        rotation:-360,
-        repeat:-1,     
-        ease:Power0.easeNone           
-    });
-};
+
 //aos init
 AOS.init();

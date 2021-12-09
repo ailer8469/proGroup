@@ -55,7 +55,6 @@
     </div> 
     <!--▲ loading ▲-->
         <!--▼ header ▼--> 
-    <main>
         <header>
         <div class="nav-pc">
             <div class="nav_item">
@@ -69,9 +68,10 @@
                     <a href="knowledge.html"><li>法律小知識</li></a>
                 </ul>
             </div>
-            <div class="nav_ask">
+            <div class="nav_ask" onclick="openModal(this)">
                 我要諮詢
             </div>
+            <input class="card_title_input" value="請選擇咨詢類別" style="opacity: 0; position: absolute;">  
         </div>
         <div class="nav-sp">
             <div class="nav_logo">
@@ -91,7 +91,10 @@
                     <a href="member.html"><li>夥伴介紹</li></a>
                     <a href="new.html"><li>最新消息</li></a>
                     <a href="knowledge.html"><li>法律小知識</li></a>
-                    <a id="bar_ask_click"><li class="sb_bar_ask">我要諮詢</li></a>
+                    <a id="bar_ask_click">
+                        <li class="sb_bar_ask" onclick="openModal(this)">我要諮詢</li>
+                        <input class="card_title_input" value="請選擇咨詢類別" style="opacity: 0;">  
+                    </a>
                 </ul>
                 <div class="nav_link">
                     <ul>
@@ -114,6 +117,7 @@
             </div>
         </div>
         <!--▲ header ▲-->
+    <main>
         <div class="top_header"></div>
         <section class="page_01">
             <!-- background animation -->
@@ -129,51 +133,53 @@
                             <img src="img/index/purple building.svg" alt="">
                         </div>
                         <div class="map_box new">
-                            <a href="new.html">
-                                <div class="map_topic">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
-                                        <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
-                                    </svg>
-                                    <span>最新消息</span>
-                                </div>
-                                <div class="loader-disc-bouncer new_ball"></div>
-                                <img src="img/index/building_news.gif" alt="" class="boat">
-                            </a>
+                                <a href="new.html">
+                                    <div class="map_topic">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
+                                            <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
+                                        </svg>
+                                        <span>最新消息</span>
+                                    </div>
+                                    <div class="loader-disc-bouncer new_ball"></div>
+                                    <img src="img/index/building_news.gif" alt="" class="boat">
+                                </a>
                         </div>
                         <div class="map_box member">
-                            <a href="member.html">
                                 <div class="map_topic">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
                                         <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
                                     </svg>
                                     <span>夥伴介紹</span>
                                 </div>
+                            <a href="member.html">    
                                 <div class="loader-disc-bouncer mem_ball"></div>
                                 <img src="img/index/up_board.svg" alt="" class="up_board_off">
                                 <lottie-player  class="up_board_on lottie" src="https://assets7.lottiefiles.com/packages/lf20_evqksvcg.json" background="transparent" speed="1" loop autoplay></lottie-player>
                             </a>
                         </div>
                         <div class="map_box about">
-                            <a href="about.html">
+                            
                                 <div class="map_topic">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
                                         <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 100 0"/>
                                     </svg>
                                     <span>關於博群</span>
                                 </div>
+                            <a href="about.html">    
                                 <div class="loader-disc-bouncer about_ball"></div>
                                 <img src="img/index/right_board.svg" alt="" class="down_board_off">
                                 <lottie-player class="down_board_on lottie" src="https://assets4.lottiefiles.com/packages/lf20_quec1s8f.json" background="transparent" speed="1"loop autoplay></lottie-player>
                             </a>
                         </div>
                         <div class="map_box knowledge">
-                            <a href="knowledge.html">
+                            
                                 <div class="map_topic">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
                                         <path class="path-line" fill="none" stroke-width="2" stroke="#FFFFFF" d="M0 0 300 0"/>
                                     </svg>
                                     <span>法律小知識</span>
                                 </div>
+                            <a href="knowledge.html">    
                                 <div class="loader-disc-bouncer know_ball"></div>
                                 <img src="img/index/book.svg" alt="" class="book_off">
                                 <lottie-player class="book_on lottie" src="https://assets3.lottiefiles.com/packages/lf20_mgm8khac.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -181,7 +187,7 @@
                         </div>
                         <img src="img/index/stairs.svg" alt="" class="stairs">
                         <div class="map_box ask">
-                            <a onclick="openModal()">
+                            <a onclick="openModal(this)">
                                 <div class="loader-disc-bouncer ask_ball"></div>
                                 <div class="map_topic">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="global_line">
@@ -192,7 +198,8 @@
                                 <img class="pig_map_off" src="img/index/pig.png" alt="">
                                 <lottie-player class="pig_map_on lottie" src="https://assets10.lottiefiles.com/packages/lf20_end7xcc1.json" background="transparent" speed="1" loop autoplay></lottie-player>
                             </a>
-                        </div>
+                            <input class="card_title_input" value="請選擇咨詢類別" style="opacity: 0;">
+                        </div> 
                     </div>
                 </div>
                 </div>      
@@ -349,7 +356,7 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
                             <input class="card_title_input" value="公司投資" style="opacity: 0;">
                         </div>
                     </div>
@@ -365,7 +372,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="金融保險" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -380,7 +388,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="智慧財產權" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -396,7 +405,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="不動產爭議" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -410,7 +420,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="學校法人" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -424,7 +435,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="勞資關係" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -438,7 +450,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="遺產繼承" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -452,7 +465,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="大陸法律事務" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -466,7 +480,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="國內外訴訟暨仲裁" style="opacity: 0;">
                         </div>
                     </div>
                     <div class="card_box"
@@ -480,7 +495,8 @@
                         </div>
                         <div class="card_hover">
                             <img src="img/index/consult.svg" alt="">
-                            <a onclick="openModal()"><button>我要諮詢</button></a>
+                            <a onclick="openModal(this)"><button>我要諮詢</button></a>
+                            <input class="card_title_input" value="專業教育訓練課程" style="opacity: 0;">
                         </div>
                     </div>
                 </div>
@@ -651,9 +667,7 @@
                 <div class="consult_box">
                     <h2>咨詢類別</h2>
                     <div class="select">
-                        <span class="placeholder">
-                            請選擇咨詢類別
-                        </span>
+                        <span class="placeholder">請選擇咨詢類別</span>
                         <input type="text" name="select" value="請選擇咨詢類別">
                         <ul>
                             <li>公司投資</li>

@@ -14,7 +14,7 @@ let modal=document.querySelector('.postcard_wrap');
 let close_modal =document.querySelector("#ask_close");
 let open_modal=document.querySelector('.nav_ask');
 let postcard=document.querySelector('.postcard');
-function openModal(){
+function openModal(e){
     card.style.display = "flex";
     modal.style.display = "flex"; 
     if(animationCompleted = true){
@@ -43,14 +43,11 @@ function openModal(){
             });
         animationCompleted = false;
     });
+    let title= e.nextElementSibling.value;
+    let placeholder=document.querySelector('.placeholder');
+    placeholder.innerHTML=title;
 }
-open_modal.addEventListener("click", () => {
-    openModal();
-});
-let bar_ask=document.getElementById('bar_ask_click');
-bar_ask.addEventListener("click", () => {
-    openModal();
-});
+
 close_modal.addEventListener("click", () => {
     modal.style.display = "none";
     postcard.style.display = "none";
