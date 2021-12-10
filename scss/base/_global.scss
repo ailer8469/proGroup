@@ -31,3 +31,8 @@ img{
     width: 100%;
     display: block;
 }
+@media (max-width:1020px){
+	button,input,a{
+		cursor:pointer;
+	}
+}
