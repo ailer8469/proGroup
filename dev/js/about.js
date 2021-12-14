@@ -98,7 +98,7 @@ $(function(){
         });
     };
 
-    if(wdth >1200){
+    if(wdth >900){
         ScrollTrigger.create({
         trigger: "#page02",
         animation: tl,

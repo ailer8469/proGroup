@@ -2362,6 +2362,7 @@ footer {
   background-image: url("../img/about/ball_up.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .page_02 .page02_circle .out_circle {
