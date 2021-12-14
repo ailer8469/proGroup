@@ -133,6 +133,7 @@ top: 0;
             background-image: url('../img/about/ball_up.png');
             background-position: center;
             background-repeat:no-repeat;
+            background-size: contain;
         }
         .out_circle{
             opacity: 0;
@@ -362,7 +363,6 @@ top: 0;
         font-size: 50px;
     }
     .page_02 .page02_circle .inner_circle {
-        background-size: contain;
         width: 175px;
         height: 175px;
     }

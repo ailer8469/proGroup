@@ -94,6 +94,12 @@ img {
   display: block;
 }
 
+@media (max-width: 1020px) {
+  button, input, a {
+    cursor: pointer;
+  }
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -122,7 +128,7 @@ header {
 .nav-pc a {
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.15em;
 }
@@ -291,14 +297,16 @@ header {
   background-color: #379595;
   color: white;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.15em;
   cursor: url("../img/mouse/click.svg"), default;
 }
 
 .nav-sp {
-  background-color: rgba(212, 232, 237, 0.2);
+  background: #FFFFFF4D;
+  -webkit-box-shadow: 0px 4px 4px 0px #BEBEBE33;
+          box-shadow: 0px 4px 4px 0px #BEBEBE33;
   position: relative;
   border-bottom: 2px solid rgba(255, 255, 255, 0.7);
   width: 100%;
@@ -315,7 +323,7 @@ header {
 }
 
 .nav-sp .nav_logo {
-  padding: 9px;
+  padding: 15px;
   margin: auto;
 }
 
@@ -535,6 +543,9 @@ body.active .burger {
 @media (max-width: 500px) {
   .nav-sp {
     height: 50px;
+  }
+  .nav-sp .nav_logo {
+    padding: 10px;
   }
   .burger {
     width: 50px;
@@ -973,6 +984,12 @@ img {
   display: block;
 }
 
+@media (max-width: 1020px) {
+  button, input, a {
+    cursor: pointer;
+  }
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -1001,7 +1018,7 @@ header {
 .nav-pc a {
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.15em;
 }
@@ -1143,14 +1160,16 @@ header {
   background-color: #379595;
   color: white;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.15em;
   cursor: url("../img/mouse/click.svg"), default;
 }
 
 .nav-sp {
-  background-color: rgba(212, 232, 237, 0.2);
+  background: #FFFFFF4D;
+  -webkit-box-shadow: 0px 4px 4px 0px #BEBEBE33;
+          box-shadow: 0px 4px 4px 0px #BEBEBE33;
   position: relative;
   border-bottom: 2px solid rgba(255, 255, 255, 0.7);
   width: 100%;
@@ -1167,7 +1186,7 @@ header {
 }
 
 .nav-sp .nav_logo {
-  padding: 9px;
+  padding: 15px;
   margin: auto;
 }
 
@@ -1378,6 +1397,9 @@ body.active .burger {
 @media (max-width: 500px) {
   .nav-sp {
     height: 50px;
+  }
+  .nav-sp .nav_logo {
+    padding: 10px;
   }
   .burger {
     width: 50px;
@@ -2659,7 +2681,6 @@ footer {
     font-size: 50px;
   }
   .page_02 .page02_circle .inner_circle {
-    background-size: contain;
     width: 175px;
     height: 175px;
   }

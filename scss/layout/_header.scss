@@ -11,7 +11,7 @@ header{
     a{
         font-size: 16px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 19px;
         letter-spacing: 0.15em;
     }
@@ -95,14 +95,15 @@ header{
     background-color: $green;
     color:white;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 19px;
     letter-spacing: 0.15em;
     cursor: $click;
 }
 
 .nav-sp{
-    background-color: $nav_back;
+    background: #FFFFFF4D;
+    box-shadow: 0px 4px 4px 0px #BEBEBE33;
     position: relative;
     border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     width: 100%;
@@ -116,7 +117,7 @@ header{
         letter-spacing: 0.15em;
     }
     .nav_logo{
-        padding: 9px;
+        padding: 15px;
         margin: auto;
     }
 }
@@ -267,6 +268,9 @@ body.active{
 @media (max-width: $mobile){
     .nav-sp{
         height: 50px;
+        .nav_logo{
+            padding: 10px;
+        }
     }
     .burger{
         width: 50px;
