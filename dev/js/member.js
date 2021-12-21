@@ -137,10 +137,13 @@ $(function(){
             let curItem= ($('.member_slider.main-pos')).attr('id');
             // change loading number
             if(wdth>1200){
-                $('.load_icon span').text(curItem + '/' + 5);
+                $('.load_icon span').text(curItem + '/' + itemCount);
                 // change title
                 $('.title_item').removeClass('current');
                 $('.title_item').eq(curItem - 1).addClass('current');
+                if($('.title_item.current')){
+                    
+                }
             }
             /*********************************/
         });
@@ -186,7 +189,7 @@ $(function(){
         sync2.find(".owl-item").eq(0).addClass("current");
     })
     .owlCarousel({
-        items:5,
+        items:itemCount,
         slideSpeed : 500,
         slideBy: 3,
         mouseDrag:true,

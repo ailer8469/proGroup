@@ -186,11 +186,18 @@ transform: scale(.85);
 
 .title_slider{
     @include flex("",center,center);
+    width: 100%;
     ul{
+        overflow: hidden;
+        cursor: $click;
         position: absolute;
         @include flex("","",center);
         width: 90%;
         bottom: 30px;
+        -ms-overflow-style: none;
+    }
+    ul::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
     }
     .title_item{
         margin: auto;

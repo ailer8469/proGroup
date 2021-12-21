@@ -2500,9 +2500,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .title_slider ul {
+  overflow: hidden;
+  cursor: url("../img/mouse/click.svg"), default;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2517,8 +2520,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 90%;
   bottom: 30px;
+  -ms-overflow-style: none;
+}
+
+.title_slider ul::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
 }
 
 .title_slider .title_item {
